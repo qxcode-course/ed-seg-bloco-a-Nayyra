@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_15-42-00",
+            "content": "@@ -497,57 +497,8 @@\n   %0A%0A\n-        fmt.Printf(%22%25s eh %25s%5Cn%22, name, classif)%0A%0A\n     \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-16_15-43-43",
+            "content": "@@ -55,17 +55,17 @@\n classif \n-s\n+S\n tring%0A  \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-16_15-43-55",
+            "content": "@@ -221,17 +221,16 @@\n && age %3E\n-=\n  12)%7B%0A  \n@@ -288,17 +288,16 @@\n f (age %3E\n-=\n  18 && a\n@@ -368,17 +368,16 @@\n f (age %3E\n-=\n  65 && a\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-16_15-44-59",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var name, classif string\n    var age int\n\n    fmt.Scan(&name)\n    fmt.Scan(&age)\n\n            if (age < 12){\n                classif = \"crianca\"\n            }else if (age < 18 && age >= 12){\n                classif = \"jovem\"\n            }else if (age >= 18 && age < 65){\n                classif = \"adulto\"\n            }else if (age >= 65 && age < 1000){\n                classif = \"idoso\"\n            }else{\n                classif = \"mumia\"\n            }   \n\n        fmt.Printf(\"%s eh %s\\n\", name, classif)\n\n        }\n\n\n",
+            "lines": "26"
+        }
+    ]
+}
