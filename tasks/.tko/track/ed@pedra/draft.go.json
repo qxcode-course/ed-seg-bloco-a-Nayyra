@@ -32,8 +32,158 @@
         },
         {
             "label": "2026-03-16_20-06-59",
-            "content": "package main\nimport \"fmt\"\nimport \"math\"\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n    jogadores := make([]int, 0, n)\n    diferencas := make([]float64, 0, n)\n\n    for i := range n{\n        var pa, pb float64\n        fmt.Scan(&pa, &pb)\n        diferenca := math.Abs(pa-pb)\n        diferencas = append(diferencas, diferenca)\n        if (diferenca < 10){\n            jogadores = append(jogadores, i)\n        }\n    }\n\n    fmt.Print(diferencas)\n}\n",
+            "content": "@@ -104,21 +104,59 @@\n ake(\n-map(%5Bint%5Dint)\n+%5B%5Dint, 0, n)%0A    diferencas := make(%5B%5Dfloat64, 0, n\n )%0A%0A \n@@ -230,17 +230,16 @@\n a, &pb)%0A\n-%0A\n         \n@@ -279,23 +279,74 @@\n     \n+d\n if\n- (diferenca %3E\n+erencas = append(diferencas, diferenca)%0A        if (diferenca %3C\n  10)\n@@ -372,23 +372,31 @@\n ores\n-%5Bi%5D = diferenca\n+ = append(jogadores, i)\n %0A   \n@@ -423,21 +423,22 @@\n t.Print(\n-jogadore\n+diferenca\n s)%0A%7D%0A\n",
             "lines": "21"
+        },
+        {
+            "label": "2026-03-17_14-21-03",
+            "content": "@@ -103,16 +103,17 @@\n make(map\n+(\n %5Bint%5Dint\n@@ -113,16 +113,17 @@\n int%5Dint)\n+)\n %0A%0A    fo\n@@ -330,10 +330,8 @@\n rint\n-ln\n (jog\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-17_14-22-25",
+            "content": "@@ -108,23 +108,15 @@\n map%5B\n-float64%5Dfloat64\n+int%5Dint\n )%0A%0A \n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-17_14-23-20",
+            "content": "@@ -104,19 +104,23 @@\n ake(map%5B\n-int\n+float64\n %5Dfloat64\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-17_14-23-38",
+            "content": "@@ -220,13 +220,23 @@\n  := \n+math.Abs(\n pa-pb\n+)\n %0A   \n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-17_14-24-13",
+            "content": "@@ -19,16 +19,29 @@\n t %22fmt%22%0A\n+import %22math%22\n %0Afunc ma\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-17_14-24-24",
+            "content": "@@ -73,54 +73,17 @@\n     \n-// pontos := make(%5B%5Dfloat64, n)%0A    mapeamento\n+jogadores\n  := \n@@ -118,11 +118,8 @@\n or i\n-, _\n  := \n@@ -250,26 +250,25 @@\n         \n-mapeamento\n+jogadores\n %5Bi%5D = di\n@@ -312,18 +312,17 @@\n tln(\n-mapeamento\n+jogadores\n )%0A%7D%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-17_14-42-14",
+            "content": "@@ -151,16 +151,19 @@\n    for i\n+, _\n  := rang\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-17_14-42-30",
+            "content": "@@ -23,21 +23,8 @@\n mt%22%0A\n-import %22math%22\n %0Afun\n@@ -261,17 +261,8 @@\n  if \n-(math.Abs\n (dif\n@@ -267,17 +267,16 @@\n iferenca\n-)\n  %3E 10)%7B%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-17_14-45-28",
+            "content": "@@ -172,21 +172,15 @@\n  := \n-0; i %3C n; i++\n+range n\n %7B%0A  \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-17_14-47-28",
+            "content": "@@ -273,18 +273,16 @@\n         \n-//\n if (math\n@@ -349,19 +349,16 @@\n %0A       \n- //\n  %7D%0A    %7D\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-17_14-47-50",
+            "content": "@@ -19,18 +19,16 @@\n t %22fmt%22%0A\n-//\n import %22\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-17_14-48-01",
+            "content": "@@ -19,16 +19,18 @@\n t %22fmt%22%0A\n+//\n import %22\n@@ -265,23 +265,13 @@\n  := \n-math.abs(\n pa-pb\n-)\n %0A   \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-17_14-48-47",
+            "content": "@@ -264,17 +264,17 @@\n := math.\n-A\n+a\n bs(pa-pb\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-17_14-48-54",
+            "content": "@@ -287,11 +287,22 @@\n     \n+//\n if \n+(math.Abs\n (dif\n@@ -307,16 +307,17 @@\n iferenca\n+)\n  %3E 10)%7B%0A\n@@ -361,16 +361,19 @@\n %0A       \n+ //\n  %7D%0A    %7D\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-17_14-49-15",
+            "content": "@@ -297,17 +297,17 @@\n ferenca \n-%3C\n+%3E\n  10)%7B%0A  \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-17_14-49-25",
+            "content": "@@ -237,24 +237,25 @@\n a, &pb)%0A\n+%0A\n         \n if (pa %3C\n@@ -250,46 +250,45 @@\n     \n+d\n if\n- (pa %3C 10) %7C%7C (pb %3C 10)%7B%0A   \n+erenca := math.Abs(pa-pb)%0A\n         \n  dif\n@@ -279,25 +279,28 @@\n pb)%0A        \n- \n+if (\n diferenca :=\n@@ -297,34 +297,22 @@\n ferenca \n-:= math.Abs(pa-pb)\n+%3C 10)%7B\n %0A       \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-17_14-50-55",
+            "content": "@@ -174,17 +174,16 @@\n = 0; i %3C\n-=\n  n; i++%7B\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-17_14-51-09",
+            "content": "@@ -281,72 +281,8 @@\n     \n-        fmt.println(%22sem ganhador%22)%0A            break%0A        %7D%0A\n     \n@@ -318,24 +318,28 @@\n pb)%0A        \n+    \n mapeamento%5Bi\n@@ -352,16 +352,26 @@\n ferenca%0A\n+        %7D%0A\n     %7D%0A%0A \n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-17_14-51-55",
+            "content": "@@ -285,25 +285,25 @@\n         fmt.\n-P\n+p\n rintln(%22sem \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-17_14-52-04",
+            "content": "@@ -289,25 +289,35 @@\n     \n-mapeamento%5Bi%5D = 0\n+fmt.Println(%22sem ganhador%22)\n %0A   \n@@ -325,16 +325,21 @@\n         \n+break\n %0A       \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-17_14-53-35",
+            "content": "@@ -253,18 +253,17 @@\n  if (pa \n-%3E=\n+%3C\n  10) %7C%7C \n@@ -270,11 +270,9 @@\n (pb \n- %3E=\n+%3C\n  10)\n@@ -277,29 +277,69 @@\n 0)%7B%0A        \n+   \n-%0A    \n+ mapeamento%5Bi%5D = 0%0A            %0A        %7D%0A\n         dife\n@@ -363,36 +363,32 @@\n (pa-pb)%0A        \n-    \n mapeamento%5Bi%5D = \n@@ -397,39 +397,16 @@\n ferenca%0A\n-            %0A        %7D%0A\n     %7D%0A%0A \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-17_14-54-53",
+            "content": "@@ -264,10 +264,10 @@\n 10) \n-&&\n+%7C%7C\n  (pb\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-17_14-55-21",
+            "content": "@@ -398,144 +398,8 @@\n  %7D%0A%0A\n-    menor := 10%0A    vencendor := 0%0A    for i, a := range mapeamento%7B%0A        if (a %3C menor)%7B%0A            vencendor = i%0A        %7D%0A    %7D%0A%0A\n     \n@@ -414,17 +414,18 @@\n tln(\n-vencendor\n+mapeamento\n )%0A%7D%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-17_15-54-04",
+            "content": "@@ -413,10 +413,8 @@\n = 10\n-.0\n %0A   \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-17_15-54-21",
+            "content": "@@ -563,34 +563,6 @@\n or)%0A\n-    fmt.Println(mapeamento)%0A\n %7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-17_15-54-58",
+            "content": "@@ -480,17 +480,16 @@\n  if (a %3C\n-=\n  menor)%7B\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-17_15-55-40",
+            "content": "@@ -431,18 +431,16 @@\n or := 0%0A\n-%0A%0A\n     for \n@@ -469,111 +469,8 @@\n to%7B%0A\n-        if (len(mapeamento) == 0)%7B%0A            fmt.Println(%22sem ganhador%22)%0A            break%0A        %7D%0A\n     \n@@ -533,21 +533,16 @@\n %0A    %7D%0A%0A\n-    %0A\n     fmt.\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-17_15-58-54",
+            "content": "@@ -467,16 +467,119 @@\n amento%7B%0A\n+        if (len(mapeamento) == 0)%7B%0A            fmt.Println(%22sem ganhador%22)%0A            break%0A        %7D%0A\n         \n@@ -595,16 +595,16 @@\n menor)%7B%0A\n-\n         \n@@ -641,48 +641,14 @@\n   %7D%0A\n+%0A\n     %0A\n-    if (len(mapeamento) == 0)%7B%0A    \n     \n@@ -663,95 +663,45 @@\n tln(\n-%22sem ganha\n+vencen\n dor\n-%22\n )%0A    \n-    break%0A    %7Delse %7B%0A        %0A        fmt.Println(vencendor)%0A    %7D%0A\n+fmt.Println(mapeamento)\n %0A%7D%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-17_15-59-46",
+            "content": "@@ -606,16 +606,30 @@\n hador%22)%0A\n+        break%0A\n     %7Dels\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-17_16-00-01",
+            "content": "package main\nimport \"fmt\"\nimport \"math\"\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n    // pontos := make([]float64, n)\n    mapeamento := make(map[int]float64)\n\n    for i := 0; i <= n; i++{\n        var pa, pb float64\n        fmt.Scan(&pa, &pb)\n        if (pa >= 10) && (pb  >= 10){\n        \n            diferenca := math.Abs(pa-pb)\n            mapeamento[i] = diferenca\n            \n        }\n    }\n\n    menor := 10.0\n    vencendor := 0\n\n\n    for i, a := range mapeamento{\n        if (a <= menor){\n            vencendor = i\n        }\n    }\n    \n    if (len(mapeamento) == 0){\n        fmt.Println(\"sem ganhador\")\n    }else {\n        \n        fmt.Println(vencendor)\n    }\n\n}\n",
+            "lines": "38"
         }
     ]
 }
