@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_20-03-45",
+            "content": "@@ -294,17 +294,25 @@\n adores, \n-i\n+diferenca\n )%0A      \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-16_20-04-18",
+            "content": "@@ -159,15 +159,11 @@\n  pb \n-float64\n+int\n %0A   \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-16_20-04-41",
+            "content": "@@ -116,44 +116,8 @@\n , n)\n-%0A    diferencas := make(%5B%5Dint, 0, n)\n %0A%0A  \n@@ -305,55 +305,8 @@\n  i)%0A\n-            diferencas = append(diferencas, i)%0A\n     \n@@ -332,22 +332,21 @@\n t.Print(\n-diferenca\n+jogadore\n s)%0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-16_20-05-47",
+            "content": "@@ -381,25 +381,17 @@\n rencas, \n-diferenca\n+i\n )%0A      \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-16_20-06-06",
+            "content": "@@ -138,23 +138,19 @@\n  make(%5B%5D\n-float64\n+int\n , 0, n)%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-16_20-06-40",
+            "content": "@@ -271,59 +271,8 @@\n pb)%0A\n-        diferencas = append(diferencas, diferenca)%0A\n     \n@@ -341,16 +341,71 @@\n res, i)%0A\n+            diferencas = append(diferencas, diferenca)%0A\n         \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-16_20-06-59",
+            "content": "package main\nimport \"fmt\"\nimport \"math\"\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n    jogadores := make([]int, 0, n)\n    diferencas := make([]float64, 0, n)\n\n    for i := range n{\n        var pa, pb float64\n        fmt.Scan(&pa, &pb)\n        diferenca := math.Abs(pa-pb)\n        diferencas = append(diferencas, diferenca)\n        if (diferenca < 10){\n            jogadores = append(jogadores, i)\n        }\n    }\n\n    fmt.Print(diferencas)\n}\n",
+            "lines": "21"
+        }
+    ]
+}
