@@ -1,0 +1,99 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_20-56-33",
+            "content": "@@ -17,404 +17,52 @@\n ort \n-(%0A    %22fmt%22%0A    %22slices%22%0A    )%0A    %0Afunc main() %7B%0A    var n int%0A    fmt.Scan(&n)%0A    var solteiros %5Bn%5Dint%0A    contador := 0%0A%0A    for i := range n%7B%0A        var bixo int%0A        fmt.Scan(&bixo)%0A        if slices.Contains(solteiros, i)%7B%0A            solteiros = append(solteiros%5B:i%5D, solteiros%5Bi+1:%5D...)%0A            contador++%0A        %7Delse%7B%0A            solteiros = append(solteiros, bixo)%0A        %7D%0A%0A\n+%22fmt%22%0Afunc main() %7B%0A    fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-17_21-16-43",
+            "content": "@@ -410,17 +410,11 @@\n      %7D%0A%0A\n-    %7D%0A\n %0A%7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-17_21-17-00",
+            "content": "@@ -94,24 +94,28 @@\n can(&n)%0A    \n+var \n solteiros :=\n@@ -116,25 +116,14 @@\n ros \n-:= make(%5B%5Dint, n)\n+%5Bn%5Dint\n %0A   \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-17_21-18-08",
+            "content": "@@ -428,32 +428,6 @@\n  %7D%0A%0A\n-    fmt.Println(contador)%0A\n %7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-17_21-18-28",
+            "content": "@@ -126,12 +126,8 @@\n int,\n- 0 ,\n  n)%0A\n@@ -254,17 +254,9 @@\n os, \n-bixo * -1\n+i\n )%7B%0A \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-17_21-20-23",
+            "content": "@@ -220,33 +220,8 @@\n xo)%0A\n-        bixo = bixo * -1%0A\n     \n@@ -258,16 +258,21 @@\n os, bixo\n+ * -1\n )%7B%0A     \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-17_21-21-51",
+            "content": "@@ -287,11 +287,8 @@\n bixo\n-%5Bi%5D\n )%7B%0A \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-17_21-22-07",
+            "content": "@@ -283,16 +283,19 @@\n os, bixo\n+%5Bi%5D\n )%7B%0A     \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-17_21-22-26",
+            "content": "@@ -301,11 +301,8 @@\n     \n- //\n  sol\n@@ -356,40 +356,8 @@\n ..)%0A\n-            fmt.Println(%22haha%22)%0A\n     \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-17_21-23-05",
+            "content": "@@ -389,10 +389,8 @@\n aha%22\n-+i\n )%0A  \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-17_21-23-16",
+            "content": "@@ -376,17 +376,18 @@\n mt.Print\n-f\n+ln\n (%22haha%22+\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-17_21-23-30",
+            "content": "@@ -384,17 +384,17 @@\n f(%22haha%22\n-,\n++\n i)%0A     \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-17_21-23-39",
+            "content": "@@ -166,23 +166,15 @@\n  := \n-0; i %3C= n; i++ \n+range n\n %7B%0A  \n@@ -224,20 +224,16 @@\n         \n-par_\n bixo = b\n@@ -283,12 +283,8 @@\n os, \n-par_\n bixo\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-17_21-24-36",
+            "content": "@@ -241,17 +241,16 @@\n ar_bixo \n-:\n = bixo *\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-17_21-24-49",
+            "content": "@@ -306,32 +306,35 @@\n xo)%7B%0A           \n+ //\n  solteiros = app\n@@ -372,16 +372,49 @@\n 1:%5D...)%0A\n+            fmt.Printf(%22haha%22,i)%0A\n         \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-17_21-25-09",
+            "content": "@@ -319,10 +319,8 @@\n     \n-//\n solt\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-17_21-25-17",
+            "content": "@@ -168,16 +168,17 @@\n = 0; i %3C\n+=\n  n; i++ \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-17_21-26-39",
+            "content": "@@ -265,77 +265,47 @@\n     \n-posicao := slices.Index(solteiros, par_bixo)%0A        if posicao != -1\n+if slices.Contains(solteiros, par_bixo)\n %7B%0A  \n@@ -306,32 +306,34 @@\n o)%7B%0A            \n+//\n solteiros = appe\n@@ -346,23 +346,17 @@\n teiros%5B:\n-posicao\n+i\n %5D, solte\n@@ -364,15 +364,9 @@\n ros%5B\n-posicao\n+i\n +1:%5D\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-17_21-33-17",
+            "content": "package main\nimport (\n    \"fmt\"\n    \"slices\"\n    )\n    \nfunc main() {\n    var n int\n    fmt.Scan(&n)\n    solteiros := make([]int, 0 , n)\n    contador := 0\n\n    for i := 0; i < n; i++ {\n        var bixo int\n        fmt.Scan(&bixo)\n        par_bixo := bixo * -1\n        posicao := slices.Index(solteiros, par_bixo)\n        if posicao != -1{\n            solteiros = append(solteiros[:posicao], solteiros[posicao+1:]...)\n            contador++\n        }else{\n            solteiros = append(solteiros, bixo)\n        }\n\n    }\n\n    fmt.Println(contador)\n}\n",
+            "lines": "28"
+        }
+    ]
+}
