@@ -16,8 +16,8 @@ sources:
   tasks: null
 expanded:
 - ed@basic
-- ed@rec
 - ed@map_set
+- ed@rec
 flags:
   inbox: inbox
   panel: help
@@ -25,4 +25,4 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@baruel
+selected: ed@vector
