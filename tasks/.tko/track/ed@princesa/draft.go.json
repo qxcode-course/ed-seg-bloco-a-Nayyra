@@ -2,8 +2,183 @@
     "patches": [
         {
             "label": "2026-03-23_16-36-52",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n",
+            "content": "@@ -41,296 +41,34 @@\n     \n-var n, e int%0A    fnt.Scan(&n, &e)%0A    pessoas := make(%5B%5Dint, n)%0A    espadaAtual := e + 1%0A%0A    fmt.Println(%22%5B%22)%0A    for i, v := range pessoas%7B%0A        if i == espadaAtual%7B%0A            fmt.Printf(%22%25d%3E %22, i)%0A        %7Delse%7B%0A             fmt.Printf(%22%25d %22, i)%0A        %7D%0A    %7D%0A    fmt.Println(%22%5D\n+fmt.Println(%22Hello, World!\n %22)%0A%7D\n",
             "lines": "5"
+        },
+        {
+            "label": "2026-04-06_19-29-40",
+            "content": "@@ -235,25 +235,25 @@\n ntf(%22%25d%3E %22, \n-v\n+i\n )%0A        %7De\n@@ -288,17 +288,17 @@\n (%22%25d %22, \n-v\n+i\n )%0A      \n@@ -301,17 +301,16 @@\n       %7D%0A\n-%0A\n     %7D%0A  \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-06_19-30-03",
+            "content": "@@ -55,17 +55,17 @@\n nt%0A    f\n-m\n+n\n t.Scan(&\n@@ -257,16 +257,17 @@\n  %7Delse%7B%0A\n+ \n         \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-06_19-30-19",
+            "content": "@@ -144,12 +144,13 @@\n rint\n+ln\n (%22%5B\n- \n %22)%0A \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-06_19-30-31",
+            "content": "@@ -162,9 +162,9 @@\n  i, \n-_\n+v\n  := \n@@ -234,25 +234,25 @@\n ntf(%22%25d%3E %22, \n-i\n+v\n )%0A        %7De\n@@ -286,17 +286,17 @@\n (%22%25d %22, \n-i\n+v\n )%0A      \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-06_19-31-20",
+            "content": "@@ -190,18 +190,16 @@\n     if i\n-+1\n  == espa\n@@ -235,26 +235,24 @@\n tf(%22%25d%3E %22, i\n-+1\n )%0A        %7De\n@@ -291,10 +291,8 @@\n %22, i\n-+1\n )%0A  \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-06_19-31-39",
+            "content": "@@ -241,16 +241,18 @@\n %25d%3E %22, i\n++1\n )%0A      \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-06_19-31-58",
+            "content": "@@ -285,24 +285,26 @@\n ntf(%22%25d %22, i\n++1\n )%0A        %7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-06_19-32-06",
+            "content": "@@ -240,27 +240,17 @@\n %22%25d%3E %22, \n-espadaAtual\n+i\n )%0A      \n@@ -289,18 +289,16 @@\n %22%25d %22, i\n-+1\n )%0A      \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-06_19-32-32",
+            "content": "@@ -190,16 +190,18 @@\n     if i\n++1\n  == espa\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-06_19-32-43",
+            "content": "@@ -160,26 +160,57 @@\n or i\n+, _\n  := \n-1; i %3C n; i ++\n+range pessoas%7B%0A        if i == espadaAtual\n %7B%0A  \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-06_19-33-23",
+            "content": "@@ -155,17 +155,16 @@\n     for \n-(\n i := 1; \n@@ -174,17 +174,16 @@\n  n; i ++\n-)\n %7B%0A      \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-06_19-33-31",
+            "content": "@@ -165,9 +165,9 @@\n  := \n-0\n+1\n ; i \n@@ -172,16 +172,17 @@\n i %3C n; i\n+ \n ++)%7B%0A   \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-06_19-34-08",
+            "content": "@@ -161,17 +161,17 @@\n r (i := \n-1\n+0\n ; i %3C n;\n@@ -180,40 +180,8 @@\n ++)%7B\n-%5D%0A        if ( i == espadaAtual)\n %0A   \n@@ -270,18 +270,11 @@\n  %22, \n-pessoas%5Bi%5D\n+i+1\n )%0A  \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-06_19-34-58",
+            "content": "@@ -176,16 +176,17 @@\n n; i++)%7B\n+%5D\n %0A       \n@@ -208,17 +208,16 @@\n daAtual)\n-%7B\n %0A       \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-06_19-35-08",
+            "content": "@@ -155,16 +155,17 @@\n     for \n+(\n i := 1; \n@@ -174,16 +174,17 @@\n %3C n; i++\n+)\n %7B%0A      \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-06_19-36-02",
+            "content": "@@ -296,17 +296,26 @@\n (%22%25d %22, \n-i\n+pessoas%5Bi%5D\n )%0A      \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-06_19-36-15",
+            "content": "@@ -131,71 +131,8 @@\n  1%0A%0A\n-    for i := 0; i %3C n; i++ %7B%0A        pessoas%5Bi%5D = i + 1%0A    %7D%0A%0A\n     \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-06_19-36-45",
+            "content": "@@ -215,33 +215,33 @@\n %22)%0A    for i := \n-0\n+1\n ; i %3C n; i++%7B%0A  \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-06_19-36-57",
+            "content": "@@ -223,17 +223,17 @@\n or i := \n-1\n+0\n ; i %3C n;\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-06_19-37-08",
+            "content": "@@ -251,26 +251,17 @@\n    if ( \n-pessoas%5Bi%5D\n+i\n  == espa\n@@ -359,26 +359,17 @@\n (%22%25d %22, \n-pessoas%5Bi%5D\n+i\n )%0A      \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-06_19-37-33",
+            "content": "@@ -215,33 +215,33 @@\n %22)%0A    for i := \n-0\n+1\n ; i %3C n; i++%7B%0A  \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-06_19-37-44",
+            "content": "@@ -266,16 +266,26 @@\n %5Bi%5D == e\n+spadaAtual\n )%7B%0A     \n@@ -311,16 +311,26 @@\n %25d%3E %22, e\n+spadaAtual\n )%0A      \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-06_19-38-03",
+            "content": "@@ -109,10 +109,8 @@\n     \n-//\n espa\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-06_19-38-15",
+            "content": "@@ -189,16 +189,17 @@\n + 1%0A    \n+%7D\n %0A%0A    fm\n@@ -399,18 +399,11 @@\n tln(%22%5D%22)\n-%0A%0A    %7D\n %0A%7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-06_19-39-41",
+            "content": "@@ -185,25 +185,24 @@\n = i + 1%0A    \n-%7D\n %0A%0A    fmt.Pr\n@@ -398,11 +398,18 @@\n tln(%22%5D%22)\n+%0A%0A    %7D\n %0A%7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-06_19-40-09",
+            "content": "@@ -105,16 +105,18 @@\n  n)%0A    \n+//\n espadaAt\n@@ -128,9 +128,9 @@\n = e \n--\n++\n  1%0A%0A\n@@ -268,26 +268,16 @@\n %5Bi%5D == e\n-spadaAtual\n )%7B%0A     \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-07_09-14-28",
+            "content": "@@ -251,17 +251,26 @@\n    if ( \n-i\n+pessoas%5Bi%5D\n  == espa\n@@ -306,34 +306,25 @@\n ntf(%22%25d%3E %22, \n-pessoas%5Bi%5D\n+e\n )%0A        %7De\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-07_09-14-55",
+            "content": "@@ -105,39 +105,8 @@\n  n)%0A\n-%0A    for len(pessoas) %3E 1%7B%0A    \n     \n@@ -127,28 +127,24 @@\n  e - 1%0A%0A    \n-  \n-  \n for i := 0; \n@@ -164,20 +164,16 @@\n         \n-    \n pessoas%5B\n@@ -183,31 +183,23 @@\n = i + 1%0A\n-    \n     %7D%0A%0A\n-    \n     fmt.\n@@ -210,20 +210,16 @@\n t(%22%5B %22)%0A\n-    \n     for \n@@ -246,20 +246,16 @@\n         \n-   \n- \n if ( i =\n@@ -270,20 +270,16 @@\n Atual)%7B%0A\n-    \n         \n@@ -321,20 +321,16 @@\n         \n-    \n %7Delse%7B%0A \n@@ -332,36 +332,32 @@\n se%7B%0A            \n-  \n-  \n fmt.Printf(%22%25d %22\n@@ -382,33 +382,21 @@\n     \n-    \n %7D%0A%0A    \n- \n-   \n %7D%0A    \n- \n-   \n fmt.\n@@ -408,17 +408,10 @@\n ln(%22%5D%22)%0A\n-    %7D%0A%0A\n %7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-07_09-18-45",
+            "content": "@@ -101,24 +101,25 @@\n int, n)%0A\n+%0A\n     for \n i := 0; \n@@ -114,27 +114,24 @@\n for \n-i := 0; i %3C n; i++ \n+len(pessoas) %3E 1\n %7B%0A  \n@@ -140,42 +140,42 @@\n     \n-p\n es\n-soas%5Bi%5D = i +\n+padaAtual := e -\n  1%0A\n+%0A\n     \n-%7D%0A%0A\n     for \n len(\n@@ -174,34 +174,41 @@\n for \n-len(pessoas) %3E 1%7B%0A\n+i := 0; i %3C n; i++ %7B%0A    \n         \n espa\n@@ -203,37 +203,44 @@\n         \n+p\n es\n-padaAtual := e - 1%0A\n+soas%5Bi%5D = i + 1%0A        %7D\n %0A%0A      \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-07_09-19-33",
+            "content": "@@ -190,18 +190,16 @@\n s) %3E 1%7B%0A\n-%0A%0A\n         \n@@ -223,141 +223,8 @@\n - 1%0A\n-        indiceMorto := (indiceEspada + 1) %25 len(pessoas)%0A%0A        pessoas = append(pessoas%5B:indiceMorto%5D, pessoas%5BindiceMorto+1:%5D...)\n %0A%0A  \n@@ -478,59 +478,8 @@\n %22%5D%22)\n-%0A%0A        indiceEspada = indiceMorto %25 len(pessoas)\n %0A   \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-07_09-21-22",
+            "content": "@@ -191,16 +191,17 @@\n ) %3E 1%7B%0A%0A\n+%0A\n         \n@@ -245,27 +245,28 @@\n rto := (\n-espadaAtual\n+indiceEspada\n  + 1) %25 \n@@ -619,27 +619,28 @@\n         \n-espadaAtual\n+indiceEspada\n  = indic\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-07_09-21-54",
+            "content": "@@ -172,54 +172,192 @@\n     \n-espadaAtual := e - 1%0A    for len(pessoas) %3E 1%7B\n+for len(pessoas) %3E 1%7B%0A%0A        espadaAtual := e - 1%0A        indiceMorto := (espadaAtual + 1) %25 len(pessoas)%0A%0A        pessoas = append(pessoas%5B:indiceMorto%5D, pessoas%5BindiceMorto+1:%5D...)\n %0A%0A  \n@@ -402,28 +402,17 @@\n  0; i %3C \n-len(pessoas)\n+n\n ; i++%7B%0A \n@@ -613,203 +613,8 @@\n %22)%0A%0A\n-        if len(pessoas) == 1 %7B%0A            break%0A        %7D%0A%0A        indiceMorto := (espadaAtual + 1) %25 len(pessoas)%0A%0A        pessoas = append(pessoas%5B:indiceMorto%5D, pessoas%5BindiceMorto+1:%5D...)%0A%0A%0A\n     \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-07_09-25-08",
+            "content": "@@ -489,19 +489,16 @@\n %0A       \n- //\n  if len(\n@@ -520,19 +520,16 @@\n %0A       \n- //\n      bre\n@@ -542,11 +542,8 @@\n     \n- //\n  %7D%0A%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-07_09-25-21",
+            "content": "@@ -211,17 +211,16 @@\n ssoas) %3E\n-=\n  1%7B%0A%0A   \n@@ -485,24 +485,27 @@\n %5D%22)%0A%0A       \n+ //\n  if len(pess\n@@ -519,24 +519,27 @@\n  1 %7B%0A       \n+ //\n      break%0A \n@@ -540,24 +540,27 @@\n reak%0A       \n+ //\n  %7D%0A%0A        \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-07_09-25-35",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var n, e int\n    fmt.Scan(&n, &e)\n    pessoas := make([]int, n)\n    for i := 0; i < n; i++ {\n        pessoas[i] = i + 1\n    }\n\n    espadaAtual := e - 1\n    for len(pessoas) >= 1{\n\n        fmt.Print(\"[ \")\n        for i := 0; i < len(pessoas); i++{\n            if ( i == espadaAtual){\n                fmt.Printf(\"%d> \", pessoas[i])\n            }else{\n                fmt.Printf(\"%d \", pessoas[i])\n            }\n\n        }\n        fmt.Println(\"]\")\n\n        if len(pessoas) == 1 {\n            break\n        }\n\n        indiceMorto := (espadaAtual + 1) % len(pessoas)\n\n        pessoas = append(pessoas[:indiceMorto], pessoas[indiceMorto+1:]...)\n\n\n        espadaAtual = indiceMorto % len(pessoas)\n    }\n\n}\n",
+            "lines": "37"
         }
     ]
 }

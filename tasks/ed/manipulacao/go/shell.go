@@ -9,38 +9,117 @@ import (
 )
 
 func getMen(vet []int) []int {
-	_ = vet
-	return nil
+	newVet := make([]int, 0)
+	for _, v := range vet{
+		if v > 0 {
+			newVet = append(newVet, v)
+		}
+	}
+
+	return newVet
 }
 
 func getCalmWomen(vet []int) []int {
-	_ = vet
-	return nil
+	newVet := make([]int, 0)
+	for _, v := range vet{
+		if v < 0 && v > -10 {
+			newVet = append(newVet, v)
+		}
+	}
+
+	return newVet
 }
 
 func sortVet(vet []int) []int {
-	_ = vet
-	return nil
+
+	newVet := make([]int, 0)
+	
+	for _, v := range vet{
+		newVet = append(newVet, v)
+		
+		j := len(newVet) - 1
+
+		for j > 0 && newVet[j] < newVet[j-1]{
+			newVet[j], newVet[j-1] = newVet[j-1], newVet[j]
+			j--
+		}
+	}
+
+	return newVet
 }
 
 func sortStress(vet []int) []int {
-	_ = vet
-	return nil
+
+	newVet := make([]int, 0)
+	negaP := make([]int, 0)
+	merje := make([]int, 0)
+	
+	for _, v := range vet{
+		if v < -49{
+			negaP = append(negaP, v)
+		}else{
+				newVet = append(newVet, v)
+				
+				j := len(newVet) - 1
+
+				for j > 0 && newVet[j] < newVet[j-1]{
+					newVet[j], newVet[j-1] = newVet[j-1], newVet[j]
+					j--
+				}
+			
+		}
+	}
+
+	for _, v := range newVet{
+		merje = append(merje, v)
+	}
+
+	for _, v := range negaP{
+		merje = append(merje, v)
+	}
+
+	return merje
 }
 
 func reverse(vet []int) []int {
-	_ = vet
-	return nil
+	vetReverse := make([]int, 0)
+	for i := len(vet)-1; i >= 0; i--{
+		vetReverse = append(vetReverse, vet[i])
+
+	} 
+
+	return vetReverse
 }
 
 func unique(vet []int) []int {
-	_ = vet
-	return nil
+	mape := make(map[int]bool)
+	resul := make([]int, 0)
+
+	for _, v := range vet{
+		if _, e := mape[v]; !e{
+			mape[v] = true
+			resul = append(resul, v)
+		}
+
+	}
+	return resul
 }
 
 func repeated(vet []int) []int {
-	_ = vet
-	return nil
+		repetidas := make([]int, 0)
+		unicas := make(map[int]bool)
+
+	   for _, v := range vet{
+			_, existe := unicas[v]
+
+			if existe{
+					repetidas = append(repetidas, v)
+			}else{
+					unicas[v] = true
+			}
+   	}
+
+		return repetidas
 }
 
 func main() {
