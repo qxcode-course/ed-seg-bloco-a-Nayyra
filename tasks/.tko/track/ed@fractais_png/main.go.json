@@ -1082,8 +1082,353 @@
         },
         {
             "label": "2026-04-10_08-56-26",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc estrela(pen *Pen, dis float64){\n\n\tif dis < 2{\n\t\treturn\n\t}\n\n\tfor range 5{\n\t\tpen.Walk(dis)\n\t\testrela(pen, dis * 0.4)\n\t\tpen.Walk(-dis)\n\t\tpen.Left(72)\n\t}\n}\n\nfunc main() {\n\tpen := NewPen(800, 800)\n\tpen.SetPosition(400, 400)\n\tpen.SetHeading(50)\n\testrela(pen, 150)\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "content": "@@ -160,12 +160,11 @@\n dis \n-%3E 10\n+%3C 2\n %7B%0A%09%09\n@@ -185,17 +185,17 @@\n r range \n-8\n+5\n %7B%0A%09%09pen.\n@@ -210,41 +210,62 @@\n )%0A%09%09\n-pen.Left(90)%0A%09%09estrela(pen, 2*dis\n+estrela(pen, dis * 0.4)%0A%09%09pen.Walk(-dis)%0A%09%09pen.Left(72\n )%0A%09%7D\n@@ -368,17 +368,19 @@\n la(pen, \n-2\n+150\n )%0A%09pen.S\n",
             "lines": "33"
+        },
+        {
+            "label": "2026-04-10_10-05-08",
+            "content": "@@ -348,17 +348,16 @@\n la(pen, \n-1\n 2)%0A%09pen.\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-05-23",
+            "content": "@@ -160,9 +160,9 @@\n dis \n-%3C\n+%3E\n  10%7B\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-05-34",
+            "content": "@@ -348,16 +348,17 @@\n la(pen, \n+1\n 2)%0A%09pen.\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-05-42",
+            "content": "@@ -158,17 +158,18 @@\n f dis %3C \n-2\n+10\n %7B%0A%09%09retu\n@@ -352,11 +352,9 @@\n en, \n-120\n+2\n )%0A%09p\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-06-02",
+            "content": "@@ -160,12 +160,11 @@\n dis \n-%3E 10\n+%3C 2\n %7B%0A%09%09\n@@ -347,17 +347,19 @@\n la(pen, \n-2\n+120\n )%0A%09pen.S\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-06-13",
+            "content": "@@ -239,10 +239,8 @@\n en, \n-0.\n 2*di\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-06-28",
+            "content": "@@ -241,9 +241,9 @@\n , 0.\n-7\n+2\n *dis\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-06-35",
+            "content": "@@ -351,18 +351,16 @@\n a(pen, 2\n-00\n )%0A%09pen.S\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-06-45",
+            "content": "@@ -352,16 +352,17 @@\n (pen, 20\n+0\n )%0A%09pen.S\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-06-52",
+            "content": "@@ -235,17 +235,19 @@\n la(pen, \n-8\n+0.7\n *dis)%0A%09%7D\n@@ -351,16 +351,17 @@\n a(pen, 2\n+0\n )%0A%09pen.S\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-07-02",
+            "content": "@@ -187,17 +187,16 @@\n  range 8\n-0\n %7B%0A%09%09pen.\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-07-24",
+            "content": "@@ -160,11 +160,12 @@\n dis \n-%3C 5\n+%3E 10\n %7B%0A%09%09\n@@ -186,17 +186,18 @@\n r range \n-4\n+80\n %7B%0A%09%09pen.\n@@ -212,60 +212,42 @@\n )%0A%09%09\n-estrela(pen, dis/2)%0A%09%09pen.Walk(-dis)%0A%09%09pen.Left(90)%0A\n+pen.Left(90)%0A%09%09estrela(pen, 8*dis)\n %0A%09%7D%0A\n@@ -350,18 +350,16 @@\n a(pen, 2\n-00\n )%0A%09pen.S\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-10-54",
+            "content": "@@ -222,17 +222,17 @@\n pen, dis\n-*\n+/\n 2)%0A%09%09pen\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-10_10-12-21",
+            "content": "@@ -227,10 +227,8 @@\n dis*\n-0.\n 2)%0A%09\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-10_10-12-30",
+            "content": "@@ -206,16 +206,69 @@\n (dis)%0A%09%09\n+estrela(pen, dis*0.2)%0A%09%09pen.Walk(-dis)%0A%09%09pen.Left(90)\n %0A%0A%09%7D%0A%7D%0A%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-10_10-12-56",
+            "content": "@@ -192,23 +192,8 @@\n  4%7B%0A\n-%09%09pen.Left(30)%0A\n %09%09pe\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-13-19",
+            "content": "@@ -331,16 +331,17 @@\n (pen, 20\n+0\n )%0A%09pen.S\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-10_10-13-30",
+            "content": "@@ -203,9 +203,9 @@\n eft(\n-9\n+3\n 0)%0A%09\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-10_10-13-39",
+            "content": "@@ -221,10 +221,8 @@\n (dis\n-*2\n )%0A%09%09\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-10_10-14-01",
+            "content": "@@ -218,28 +218,8 @@\n alk(\n-dis)%0A%09%09estrela(pen, \n dis*\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-10_10-14-28",
+            "content": "@@ -333,16 +333,17 @@\n Heading(\n+5\n 0)%0A%09estr\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-10_10-15-02",
+            "content": "@@ -333,17 +333,17 @@\n Heading(\n-1\n+0\n )%0A%09estre\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-10_10-15-10",
+            "content": "@@ -221,16 +221,35 @@\n (dis)%0A%09%09\n+estrela(pen, dis*2)\n %0A%09%09%0A%0A%09%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-10_10-15-14",
+            "content": "@@ -298,16 +298,35 @@\n 0, 400)%0A\n+%09pen.SetHeading(1)%0A\n %09estrela\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-10_10-15-22",
+            "content": "@@ -221,11 +221,8 @@\n (dis\n-+10\n )%0A%09%09\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-10_10-15-48",
+            "content": "@@ -221,30 +221,13 @@\n (dis\n-)%0A%09%09pen.Walk(dis+5\n++1\n 0)%0A\n-%0A\n %09%09%0A%09\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-10_10-17-36",
+            "content": "@@ -225,29 +225,32 @@\n )%0A%09%09\n-estrela(pen, dis - 5)\n+pen.Walk(dis+50)%0A%0A%09%09%0A%09%09%0A\n %0A%09%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-10_10-18-44",
+            "content": "@@ -175,16 +175,28 @@\n rn%0A%09%7D%0A%0A%09\n+for range 4%7B\n %0A%09%09pen.L\n@@ -243,16 +243,18 @@\n is - 5)%0A\n+%09%7D\n %0A%7D%0A%0Afunc\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-10_10-19-18",
+            "content": "@@ -317,17 +317,16 @@\n (pen, 20\n-0\n )%0A%09pen.S\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-10_10-19-30",
+            "content": "@@ -315,17 +315,17 @@\n la(pen, \n-8\n+2\n 00)%0A%09pen\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-10_10-19-40",
+            "content": "@@ -305,27 +305,8 @@\n 00)%0A\n-%09pen.SetHeading(0)%0A\n %09est\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-10_10-20-19",
+            "content": "@@ -317,17 +317,16 @@\n Heading(\n-9\n 0)%0A%09estr\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-20-27",
+            "content": "@@ -321,9 +321,9 @@\n ing(\n-3\n+9\n 0)%0A%09\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-20-37",
+            "content": "@@ -317,16 +317,17 @@\n Heading(\n+3\n 0)%0A%09estr\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-20-52",
+            "content": "@@ -300,9 +300,9 @@\n 00, \n-2\n+4\n 00)%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-21-01",
+            "content": "@@ -292,25 +292,25 @@\n sition(400, \n-8\n+2\n 00)%0A%09pen.Set\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-21-09",
+            "content": "@@ -338,9 +338,9 @@\n en, \n-3\n+8\n 00)%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-21-17",
+            "content": "@@ -228,17 +228,16 @@\n , dis - \n-1\n 5)%0A%0A%7D%0A%0Af\n@@ -334,17 +334,17 @@\n la(pen, \n-4\n+3\n 00)%0A%09pen\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-21-29",
+            "content": "@@ -296,9 +296,9 @@\n ion(\n-2\n+4\n 00, \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-21-39",
+            "content": "@@ -292,17 +292,17 @@\n osition(\n-8\n+2\n 00, 800)\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-21-48",
+            "content": "@@ -292,17 +292,17 @@\n osition(\n-6\n+8\n 00, 800)\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-21-54",
+            "content": "@@ -297,17 +297,17 @@\n on(600, \n-6\n+8\n 00)%0A%09pen\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-22-02",
+            "content": "@@ -335,17 +335,17 @@\n la(pen, \n-5\n+4\n 00)%0A%09pen\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-22-12",
+            "content": "@@ -336,17 +336,17 @@\n a(pen, 5\n-8\n+0\n 0)%0A%09pen.\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-22-20",
+            "content": "@@ -297,17 +297,17 @@\n on(600, \n-4\n+6\n 00)%0A%09pen\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-22-30",
+            "content": "@@ -301,9 +301,9 @@\n 00, \n-2\n+4\n 00)%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-22-38",
+            "content": "@@ -301,9 +301,9 @@\n 00, \n-7\n+2\n 00)%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-22-46",
+            "content": "@@ -292,17 +292,17 @@\n osition(\n-7\n+6\n 00, 700)\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-22-53",
+            "content": "@@ -172,16 +172,19 @@\n eturn%0A%09%7D\n+%0A%0A%09\n %0A%09%09pen.L\n@@ -229,17 +229,17 @@\n  dis - 1\n-0\n+5\n )%0A%0A%7D%0A%0Afu\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-10_10-23-09",
+            "content": "@@ -152,72 +152,8 @@\n )%7B%0A%0A\n-%09r := rand.IntN(250)%0A%09g := rand.IntN(250)%0A%09b := rand.IntN(250)%0A%0A\n %09if \n@@ -192,30 +192,8 @@\n 90)%0A\n-%09%09pen.SetRGB(r, g, b)%0A\n %09%09pe\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-10_10-28-11",
+            "content": "@@ -38,11 +38,8 @@\n rand\n-/v2\n %22%0A)%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-10_10-28-38",
+            "content": "@@ -166,77 +166,59 @@\n and.\n-Float64() * 100%0A%09g := rand.Float64() * 100%0A%09b := rand.Float64() * 100\n+IntN(250)%0A%09g := rand.IntN(250)%0A%09b := rand.IntN(250)\n %0A%0A%09i\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-10_10-29-35",
+            "content": "@@ -42,16 +42,87 @@\n /v2%22%0A)%0A%0A\n+func randInt(min, max int) int %7B%0A%09return min + rand.Intn(max-min+1)%0A%7D%0A%0A\n func est\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-10_10-29-49",
+            "content": "@@ -46,82 +46,8 @@\n %0A)%0A%0A\n-func randInt(min, max int) int %7B%0A%09return min + rand.Intn(max-min+1)%0A// %7D%0A%0A\n func\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-10_10-30-01",
+            "content": "@@ -302,30 +302,8 @@\n  b)%0A\n-%09%09pen.SetLineWidth(3)%0A\n %09%09pe\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-10_10-30-25",
+            "content": "@@ -265,29 +265,8 @@\n %0A%09%7D%0A\n-%09pen.SetLineWidth(3)%0A\n %09%09pe\n@@ -298,16 +298,38 @@\n , g, b)%0A\n+%09%09pen.SetLineWidth(3)%0A\n %09%09pen.Wa\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-10_10-30-36",
+            "content": "@@ -261,17 +261,16 @@\n turn%0A%09%7D%0A\n-%09\n %09pen.Set\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-10_10-30-43",
+            "content": "@@ -263,19 +263,16 @@\n rn%0A%09%7D%0A%09%09\n-// \n pen.SetL\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-10_10-30-59",
+            "content": "@@ -42,19 +42,16 @@\n /v2%22%0A)%0A%0A\n-// \n func ran\n@@ -75,19 +75,16 @@\n ) int %7B%0A\n-// \n %09return \n@@ -116,11 +116,8 @@\n )%0A//\n- //\n  %7D%0A%0A\n@@ -261,16 +261,42 @@\n turn%0A%09%7D%0A\n+%09%09// pen.SetLineWidth(3)%0A%09\n %09pen.Lef\n@@ -301,16 +301,17 @@\n eft(90)%0A\n+%09\n %09pen.Set\n@@ -324,36 +324,16 @@\n  g, b)%0A%09\n-pen.SetLineWidth(3)%0A\n %09pen.Wal\n@@ -339,16 +339,17 @@\n lk(dis)%0A\n+%09\n %09estrela\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-10_10-31-21",
+            "content": "@@ -323,17 +323,17 @@\n neWidth(\n-6\n+3\n )%0A%09pen.W\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-10_10-31-34",
+            "content": "@@ -186,18 +186,18 @@\n t64() * \n-25\n+10\n 0%0A%09g := \n@@ -213,18 +213,18 @@\n t64() * \n-25\n+10\n 0%0A%09b := \n@@ -244,10 +244,10 @@\n ) * \n-25\n+10\n 0%0A%0A%09\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-10_10-31-46",
+            "content": "@@ -468,17 +468,17 @@\n la(pen, \n-7\n+5\n 80)%0A%09pen\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-10_10-32-16",
+            "content": "@@ -472,10 +472,10 @@\n en, \n-60\n+78\n 0)%0A%09\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-10_10-32-28",
+            "content": "@@ -469,17 +469,17 @@\n a(pen, 6\n-8\n+0\n 0)%0A%09pen.\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-10_10-32-38",
+            "content": "@@ -468,18 +468,18 @@\n la(pen, \n-70\n+68\n 0)%0A%09pen.\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-10_10-32-50",
+            "content": "@@ -468,17 +468,17 @@\n la(pen, \n-6\n+7\n 00)%0A%09pen\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-10_10-32-58",
+            "content": "@@ -327,11 +327,9 @@\n dth(\n-5.5\n+6\n )%0A%09p\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-10_10-33-12",
+            "content": "@@ -323,17 +323,19 @@\n neWidth(\n-4\n+5.5\n )%0A%09pen.W\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-10_10-33-22",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand/v2\"\n)\n\n// func randInt(min, max int) int {\n// \treturn min + rand.Intn(max-min+1)\n// // }\n\nfunc estrela(pen *Pen, dis float64){\n\n\tr := rand.Float64() * 250\n\tg := rand.Float64() * 250\n\tb := rand.Float64() * 250\n\n\tif dis < 5{\n\t\treturn\n\t}\n\tpen.Left(90)\n\tpen.SetRGB(r, g, b)\n\tpen.SetLineWidth(4)\n\tpen.Walk(dis)\n\testrela(pen, dis - 10)\n\n}\n\nfunc main() {\n\tpen := NewPen(800, 800)\n\tpen.SetPosition(700, 700)\n\tpen.SetHeading(0)\n\testrela(pen, 600)\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "lines": "36"
         }
     ]
 }
