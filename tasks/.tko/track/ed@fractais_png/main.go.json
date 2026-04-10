@@ -937,8 +937,153 @@
         },
         {
             "label": "2026-04-09_23-41-39",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc arvore(pen *Pen, dis float64){\n\tangle := 30.0\n\n\tif dis < 10{\n\t\tpen.SetRGB(0, 0, 0)\n\t\treturn\n\t}\n\n\tpen.Walk(dis)\n\tpen.Left(angle)\n\tarvore(pen, dis - 5)\n\tpen.Right(2*angle)\n\tarvore(pen, dis - 5)\n\tpen.Left(angle)\n\tpen.Walk(-dis)\n\n\t\n}\n\nfunc main() {\n\tpen := NewPen(800, 600)\n\tpen.SetPosition(540, 300)\n\tpen.SetHeading(9)\n\tarvore(pen, 45.0)\n\tpen.Left(450)\n\tarvore(pen, 45.0)\n\tpen.Left(490)\n\tpen.Walk(170)\n\tpen.Right(-630)\n\tpen.Walk(170)\n\tpen.SetHeading(90)\n\tarvore(pen, 45.0)\n\tpen.Left(450)\n\tarvore(pen, 45.0)\n\tpen.Left(630)\n\t\n\t\n\n\n\n\n\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "content": "@@ -432,22 +432,226 @@\n ing(9)%0A%09\n-%0A%09%0A%09%0A%09\n+arvore(pen, 45.0)%0A%09pen.Left(450)%0A%09arvore(pen, 45.0)%0A%09pen.Left(490)%0A%09pen.Walk(170)%0A%09pen.Right(-630)%0A%09pen.Walk(170)%0A%09pen.SetHeading(90)%0A%09arvore(pen, 45.0)%0A%09pen.Left(450)%0A%09arvore(pen, 45.0)%0A%09pen.Left(630)%0A%09%0A%09%0A%0A%0A%0A%0A\n %0A%09pen.Sa\n",
             "lines": "56"
+        },
+        {
+            "label": "2026-04-10_08-38-21",
+            "content": "@@ -436,38 +436,8 @@\n 9)%0A%09\n-for range 5%7B%0A%09%09pen.Walk(75)%0A%09%7D\n %0A%09%0A%09\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-10_08-38-56",
+            "content": "@@ -406,10 +406,10 @@\n ion(\n+5\n 4\n-0\n 0, 3\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-10_08-39-10",
+            "content": "@@ -460,10 +460,10 @@\n alk(\n+7\n 5\n-0\n )%0A%09%7D\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-10_08-39-21",
+            "content": "@@ -449,23 +449,8 @@\n  5%7B%0A\n-%09%09pen.Left(72)%0A\n %09%09pe\n@@ -460,17 +460,16 @@\n alk(50)%0A\n-%0A\n %09%7D%0A%09%0A%09%0A%09\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-10_08-39-53",
+            "content": "@@ -449,18 +449,21 @@\n  5%7B%0A\n-%0A\n %09%09pen.\n-Up(\n+Left(72\n )%0A%09%09\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-10_08-40-54",
+            "content": "@@ -475,37 +475,8 @@\n (50)\n-%0A%09%09pen.Down()%0A%09%09pen.Walk(-50)\n %0A%0A%09%7D\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-10_08-42-09",
+            "content": "@@ -470,17 +470,16 @@\n .Walk(50\n-0\n )%0A%09%09pen.\n@@ -499,17 +499,16 @@\n Walk(-50\n-0\n )%0A%0A%09%7D%0A%09%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-10_08-42-27",
+            "content": "@@ -468,17 +468,17 @@\n en.Walk(\n-1\n+5\n 00)%0A%09%09pe\n@@ -498,17 +498,17 @@\n n.Walk(-\n-1\n+5\n 00)%0A%0A%09%7D%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-10_08-42-39",
+            "content": "@@ -468,17 +468,17 @@\n en.Walk(\n-2\n+1\n 00)%0A%09%09pe\n@@ -498,17 +498,17 @@\n n.Walk(-\n-2\n+1\n 00)%0A%0A%09%7D%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-10_08-42-47",
+            "content": "@@ -450,23 +450,8 @@\n 5%7B%0A%0A\n-%09%09pen.Left(72)%0A\n %09%09pe\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-10_08-43-13",
+            "content": "@@ -407,17 +407,17 @@\n on(400, \n-2\n+3\n 00)%0A%09pen\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-10_08-43-26",
+            "content": "@@ -407,17 +407,17 @@\n on(400, \n-3\n+2\n 00)%0A%09pen\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-10_08-43-35",
+            "content": "@@ -428,18 +428,17 @@\n Heading(\n-10\n+9\n )%0A%09for r\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-10_08-43-41",
+            "content": "@@ -115,23 +115,22 @@\n %7D%0A%0Afunc \n-estrela\n+arvore\n (pen *Pe\n@@ -176,119 +176,48 @@\n s %3C \n-2%7B%0A%09%09return%0A%09%7D%0A%0A%09for range 5%7B%0A%09%09pen.Walk(dis)%0A%09%09estrela(pen, dis * 0.4)%0A%09%09pen.Walk(-dis)%0A%09%09pen.Left(72)%0A%09%7D%0A%09// \n+10%7B%0A%09%09pen.SetRGB(0, 0, 0)%0A%09%09return%0A%09%7D%0A%0A%09\n pen.\n@@ -227,19 +227,16 @@\n k(dis)%0A%09\n-// \n pen.Left\n@@ -236,35 +236,32 @@\n en.Left(angle)%0A%09\n-// \n arvore(pen, dis \n@@ -262,27 +262,24 @@\n , dis - 5)%0A%09\n-// \n pen.Right(2*\n@@ -286,19 +286,16 @@\n angle)%0A%09\n-// \n arvore(p\n@@ -308,19 +308,16 @@\n s - 5)%0A%09\n-// \n pen.Left\n@@ -329,11 +329,8 @@\n e)%0A%09\n-// \n pen.\n@@ -493,27 +493,8 @@\n 00)%0A\n-%09%09estrela(pen, 50)%0A\n %09%09pe\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-10_08-51-38",
+            "content": "@@ -146,16 +146,31 @@\n loat64)%7B\n+%0A%09angle := 30.0\n %0A%0A%09if di\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-04-10_08-51-47",
+            "content": "@@ -507,16 +507,73 @@\n ing(10)%0A\n+%09for range 5%7B%0A%0A%09%09pen.Left(72)%0A%09%09pen.Up()%0A%09%09pen.Walk(200)%0A\n %09%09estrel\n@@ -583,15 +583,45 @@\n en, \n-2\n 50)%0A\n-%0A%0A\n+%09%09pen.Down()%0A%09%09pen.Walk(-200)%0A%0A%09%7D\n %0A%09%0A%09\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-10_08-52-12",
+            "content": "@@ -523,17 +523,17 @@\n a(pen, 2\n-0\n+5\n 0)%0A%0A%0A%0A%09%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-10_08-52-35",
+            "content": "@@ -507,16 +507,17 @@\n ing(10)%0A\n+%09\n %09estrela\n@@ -526,12 +526,21 @@\n en, \n-190)\n+200)%0A%0A%0A%0A%09%0A%09%0A%09\n %0A%09pe\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-10_08-52-47",
+            "content": "@@ -525,10 +525,10 @@\n en, \n-20\n+19\n 0)%0A%09\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-10_08-52-56",
+            "content": "@@ -455,17 +455,17 @@\n en(800, \n-8\n+6\n 00)%0A%09pen\n@@ -525,10 +525,10 @@\n en, \n-15\n+20\n 0)%0A%09\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-10_08-53-32",
+            "content": "@@ -227,17 +227,17 @@\n dis * 0.\n-3\n+4\n )%0A%09%09pen.\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-10_08-53-46",
+            "content": "@@ -231,10 +231,9 @@\n * 0.\n-45\n+3\n )%0A%09%09\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-10_08-53-57",
+            "content": "@@ -227,16 +227,17 @@\n dis * 0.\n+4\n 5)%0A%09%09pen\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-10_08-54-10",
+            "content": "@@ -227,17 +227,17 @@\n dis * 0.\n-4\n+5\n )%0A%09%09pen.\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-10_08-54-18",
+            "content": "@@ -202,18 +202,16 @@\n Walk(dis\n-*2\n )%0A%09%09estr\n@@ -249,10 +249,8 @@\n -dis\n-*2\n )%0A%09%09\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-10_08-55-14",
+            "content": "@@ -202,16 +202,18 @@\n Walk(dis\n+*2\n )%0A%09%09estr\n@@ -247,16 +247,18 @@\n alk(-dis\n+*2\n )%0A%09%09pen.\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-10_08-55-28",
+            "content": "@@ -265,16 +265,169 @@\n (72)%0A%09%7D%0A\n+%09// pen.Walk(dis)%0A%09// pen.Left(angle)%0A%09// arvore(pen, dis - 5)%0A%09// pen.Right(2*angle)%0A%09// arvore(pen, dis - 5)%0A%09// pen.Left(angle)%0A%09// pen.Walk(-dis)%0A%0A%09%0A\n %7D%0A%0Afunc \n@@ -482,17 +482,17 @@\n on(400, \n-4\n+3\n 00)%0A%09pen\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-10_08-56-22",
+            "content": "@@ -350,17 +350,17 @@\n Heading(\n-5\n+1\n 0)%0A%09estr\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-10_08-56-26",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc estrela(pen *Pen, dis float64){\n\n\tif dis < 2{\n\t\treturn\n\t}\n\n\tfor range 5{\n\t\tpen.Walk(dis)\n\t\testrela(pen, dis * 0.4)\n\t\tpen.Walk(-dis)\n\t\tpen.Left(72)\n\t}\n}\n\nfunc main() {\n\tpen := NewPen(800, 800)\n\tpen.SetPosition(400, 400)\n\tpen.SetHeading(50)\n\testrela(pen, 150)\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "lines": "33"
         }
     ]
 }

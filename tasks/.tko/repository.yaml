@@ -16,8 +16,8 @@ sources:
   tasks: null
 expanded:
 - ed@map_set
-- ed@basic
 - ed@rec
+- ed@basic
 flags:
   inbox: inbox
   panel: help
