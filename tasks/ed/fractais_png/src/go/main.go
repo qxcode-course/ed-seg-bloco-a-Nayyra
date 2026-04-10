@@ -9,31 +9,43 @@ func randInt(min, max int) int {
 	return min + rand.Intn(max-min+1)
 }
 
-func main() {
-	pen := NewPen(500, 500)   // cria um canvas de 500 de largura por 500 de altura
-	pen.SetRGB(255, 0, 0)     // muda a cor do pincel para vermelho
-	pen.SetPosition(250, 500) // move o pincel para x 250, y 500
-	pen.SetHeading(90)        // coloca o pincel apontando para cima
-	pen.Walk(100)             // anda 100 pixels
-	pen.Left(30)              // dobra 30 graus para esquerda
-	pen.Walk(100)             // anda 100 pixels
-	pen.DrawCircle(50)        // desenha um círculo de raio 50
-	pen.Right(60)             // gira para direita 60 graus
-	pen.Walk(150)
-	for range 10 {
-		pen.Up()
-		pen.Walk(30) // anda sem riscar
-		pen.Down()
+func arvore(pen *Pen, dis float64){
+	angle := 30.0
 
-		pen.DrawCircle(10) //desenha um circulo pequeno
-
-		pen.Up()
-		pen.Walk(-30) // volta sem riscar
-		pen.Down()
-
-		pen.Left(36) // gira
+	if dis < 10{
+		pen.SetRGB(0, 0, 0)
+		return
 	}
 
+	pen.Walk(dis)
+	pen.Left(angle)
+	arvore(pen, dis - 5)
+	pen.Right(2*angle)
+	arvore(pen, dis - 5)
+	pen.Left(angle)
+	pen.Walk(-dis)
+
+	
+}
+
+func main() {
+	pen := NewPen(800, 600)
+	pen.SetPosition(540, 300)
+	pen.SetHeading(9)
+	arvore(pen, 45.0)
+	pen.Left(450)
+	arvore(pen, 45.0)
+	pen.Left(490)
+	pen.Walk(170)
+	pen.Right(-630)
+	pen.Walk(170)
+	pen.SetHeading(90)
+	arvore(pen, 45.0)
+	pen.Left(450)
+	arvore(pen, 45.0)
+	pen.Left(630)
+	
+	
 	pen.SavePNG("tree.png")
 	fmt.Println("PNG file created successfully.")
 }
