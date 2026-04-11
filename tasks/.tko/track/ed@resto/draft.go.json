@@ -2,8 +2,38 @@
     "patches": [
         {
             "label": "2026-04-10_14-32-31",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n",
+            "content": "@@ -23,201 +23,53 @@\n mt%22%0A\n-%0A\n func \n-divRest(n int)%7B%0A    if n == 0%7B%0A        return%0A    %7D%0A%0A    div := n / 2%0A    resto := n %25 2%0A    divRest(n)%0A    fmt.Println(n)%0A%0A%7D%0A%0A%0Afunc main() %7B%0A    var n int%0A    fmt.Scan(&n)%0A    divRest(n\n+main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n-%0A\n",
             "lines": "5"
+        },
+        {
+            "label": "2026-04-11_08-16-45",
+            "content": "@@ -149,25 +149,9 @@\n tln(\n-div + %22 %22 + resto\n+n\n )%0A%0A%7D\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-11_08-17-39",
+            "content": "@@ -145,25 +145,23 @@\n Prin\n-f(%22&d &d%5Cn%22, div,\n+tln(div + %22 %22 +\n  res\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-11_08-18-13",
+            "content": "@@ -141,17 +141,16 @@\n fmt.Prin\n-t\n f(%22&d &d\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-11_08-18-22",
+            "content": "@@ -126,19 +126,17 @@\n divRest(\n-div\n+n\n )%0A    fm\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-11_08-19-02",
+            "content": "@@ -151,12 +151,12 @@\n tf(%22\n-%25d %25\n+&d &\n d%5Cn%22\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-11_08-19-12",
+            "content": "package main\nimport \"fmt\"\n\nfunc divRest(n int){\n    if n == 0{\n        return\n    }\n\n    div := n / 2\n    resto := n % 2\n    divRest(div)\n    fmt.Printf(\"%d %d\\n\", div, resto)\n\n}\n\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n    divRest(n)\n}\n\n",
+            "lines": "22"
         }
     ]
 }
