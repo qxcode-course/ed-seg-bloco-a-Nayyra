@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-11_08-27-05",
+            "content": "@@ -81,18 +81,16 @@\n %09%09return\n- 0\n %0A%09%7D%0A%09r :\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-11_08-27-29",
+            "content": "@@ -100,16 +100,24 @@\n  a %25 b%0A%09\n+mdc(b,r)\n %0A%09return\n@@ -117,24 +117,17 @@\n %09return \n-mdc(b,r)\n+r\n %0A%0A%7D%0A%0Afun\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-11_08-28-03",
+            "content": "@@ -104,16 +104,8 @@\n  b%0A%09\n-mdc(b,r)\n %0A%09re\n@@ -109,16 +109,24 @@\n %09return \n+mdc(b,r)\n %0A%0A%7D%0A%0Afun\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-11_08-28-09",
+            "content": "@@ -117,17 +117,16 @@\n %09return \n-r\n %0A%0A%7D%0A%0Afun\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-11_08-28-16",
+            "content": "@@ -66,36 +66,17 @@\n = 0 \n-%7B%0A%09%09return a%0A%09%7D%0A%0A%09if\n+%7C%7C\n  b == 0\n- \n %7B%0A%09%09\n@@ -86,14 +86,13 @@\n urn \n-b\n+0\n %0A%09%7D%0A\n-%0A\n %09r :\n@@ -104,13 +104,8 @@\n  b%0A%09\n-e := \n mdc(\n@@ -117,17 +117,17 @@\n %09return \n-e\n+r\n %0A%0A%7D%0A%0Afun\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-11_08-30-43",
+            "content": "@@ -120,22 +120,20 @@\n  a %25 b%0A%09\n-return\n+e :=\n  mdc(b,r\n@@ -133,16 +133,26 @@\n mdc(b,r)\n+%0A%09return e\n %0A%0A%7D%0A%0Afun\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-11_08-30-59",
+            "content": "@@ -55,17 +55,17 @@\n t %7B%0A%09if \n-b\n+a\n  == 0 %7B%0A\n@@ -79,25 +79,25 @@\n n a%0A%09%7D%0A%0A%09if \n-a\n+b\n  == 0 %7B%0A%09%09re\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-11_08-34-26",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc mdc(a, b int) int {\n\tif b == 0 {\n\t\treturn a\n\t}\n\n\tif a == 0 {\n\t\treturn b\n\t}\n\n\tr := a % b\n\treturn mdc(b,r)\n\n}\n\nfunc main() {\n\tvar a, b int\n\tfmt.Scan(&a, &b)\n\tfmt.Println(mdc(a, b))\n}\n",
+            "lines": "25"
+        }
+    ]
+}
