@@ -16,13 +16,15 @@ sources:
   tasks: null
 expanded:
 - ed@map_set
-- ed@rec
 - ed@basic
+- ed@vector
+- ed@rec
 flags:
-  inbox: inbox
+  inbox: all
   panel: help
-  show_panel: 'false'
+  show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@queimada
+selected: ed@labirinto
+selected_index: 24

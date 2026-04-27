@@ -1,0 +1,119 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-27_01-06-26",
+            "content": "@@ -41,126 +41,35 @@\n     \n-var n int%0A    fmt.Scan(&n)%0A    s := make(%5B%5Dint, n)%0A    for i := range n%7B%0A        fmt.Scan(&s%5Bi%5D)%0A    %7D%0A    fmt.Print(s\n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-27_09-05-33",
+            "content": "@@ -128,17 +128,20 @@\n t.Scan(&\n-i\n+s%5Bi%5D\n )%0A    %7D%0A\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-04-27_09-05-42",
+            "content": "@@ -99,11 +99,8 @@\n  for\n- _,\n  i :\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-04-27_09-05-51",
+            "content": "@@ -110,17 +110,17 @@\n = range \n-s\n+n\n %7B%0A      \n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-04-27_09-06-26",
+            "content": "@@ -135,12 +135,9 @@\n an(&\n-s%5Bi%5D\n+i\n )%0A  \n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-04-27_09-06-39",
+            "content": "@@ -100,25 +100,23 @@\n for \n-i:= 0; i %3C n; i++\n+_, i := range s\n %7B%0A  \n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-04-27_09-06-59",
+            "content": "@@ -84,14 +84,11 @@\n e(%5B%5D\n-Str\n in\n-g\n+t\n , n)\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-04-27_09-07-13",
+            "content": "@@ -80,17 +80,17 @@\n  make(%5B%5D\n-s\n+S\n tring, n\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-04-27_09-07-46",
+            "content": "@@ -103,23 +103,25 @@\n for \n-_, i := range s\n+i:= 0; i %3C n; i++\n %7B%0A  \n@@ -136,17 +136,20 @@\n t.Scan(&\n-i\n+s%5Bi%5D\n )%0A    %7D%0A\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-04-27_09-08-08",
+            "content": "@@ -98,16 +98,19 @@\n %0A    for\n+ _,\n  i := ra\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-04-27_09-08-17",
+            "content": "@@ -108,21 +108,15 @@\n  := \n-0; i %3C n; i++\n+range s\n %7B%0A  \n@@ -135,12 +135,9 @@\n an(&\n-s%5Bi%5D\n+i\n )%0A  \n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-04-27_09-08-44",
+            "content": "@@ -153,123 +153,23 @@\n   %7D%0A\n-%0A    var q int%0A    fmt.Scan(&q)%0A    c := make(%5B%5Dstring, q)%0A    for i := 0; i %3C q; i++%7B%0A        fmt.Scan(&c%5Bi%5D)%0A    %7D\n+    fmt.Print(s)\n %0A%7D%0A\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-04-27_09-09-34",
+            "content": "@@ -269,46 +269,7 @@\n    %7D\n-%0A%0A    fmt.Println(s)%0A    fmt.Println(c)\n %0A%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-27_09-09-58",
+            "content": "@@ -23,167 +23,8 @@\n mt%22%0A\n-%0Afunc matchingStrings(s %5B%5Dstring, c %5B%5Dstring) %5B%5Dint%7B%0A    mapa := make(map%5Bstring%5Dint)%0A    for _, v := range s%7B%0A        mapa%5Bs%5D++%0A    %7D%0A%0A    fmt.Print(mapa)%0A%7D%0A%0A\n func\n@@ -275,27 +275,39 @@\n     \n-matchingStrings(s, \n+fmt.Println(s)%0A    fmt.Println(\n c)%0A%7D\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-27_09-12-50",
+            "content": "@@ -143,17 +143,17 @@\n    mapa%5B\n-v\n+s\n %5D++%0A    \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-27_09-12-59",
+            "content": "@@ -179,23 +179,8 @@\n pa)%0A\n-    return nil%0A\n %7D%0A%0Af\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-27_09-13-10",
+            "content": "@@ -163,91 +163,24 @@\n     \n-r := make(%5B%5Dint, 0)%0A    for _, v := range c%7B%0A        r = append(r, \n+fmt.Print(\n mapa\n-%5Bv%5D\n )%0A\n-    %7D%0A%0A\n     \n@@ -186,17 +186,19 @@\n  return \n-r\n+nil\n %0A%7D%0A%0Afunc\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-27_09-15-46",
+            "content": "@@ -168,15 +168,22 @@\n  := \n+make(\n %5B%5Dint\n-%7B%7D\n+, 0)\n %0A   \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-27_09-15-59",
+            "content": "@@ -507,18 +507,8 @@\n     \n-fmt.Print(\n matc\n@@ -524,12 +524,11 @@\n gs(s, c)\n-)\n %0A%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-27_09-18-31",
+            "content": "@@ -507,16 +507,18 @@\n     \n-eita := \n+fmt.Print(\n matc\n@@ -538,156 +538,8 @@\n , c)\n-%0A    for i:=0; i %3C len(eita); i++%7B%0A        if i == len(eita)-1%7B%0A            fmt.Print(v)%0A        %7Delse%7B%0A            fmt.Print(v, %22 %22)%0A        %7D%0A    %7D\n+)\n %0A%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-27_09-21-26",
+            "content": "@@ -618,23 +618,17 @@\n t.Print(\n-eita%5Bi%5D\n+v\n )%0A      \n@@ -662,15 +662,9 @@\n int(\n-eita%5Bi%5D\n+v\n , %22 \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-27_09-21-44",
+            "content": "@@ -629,14 +629,8 @@\n a%5Bi%5D\n-, %22%5Cn%22\n )%0A  \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-27_09-21-56",
+            "content": "package main\nimport \"fmt\"\n\nfunc matchingStrings(s []string, c []string) []int{\n    mapa := make(map[string]int)\n    for _, v := range s{\n        mapa[v]++\n    }\n\n    r := []int{}\n    for _, v := range c{\n        r = append(r, mapa[v])\n    }\n\n    return r\n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n    s := make([]string, n)\n    for i := 0; i < n; i++{\n        fmt.Scan(&s[i])\n    }\n\n    var q int\n    fmt.Scan(&q)\n    c := make([]string, q)\n    for i := 0; i < q; i++{\n        fmt.Scan(&c[i])\n    }\n\n    eita := matchingStrings(s, c)\n    for i:=0; i < len(eita); i++{\n        if i == len(eita)-1{\n            fmt.Print(eita[i], \"\\n\")\n        }else{\n            fmt.Print(eita[i], \" \")\n        }\n    }\n}\n",
+            "lines": "41"
+        }
+    ]
+}

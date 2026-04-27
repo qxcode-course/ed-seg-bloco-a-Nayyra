@@ -1,0 +1,85 @@
+2026-04-27 00:03:00, EXEC, v:1, k:ed@especiais, mode:FULL, rate:25, size:181
+2026-04-27 00:05:31, EXEC, v:1, k:ed@especiais, mode:FULL, rate:25, size:186
+2026-04-27 00:05:47, EXEC, v:1, k:ed@especiais, mode:FULL, rate:25, size:186
+2026-04-27 00:05:59, EXEC, v:1, k:ed@especiais, mode:FULL, rate:25, size:186
+2026-04-27 00:07:17, EXEC, v:1, k:ed@especiais, mode:FULL, rate:25, size:181
+2026-04-27 00:07:36, EXEC, v:1, k:ed@especiais, mode:FULL, rate:25, size:184
+2026-04-27 00:09:23, EXEC, v:1, k:ed@especiais, mode:FULL, rate:25, size:181
+2026-04-27 00:10:36, EXEC, v:1, k:ed@especiais, mode:FULL, rate:25, size:181
+2026-04-27 00:11:01, EXEC, v:1, k:ed@especiais, mode:FULL, rate:25, size:181
+2026-04-27 00:14:01, EXEC, v:1, k:ed@especiais, mode:FULL, rate:25, size:181
+2026-04-27 00:15:49, EXEC, v:1, k:ed@especiais, mode:FULL, rate:25, size:181
+2026-04-27 00:17:47, EXEC, v:1, k:ed@especiais, mode:FREE, size:181
+2026-04-27 00:20:14, EXEC, v:1, k:ed@especiais, mode:FULL, rate:25, size:187
+2026-04-27 00:25:14, EXEC, v:1, k:ed@especiais, mode:FULL, rate:25
+2026-04-27 00:25:40, EXEC, v:1, k:ed@especiais, mode:FULL, rate:25, size:186
+2026-04-27 00:26:17, EXEC, v:1, k:ed@especiais, mode:FULL, rate:37, size:186
+2026-04-27 00:29:36, EXEC, v:1, k:ed@especiais, mode:FULL, rate:37, size:199
+2026-04-27 00:30:14, EXEC, v:1, k:ed@especiais, mode:FULL, rate:37, size:199
+2026-04-27 00:31:47, EXEC, v:1, k:ed@especiais, mode:FULL, rate:37, size:200
+2026-04-27 00:34:46, EXEC, v:1, k:ed@especiais, mode:FULL, rate:37, size:197
+2026-04-27 00:35:00, EXEC, v:1, k:ed@especiais, mode:FULL, rate:37, size:197
+2026-04-27 00:36:03, EXEC, v:1, k:ed@especiais, mode:FULL, size:200, fail:COMP
+2026-04-27 00:36:10, EXEC, v:1, k:ed@especiais, mode:FULL, fail:COMP
+2026-04-27 00:36:23, EXEC, v:1, k:ed@especiais, mode:FULL, rate:37, size:201
+2026-04-27 00:37:14, EXEC, v:1, k:ed@especiais, mode:FULL, rate:50, size:210
+2026-04-27 00:38:02, EXEC, v:1, k:ed@especiais, mode:FULL, rate:37, size:202
+2026-04-27 00:40:30, EXEC, v:1, k:ed@especiais, mode:FULL, size:203, fail:COMP
+2026-04-27 00:40:32, EXEC, v:1, k:ed@especiais, mode:FULL, fail:COMP
+2026-04-27 00:40:39, EXEC, v:1, k:ed@especiais, mode:FULL, rate:37, size:202
+2026-04-27 00:40:59, EXEC, v:1, k:ed@especiais, mode:FULL, size:202, fail:COMP
+2026-04-27 00:41:02, EXEC, v:1, k:ed@especiais, mode:FULL, fail:COMP
+2026-04-27 00:45:26, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-04-27 00:45:27, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-04-27 00:47:23, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-04-27 00:47:31, EXEC, v:1, k:ed@especiais, mode:FULL, rate:50, size:207
+2026-04-27 00:57:02, EXEC, v:1, k:ed@especiais, mode:FULL, size:214, fail:COMP
+2026-04-27 00:57:14, EXEC, v:1, k:ed@especiais, mode:FULL, size:216, fail:COMP
+2026-04-27 00:57:29, EXEC, v:1, k:ed@especiais, mode:FULL, size:216, fail:COMP
+2026-04-27 00:57:41, EXEC, v:1, k:ed@especiais, mode:FULL, rate:50, size:214
+2026-04-27 00:58:00, EXEC, v:1, k:ed@especiais, mode:FULL, rate:50, size:214
+2026-04-27 00:59:49, EXEC, v:1, k:ed@especiais, mode:FULL, rate:50, size:222
+2026-04-27 01:00:07, EXEC, v:1, k:ed@especiais, mode:FULL, rate:50, size:222
+2026-04-27 01:00:17, EXEC, v:1, k:ed@especiais, mode:FULL, rate:50, size:214
+2026-04-27 01:02:13, EXEC, v:1, k:ed@especiais, mode:FULL, rate:62, size:230
+2026-04-27 01:06:10, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-04-27 01:06:23, MOVE, v:1, k:ed@buscas, mode:DOWN
+2026-04-27 01:06:24, MOVE, v:1, k:ed@buscas, mode:PICK
+2026-04-27 01:06:26, EXEC, v:1, k:ed@buscas, mode:FREE, size:5
+2026-04-27 08:56:11, MOVE, v:1, k:ed@buscas, mode:PICK
+2026-04-27 08:56:12, EXEC, v:1, k:ed@buscas, mode:FREE
+2026-04-27 09:05:33, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:11
+2026-04-27 09:05:42, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:11
+2026-04-27 09:05:51, EXEC, v:1, k:ed@buscas, mode:FULL, size:11, fail:COMP
+2026-04-27 09:05:53, EXEC, v:1, k:ed@buscas, mode:FULL, fail:COMP
+2026-04-27 09:06:26, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:11
+2026-04-27 09:06:39, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:11
+2026-04-27 09:06:59, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:11
+2026-04-27 09:07:13, EXEC, v:1, k:ed@buscas, mode:FULL, size:11, fail:COMP
+2026-04-27 09:07:14, EXEC, v:1, k:ed@buscas, mode:FULL, fail:COMP
+2026-04-27 09:07:46, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:11
+2026-04-27 09:08:08, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:11
+2026-04-27 09:08:17, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:11
+2026-04-27 09:08:44, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:11
+2026-04-27 09:09:34, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:17
+2026-04-27 09:09:58, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:20
+2026-04-27 09:12:50, EXEC, v:1, k:ed@buscas, mode:FULL, size:29, fail:COMP
+2026-04-27 09:12:53, EXEC, v:1, k:ed@buscas, mode:FULL, fail:COMP
+2026-04-27 09:12:59, EXEC, v:1, k:ed@buscas, mode:FULL, size:29, fail:COMP
+2026-04-27 09:13:10, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:30
+2026-04-27 09:15:46, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:34
+2026-04-27 09:15:59, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:34
+2026-04-27 09:16:22, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0
+2026-04-27 09:18:31, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:34
+2026-04-27 09:21:26, EXEC, v:1, k:ed@buscas, mode:FULL, size:41, fail:COMP
+2026-04-27 09:21:44, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:41
+2026-04-27 09:21:56, EXEC, v:1, k:ed@buscas, mode:FULL, rate:100, size:41
+2026-04-27 09:21:58, MOVE, v:1, k:ed@buscas, mode:BACK
+2026-04-27 09:22:51, SELF, v:1, k:ed@buscas, self:1, rate:100, study:30, concept:1
+2026-04-27 09:25:15, MOVE, v:1, k:ed@queimada, mode:PICK
+2026-04-27 09:32:17, EXEC, v:1, k:ed@queimada, mode:FULL, rate:14
+2026-04-27 09:47:07, EXEC, v:1, k:ed@queimada, mode:FULL, size:53, fail:COMP
+2026-04-27 09:47:51, EXEC, v:1, k:ed@queimada, mode:FULL, fail:COMP
+2026-04-27 09:48:26, EXEC, v:1, k:ed@queimada, mode:FULL, rate:100, size:53
+2026-04-27 09:48:30, MOVE, v:1, k:ed@queimada, mode:BACK
+2026-04-27 09:49:11, SELF, v:1, k:ed@queimada, self:1, rate:100, study:30, concept:1
