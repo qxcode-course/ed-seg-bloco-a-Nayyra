@@ -15,10 +15,10 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@map_set
 - ed@basic
-- ed@vector
 - ed@rec
+- ed@vector
+- ed@map_set
 flags:
   inbox: all
   panel: help
