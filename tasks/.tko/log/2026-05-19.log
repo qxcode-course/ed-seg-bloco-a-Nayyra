@@ -1,0 +1,29 @@
+2026-05-19 00:39:53, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-19 00:40:09, EXEC, v:1, k:ed@vetbuild, mode:FREE, size:130
+2026-05-19 15:55:46, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-19 15:57:30, EXEC, v:1, k:ed@vetbuild, mode:FULL, size:130, fail:COMP
+2026-05-19 15:57:49, EXEC, v:1, k:ed@vetbuild, mode:FULL, size:130, fail:COMP
+2026-05-19 15:58:37, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-19 16:08:59, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-19 16:10:26, EXEC, v:1, k:ed@vetbuild, mode:FULL, size:132, fail:COMP
+2026-05-19 16:11:37, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:0, size:132
+2026-05-19 16:19:01, EXEC, v:1, k:ed@vetbuild, mode:FULL, size:132, fail:COMP
+2026-05-19 16:19:28, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:0, size:132
+2026-05-19 16:26:46, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-05-19 16:27:01, MOVE, v:1, k:ed@escada, mode:DOWN
+2026-05-19 16:34:11, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-19 16:34:16, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:0
+2026-05-19 16:41:49, EXEC, v:1, k:ed@vetbuild, mode:FULL, size:141, fail:COMP
+2026-05-19 16:41:59, EXEC, v:1, k:ed@vetbuild, mode:FULL, size:141, fail:COMP
+2026-05-19 16:42:27, EXEC, v:1, k:ed@vetbuild, mode:FULL, size:141, fail:COMP
+2026-05-19 16:42:47, EXEC, v:1, k:ed@vetbuild, mode:FULL, size:143, fail:COMP
+2026-05-19 16:43:02, EXEC, v:1, k:ed@vetbuild, mode:FULL, size:144, fail:COMP
+2026-05-19 16:43:35, EXEC, v:1, k:ed@vetbuild, mode:FULL, size:144, fail:COMP
+2026-05-19 16:43:48, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:0, size:144
+2026-05-19 16:44:17, EXEC, v:1, k:ed@vetbuild, mode:FREE, size:144
+2026-05-19 16:44:41, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:0, size:144
+2026-05-19 16:48:28, EXEC, v:1, k:ed@vetbuild, mode:FULL, size:144, fail:COMP
+2026-05-19 16:48:44, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:0, size:144
+2026-05-19 16:52:40, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:0, size:154
+2026-05-19 16:52:54, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:0, size:154
+2026-05-19 16:53:03, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:0, size:154

@@ -1,0 +1,33 @@
+2026-04-28 13:49:56, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-04-28 13:49:58, EXEC, v:1, k:ed@labirinto, mode:FULL, fail:COMP
+2026-04-28 13:59:07, EXEC, v:1, k:ed@labirinto, mode:FULL, size:91, fail:COMP
+2026-04-28 13:59:09, EXEC, v:1, k:ed@labirinto, mode:FULL, fail:COMP
+2026-04-28 14:00:14, EXEC, v:1, k:ed@labirinto, mode:FULL, size:91, fail:COMP
+2026-04-28 14:00:15, EXEC, v:1, k:ed@labirinto, mode:FULL, fail:COMP
+2026-04-28 14:01:02, EXEC, v:1, k:ed@labirinto, mode:FULL, size:91, fail:COMP
+2026-04-28 14:01:05, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-04-28 14:01:09, MOVE, v:1, k:ed@eh_primo, mode:PICK
+2026-04-28 14:01:10, EXEC, v:1, k:ed@eh_primo, mode:FREE, size:20
+2026-04-28 14:02:35, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:44
+2026-04-28 14:02:46, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:44
+2026-04-28 14:18:03, EXEC, v:1, k:ed@eh_primo, mode:FULL, size:29, fail:COMP
+2026-04-28 14:18:21, EXEC, v:1, k:ed@eh_primo, mode:FULL, size:29, fail:COMP
+2026-04-28 14:18:39, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:88, size:29
+2026-04-28 14:19:04, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:66, size:30
+2026-04-28 14:19:09, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:88, size:30
+2026-04-28 14:19:24, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:88, size:34
+2026-04-28 14:19:37, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:100, size:34
+2026-04-28 14:19:45, MOVE, v:1, k:ed@eh_primo, mode:BACK
+2026-04-28 14:21:28, SELF, v:1, k:ed@eh_primo, self:1, rate:100, study:15
+2026-04-28 14:21:28, MOVE, v:1, k:ed@eh_primo, mode:PICK
+2026-04-28 14:21:31, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:100
+2026-04-28 14:21:33, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:100
+2026-04-28 14:21:34, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:100
+2026-04-28 14:21:36, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:100
+2026-04-28 14:21:38, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:100
+2026-04-28 14:21:41, MOVE, v:1, k:ed@eh_primo, mode:BACK
+2026-04-28 14:22:35, SELF, v:1, k:ed@eh_primo, self:1, rate:100, study:15
+2026-04-28 14:23:05, MOVE, v:1, k:ed@vetequals, mode:DOWN
+2026-04-28 14:23:17, MOVE, v:1, k:ed@vetequals, mode:PICK
+2026-04-28 14:23:19, EXEC, v:1, k:ed@vetequals, mode:FREE, size:49
+2026-04-28 16:04:35, MOVE, v:1, k:ed@lista_d1, mode:DOWN
