@@ -13,18 +13,18 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@list
-- ed@basic
-- ed@map_set
-- ed@rec
-- ed@vector
 - ed@backtrack
+- ed@map_set
+- ed@vector
+- ed@basic
+- ed@list
+- ed@rec
 flags:
   inbox: all
-  panel: help
+  panel: skills
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@lista_d2
-selected_index: 58
+selected: ed@prin_list1
+selected_index: 59

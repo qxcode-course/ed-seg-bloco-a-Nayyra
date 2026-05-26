@@ -32,3 +32,11 @@
 2026-05-25 10:29:49, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:100, size:160
 2026-05-25 10:29:56, MOVE, v:1, k:ed@lista_d1, mode:BACK
 2026-05-25 10:31:00, SELF, v:1, k:ed@lista_d1, self:1, rate:100, study:60, concept:1, debug:1, refactor:1
+2026-05-25 14:47:04, MOVE, v:1, k:ed@lista_d2, mode:DOWN
+2026-05-25 14:47:41, MOVE, v:1, k:ed@lista_d2, mode:PICK
+2026-05-25 16:19:07, MOVE, v:1, k:ed@lista_d2, mode:PICK
+2026-05-25 16:19:15, EXEC, v:1, k:ed@lista_d2, mode:FULL, size:132, fail:COMP
+2026-05-25 16:19:56, EXEC, v:1, k:ed@lista_d2, mode:FULL, size:130, fail:COMP
+2026-05-25 16:23:19, EXEC, v:1, k:ed@lista_d2, mode:FULL, size:136, fail:COMP
+2026-05-25 16:24:46, EXEC, v:1, k:ed@lista_d2, mode:FULL, size:136, fail:COMP
+2026-05-25 16:30:58, MOVE, v:1, k:ed@lista_d2, mode:BACK
