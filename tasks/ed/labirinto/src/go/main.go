@@ -23,34 +23,36 @@ func match(grid [][]rune, p Pos, value rune) bool {
 }
 
 // Função recursiva que tenta encontrar o caminho do início ao fim
-func search(grid [][]rune, l, c Pos) bool {
+func search(grid [][]rune, p Pos) bool {
 	// _, _, _ = grid, startPos, endPos
-	if l < 0 || l >= len(grid) || c < 0 || c >= len(grid[0]){
+	if p.l < 0 || p.l >= len(grid) || p.c < 0 || p.c >= len(grid[0]){
 		return false
 	}
-	if grid[l][c] == '#'{
+	if grid[p.l][p.c] == '#'{
 		return false 
 	}
 
-	if grid[l][c] == '.'{
+	if grid[p.l][p.c] == '.'{
 		return false
 	}
 
-	if grid[l][c] == 'F'{
-		return
+	if grid[p.l][p.c] == 'F' {
+    	grid[p.l][p.c] = '.'
+    	return true
 	}
 
-	grid[l][c] = '.'
+	grid[p.l][p.c] = '.'
 
-	if search(grid, l-1, c) ||
-	 search(grid, l-1, c) || 
-	 search(grid, l, c-1)  ||
-	  search(grid, l, c+1){
-		return true 
+	if search(grid, Pos{p.l - 1, p.c}) ||
+		search(grid, Pos{p.l + 1, p.c}) ||
+		search(grid, Pos{p.l, p.c - 1}) ||
+		search(grid, Pos{p.l, p.c + 1}) {
+		return true
 	}
 
-	grid[l][c] = ' '
+	grid[p.l][p.c] = ' ' // backtracking
 	return false
+
 }
 
 func main() {
@@ -68,21 +70,21 @@ func main() {
 	}
 
 	// Procura posições de início e endPos e conserta para _
-	var startPos, endPos Pos
+	var startPos Pos
 	for l := range nl {
 		for c := range nc {
 			if grid[l][c] == 'I' {
 				grid[l][c] = ' '
 				startPos = Pos{l, c}
 			}
-			if grid[l][c] == 'F' {
-				grid[l][c] = ' '
-				endPos = Pos{l, c}
-			}
+			// if grid[l][c] == 'F' {
+			// 	grid[l][c] = ' '
+			// 	endPos = Pos{l, c}
+			// }
 		}
 	}
 
-	search(grid, startPos, endPos)
+	search(grid, startPos)
 
 	// Imprime o labirinto final
 	for _, line := range grid {

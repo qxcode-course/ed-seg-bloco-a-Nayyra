@@ -2,7 +2,7 @@
 
 	import (
 		"fmt"
-		"strings"
+		// "strings"
 	)
 
 	// mostra a lista com o elemento sword destacado
@@ -41,7 +41,7 @@
 	func main() {
 		var qtd, chosen int
 		fmt.Scan(&qtd, &chosen)
-		fmt.Println(qtd, chosen)
+		// fmt.Println(qtd, chosen)
 		l := NewDList[int]()
 		for i := 1; i <= qtd; i++ {
 			l.PushBack(i)

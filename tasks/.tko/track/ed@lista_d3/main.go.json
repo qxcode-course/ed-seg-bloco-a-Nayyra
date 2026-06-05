@@ -37,8 +37,63 @@
         },
         {
             "label": "2026-06-01_16-04-57",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tnext  *Node\n\tprev  *Node\n\troot  *Node\n}\n\ntype LList struct {\n\troot *Node\n\tsize int\n}\n\nfunc NewLList() *LList {\n\tlist := &LList{}\n\tlist.root = &Node{root: nil}\n\tlist.root.next = list.root\n\tlist.root.prev = list.root\n\tlist.root.root = list.root // n\u00f3 sentinela aponta pra si mesmo\n\treturn list\n}\n\nfunc (l *LList) PushBack(value int) {\n\tl.insertBefore(l.root, value)\n}\n\nfunc (l *LList) insertBefore(mark *Node, value int) {\n\tn := &Node{\n\t\tValue: value,\n\t\troot:  l.root,\n\t}\n\tn.prev = mark.prev\n\tn.next = mark\n\tmark.prev.next = n\n\tmark.prev = n\n}\n\n\nfunc str2list(serial string) *LList {\n\tserial = serial[1 : len(serial)-1]\n\tll := NewLList()\n\tif serial == \"\" {\n\t\treturn ll\n\t}\n\tfor _, p := range strings.Split(serial, \",\") {\n\t\tvalue, _ := strconv.Atoi(p)\n\t\tll.PushBack(value)\n\t}\n\treturn ll\n}\n\nfunc equals(l1, l2 *Node) bool{\n\tp1 := l1\n\tp2 := l2\n\n\tfor p1 != nil && p2 != nil{\n\t\tif p1.Value != p2.Value{\n\t\t\treturn false\n\t\t}\n\t\tp1 = p1.next\n\t\tp2 = p2.next\n\t}\n\treturn p1 == nil && p2 == nil\n}\n\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tfor {\n\t\tfmt.Print(\"$\")\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\tfmt.Println(line)\n\t\targs := strings.Fields(line)\n\n\t\tif len(args) == 0 {\n\t\t\tcontinue\n\t\t}\n\n\t\tcmd := args[0]\n\n\t\tswitch cmd {\n\t\tcase \"compare\":\n\t\t\tlla := str2list(args[1])\n\t\t\tllb := str2list(args[2])\n\t\t\tif equals(lla, llb) {\n\t\t\t\tfmt.Println(\"iguais\")\n\t\t\t} else {\n\t\t\t\tfmt.Println(\"diferentes\")\n\t\t\t}\n\t\tcase \"addsorted\":\n\t\t\t// lla := NewLList()\n\t\t\t// for i := 1; i < len(args); i++ {\n\t\t\t// \tvalue, _ := strconv.Atoi(args[i])\n\t\t\t// \taddsorted(lla, value)\n\t\t\t// }\n\t\t\t// fmt.Println(lla)\n\t\tcase \"reverse\":\n\t\t\t// lla := str2list(args[1])\n\t\t\t// reverse(lla)\n\t\t\t// fmt.Println(lla)\n\t\tcase \"merge\":\n\t\t\t// lla := str2list(args[1])\n\t\t\t// llb := str2list(args[2])\n\t\t\t// merged := merge(lla, llb)\n\t\t\t// fmt.Println(merged)\n\t\tcase \"end\":\n\t\t\treturn\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "content": "@@ -900,21 +900,20 @@\n l1, l2 *\n-LList\n+Node\n ) bool%7B%0A\n@@ -921,21 +921,16 @@\n p1 := l1\n-.root\n %0A%09p2 := \n@@ -931,21 +931,16 @@\n p2 := l2\n-.root\n %0A%0A%09for p\n",
             "lines": "125"
+        },
+        {
+            "label": "2026-06-05_16-50-15",
+            "content": "@@ -922,16 +922,21 @@\n p1 := l1\n+.root\n %0A%09p2 := \n@@ -941,164 +941,51 @@\n = l2\n-%0A%0A%09for node1 := l1.root.next; node1 != l1.root.prev; node1 = node1.next%7B%0A%09%09for node2 := l2.root.next; node2 != l2.root.prev; node\n+.root%0A%0A%09for p1 != nil && p\n 2 \n+!\n = n\n-ode2.next\n+il\n %7B%0A\n-%09\n %09%09if \n-node2\n+p1\n .Val\n@@ -994,21 +994,18 @@\n  != \n-node1\n+p2\n .Value%7B%0A\n %09%09%09%09\n@@ -1000,17 +1000,16 @@\n .Value%7B%0A\n-%09\n %09%09%09retur\n@@ -1022,30 +1022,73 @@\n e%0A%09%09\n-%09%7D%0A%09%09%7D%0A%09%7D%0A%09return true\n+%7D%0A%09%09p1 = p1.next%0A%09%09p2 = p2.next%0A%09%7D%0A%09return p1 == nil && p2 == nil\n %0A%7D%0A%0A\n",
+            "lines": "125"
+        },
+        {
+            "label": "2026-06-05_17-37-52",
+            "content": "@@ -913,16 +913,37 @@\n ) bool%7B%0A\n+%09p1 := l1%0A%09p2 := l2%0A%0A\n %09for nod\n",
+            "lines": "125"
+        },
+        {
+            "label": "2026-06-05_17-38-03",
+            "content": "@@ -917,31 +917,8 @@\n ol%7B%0A\n-%09node2 := l2.root.next%0A\n %09for\n@@ -984,16 +984,88 @@\n 1.next%7B%0A\n+%09%09for node2 := l2.root.next; node2 != l2.root.prev; node2 = node2.next%7B%0A\n %09%09%09if no\n@@ -1114,34 +1114,17 @@\n %0A%09%09%09%7D%0A%09%09\n-node2 = node2.next\n+%7D\n %0A%09%7D%0A%09ret\n",
+            "lines": "122"
+        },
+        {
+            "label": "2026-06-05_17-39-43",
+            "content": "@@ -980,16 +980,21 @@\n  l1.root\n+.prev\n ; node1 \n",
+            "lines": "122"
+        },
+        {
+            "label": "2026-06-05_17-42-14",
+            "content": "@@ -917,50 +917,8 @@\n ol%7B%0A\n-%09if l1.size != l2.size%7B%0A%09%09return false%0A%09%7D%0A\n %09nod\n",
+            "lines": "122"
+        },
+        {
+            "label": "2026-06-05_17-42-45",
+            "content": "@@ -955,21 +955,17 @@\n alse%0A%09%7D%0A\n-%0A%09// \n+%09\n node2 :=\n@@ -979,19 +979,16 @@\n t.next%0A%09\n-// \n for node\n@@ -1045,19 +1045,16 @@\n .next%7B%0A%09\n-// \n %09%09if nod\n@@ -1079,19 +1079,16 @@\n Value%7B%0A%09\n-// \n %09%09%09retur\n@@ -1100,19 +1100,13 @@\n se%0A%09\n-// \n %09%09%7D%0A%09\n-// \n %09nod\n@@ -1126,17 +1126,11 @@\n xt%0A%09\n-// %7D%0A%09// \n+%7D%0A%09\n retu\n",
+            "lines": "125"
+        },
+        {
+            "label": "2026-06-05_17-43-06",
+            "content": "@@ -917,12 +917,55 @@\n ol%7B%0A\n-%0A%09%0A%09\n+%09if l1.size != l2.size%7B%0A%09%09return false%0A%09%7D%0A%0A%09// \n node\n@@ -983,16 +983,19 @@\n t.next%0A%09\n+// \n for node\n@@ -1056,84 +1056,11 @@\n t%7B%0A%09\n-%09%09if node1.next == l1.root %7C%7C node2.next == l2.root%7B%0A%09%09%09%09return false%0A%09%09%09%7D%0A%09\n+// \n %09%09if\n@@ -1089,16 +1089,19 @@\n Value%7B%0A%09\n+// \n %09%09%09retur\n@@ -1109,21 +1109,27 @@\n  false%0A%09\n+// \n %09%09%7D%0A%09\n+// \n %09node2 =\n@@ -1141,19 +1141,25 @@\n 2.next%0A%09\n-%7D%0A%09\n+// %7D%0A%09// \n return t\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-05_17-44-19",
+            "content": "@@ -1008,19 +1008,16 @@\n ext%7B%0A%09%09%09\n-// \n if node1\n@@ -1062,19 +1062,16 @@\n oot%7B%0A%09%09%09\n-// \n %09return \n@@ -1075,27 +1075,24 @@\n rn false%0A%09%09%09\n-// \n %7D%0A%09%09%09if node\n",
+            "lines": "127"
+        },
+        {
+            "label": "2026-06-05_17-44-33",
+            "content": "@@ -1012,12 +1012,14 @@\n %0A%09%09%09\n+// \n if \n-(\n node\n@@ -1039,39 +1039,12 @@\n root\n- && node2.next != l2.root)\n  %7C%7C \n-(\n node\n@@ -1064,39 +1064,16 @@\n root\n- && node1.next != l1.root)\n %7B%0A%09%09%09\n+// \n %09ret\n@@ -1081,24 +1081,27 @@\n rn false%0A%09%09%09\n+// \n %7D%0A%09%09%09if node\n@@ -1124,16 +1124,16 @@\n .Value%7B%0A\n+\n %09%09%09%09retu\n@@ -1145,13 +1145,8 @@\n lse%0A\n-%09%09%09%09%0A\n %09%09%09%7D\n",
+            "lines": "127"
+        },
+        {
+            "label": "2026-06-05_17-47-07",
+            "content": "@@ -1062,20 +1062,17 @@\n root) %7C%7C\n-%0A%09%09%09\n+ \n (node2.n\n@@ -1186,16 +1186,20 @@\n n false%0A\n+%09%09%09%09\n %0A%09%09%09%7D%0A%09%09\n",
+            "lines": "128"
+        },
+        {
+            "label": "2026-06-05_17-47-46",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tnext  *Node\n\tprev  *Node\n\troot  *Node\n}\n\ntype LList struct {\n\troot *Node\n\tsize int\n}\n\nfunc NewLList() *LList {\n\tlist := &LList{}\n\tlist.root = &Node{root: nil}\n\tlist.root.next = list.root\n\tlist.root.prev = list.root\n\tlist.root.root = list.root // n\u00f3 sentinela aponta pra si mesmo\n\treturn list\n}\n\nfunc (l *LList) PushBack(value int) {\n\tl.insertBefore(l.root, value)\n}\n\nfunc (l *LList) insertBefore(mark *Node, value int) {\n\tn := &Node{\n\t\tValue: value,\n\t\troot:  l.root,\n\t}\n\tn.prev = mark.prev\n\tn.next = mark\n\tmark.prev.next = n\n\tmark.prev = n\n}\n\n\nfunc str2list(serial string) *LList {\n\tserial = serial[1 : len(serial)-1]\n\tll := NewLList()\n\tif serial == \"\" {\n\t\treturn ll\n\t}\n\tfor _, p := range strings.Split(serial, \",\") {\n\t\tvalue, _ := strconv.Atoi(p)\n\t\tll.PushBack(value)\n\t}\n\treturn ll\n}\n\nfunc equals(l1, l2 *LList) bool{\n\n\t\n\tnode2 := l2.root.next\n\tfor node1 := l1.root.next; node1 != l1.root; node1 = node1.next{\n\t\t\tif (node1.next == l1.root && node2.next != l2.root) ||\n\t\t\t(node2.next == l2.root && node1.next != l1.root){\n\t\t\t\treturn false\n\t\t\t}\n\t\t\tif node2.Value != node1.Value{\n\t\t\t\treturn false\n\n\t\t\t}\n\t\tnode2 = node2.next\n\t}\n\treturn true\n}\n\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tfor {\n\t\tfmt.Print(\"$\")\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\tfmt.Println(line)\n\t\targs := strings.Fields(line)\n\n\t\tif len(args) == 0 {\n\t\t\tcontinue\n\t\t}\n\n\t\tcmd := args[0]\n\n\t\tswitch cmd {\n\t\tcase \"compare\":\n\t\t\tlla := str2list(args[1])\n\t\t\tllb := str2list(args[2])\n\t\t\tif equals(lla, llb) {\n\t\t\t\tfmt.Println(\"iguais\")\n\t\t\t} else {\n\t\t\t\tfmt.Println(\"diferentes\")\n\t\t\t}\n\t\tcase \"addsorted\":\n\t\t\t// lla := NewLList()\n\t\t\t// for i := 1; i < len(args); i++ {\n\t\t\t// \tvalue, _ := strconv.Atoi(args[i])\n\t\t\t// \taddsorted(lla, value)\n\t\t\t// }\n\t\t\t// fmt.Println(lla)\n\t\tcase \"reverse\":\n\t\t\t// lla := str2list(args[1])\n\t\t\t// reverse(lla)\n\t\t\t// fmt.Println(lla)\n\t\tcase \"merge\":\n\t\t\t// lla := str2list(args[1])\n\t\t\t// llb := str2list(args[2])\n\t\t\t// merged := merge(lla, llb)\n\t\t\t// fmt.Println(merged)\n\t\tcase \"end\":\n\t\t\treturn\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "129"
         }
     ]
 }

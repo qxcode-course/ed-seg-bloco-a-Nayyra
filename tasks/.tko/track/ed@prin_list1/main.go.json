@@ -62,7 +62,17 @@
         },
         {
             "label": "2026-06-04_19-43-49",
-            "content": "\tpackage main\n\n\timport (\n\t\t\"fmt\"\n\t\t\"strings\"\n\t)\n\n\t// mostra a lista com o elemento sword destacado\n\tfunc ToStr(l *DList[int], sword *DNode[int]) string {\n\t\tresult := \"[ \"\n\t\tfor node := l\t.Front(); node != l.End(); node = node.Next() {\n\t\t\tif node == sword{\n\t\t\t\tresult += fmt.Sprintf(\"%d> \", node.Value)\n\t\t\t}else{\n\t\t\t\tresult += fmt.Sprintf(\"%d \", node.Value)\n\n\t\t\t}\n\n\t\t} \n\t\tresult += \"]\"\n\t\treturn result\n\t}\n\n\t// move para frente na lista circular\n\tfunc Next(l *DList[int], it *DNode[int]) *DNode[int] {\n\t\tif it == nil || it == l.End() {\n      \treturn l.Front()\n   \t}\n\n   \tnext := it.Next()\n\n\t\tif next == l.End() {\n      \treturn l.Front()\n   \t}\n\n   \treturn next\n\n\t}\n\n\n\tfunc main() {\n\t\tvar qtd, chosen int\n\t\tfmt.Scan(&qtd, &chosen)\n\t\tfmt.Println(qtd, chosen)\n\t\tl := NewDList[int]()\n\t\tfor i := 1; i <= qtd; i++ {\n\t\t\tl.PushBack(i)\n\t\t}\n\t\tsword := l.Front()\n\t\tfor range chosen - 1 {\n\t\t\tsword = Next(l, sword)\n\t\t}\n\t\tfor range qtd - 1 {\n\t\t\tfmt.Println(ToStr(l, sword))\n\t\t\tvitima := Next(l, sword)\n\t\t\tnextEspada := Next(l, vitima)\n\n\t\t\tif nextEspada == vitima || nextEspada == l.End() {\n\t\t\t\tnextEspada = sword\n\t\t\t}\n\n\t\t\tl.Erase(vitima)\n\t\t\tsword = nextEspada\n\t\t}\n\t\tfmt.Println(ToStr(l, sword))\n\t}\n",
+            "content": "@@ -28,19 +28,16 @@\n %22fmt%22%0A%09%09\n-// \n %22strings\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-06-05_16-45-19",
+            "content": "@@ -725,19 +725,16 @@\n osen)%0A%09%09\n-// \n fmt.Prin\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-06-05_16-45-58",
+            "content": "\tpackage main\n\n\timport (\n\t\t\"fmt\"\n\t\t// \"strings\"\n\t)\n\n\t// mostra a lista com o elemento sword destacado\n\tfunc ToStr(l *DList[int], sword *DNode[int]) string {\n\t\tresult := \"[ \"\n\t\tfor node := l\t.Front(); node != l.End(); node = node.Next() {\n\t\t\tif node == sword{\n\t\t\t\tresult += fmt.Sprintf(\"%d> \", node.Value)\n\t\t\t}else{\n\t\t\t\tresult += fmt.Sprintf(\"%d \", node.Value)\n\n\t\t\t}\n\n\t\t} \n\t\tresult += \"]\"\n\t\treturn result\n\t}\n\n\t// move para frente na lista circular\n\tfunc Next(l *DList[int], it *DNode[int]) *DNode[int] {\n\t\tif it == nil || it == l.End() {\n      \treturn l.Front()\n   \t}\n\n   \tnext := it.Next()\n\n\t\tif next == l.End() {\n      \treturn l.Front()\n   \t}\n\n   \treturn next\n\n\t}\n\n\n\tfunc main() {\n\t\tvar qtd, chosen int\n\t\tfmt.Scan(&qtd, &chosen)\n\t\t// fmt.Println(qtd, chosen)\n\t\tl := NewDList[int]()\n\t\tfor i := 1; i <= qtd; i++ {\n\t\t\tl.PushBack(i)\n\t\t}\n\t\tsword := l.Front()\n\t\tfor range chosen - 1 {\n\t\t\tsword = Next(l, sword)\n\t\t}\n\t\tfor range qtd - 1 {\n\t\t\tfmt.Println(ToStr(l, sword))\n\t\t\tvitima := Next(l, sword)\n\t\t\tnextEspada := Next(l, vitima)\n\n\t\t\tif nextEspada == vitima || nextEspada == l.End() {\n\t\t\t\tnextEspada = sword\n\t\t\t}\n\n\t\t\tl.Erase(vitima)\n\t\t\tsword = nextEspada\n\t\t}\n\t\tfmt.Println(ToStr(l, sword))\n\t}\n",
             "lines": "66"
         }
     ]

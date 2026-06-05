@@ -58,18 +58,22 @@ func str2list(serial string) *LList {
 	return ll
 }
 
-func equals(l1, l2 *Node) bool{
-	p1 := l1
-	p2 := l2
+func equals(l1, l2 *LList) bool{
 
-	for p1 != nil && p2 != nil{
-		if p1.Value != p2.Value{
-			return false
-		}
-		p1 = p1.next
-		p2 = p2.next
+	
+	node2 := l2.root.next
+	for node1 := l1.root.next; node1 != l1.root; node1 = node1.next{
+			if (node1.next == l1.root && node2.next != l2.root) ||
+			(node2.next == l2.root && node1.next != l1.root){
+				return false
+			}
+			if node2.Value != node1.Value{
+				return false
+
+			}
+		node2 = node2.next
 	}
-	return p1 == nil && p2 == nil
+	return true
 }
 
 

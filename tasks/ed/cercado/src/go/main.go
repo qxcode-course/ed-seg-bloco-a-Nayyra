@@ -6,9 +6,24 @@ import (
 	"os"
 )
 
+// type Position struct{
+// 	c int
+// 	l int
+// }
+
 // NÃO ALTERE A ASSINATURA DA FUNÇÃO solve
 func solve(board [][]byte) {
-	_ = board
+	mapa := make(map[int]bool)
+	//linha //registra no mapa a posição 
+	for i := 0; i < len(board); i++{
+		if i == 'O'{
+			mapa[i] = true
+		}
+	}
+	
+	//coluna
+	//linha inversa
+	//coluna inversa
 }
 
 // NÃO ALTERE A MAIN
