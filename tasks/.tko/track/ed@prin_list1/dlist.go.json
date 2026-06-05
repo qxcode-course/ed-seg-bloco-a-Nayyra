@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-29_15-47-52",
+            "content": "@@ -37,17 +37,19 @@\n ngs%22%0A)%0A%0A\n+/*\n %0A\n-\n class DN\n@@ -180,19 +180,16 @@\n e: int%0A%09\n-// \n ___ m%C3%A9to\n@@ -210,19 +210,16 @@\n %C3%A3o ___%0A%09\n-// \n PushBack\n@@ -229,19 +229,16 @@\n lue T)%0A%09\n-// \n PushFron\n@@ -249,19 +249,16 @@\n lue T)%0A%09\n-// \n PopBack(\n@@ -260,19 +260,16 @@\n Back()%0A%09\n-// \n PopFront\n@@ -272,19 +272,16 @@\n ront()%0A%09\n-// \n Insert(i\n@@ -303,19 +303,16 @@\n lue T)%0A%09\n-// \n Erase(it\n@@ -324,19 +324,16 @@\n de%3CT%3E)%0A%09\n-// \n Clear()%0A\n@@ -333,19 +333,16 @@\n lear()%0A%09\n-// \n ___ m%C3%A9to\n@@ -376,19 +376,16 @@\n to ___%0A%09\n-// \n Front() \n@@ -395,19 +395,16 @@\n ode%3CT%3E%0A%09\n-// \n Back() *\n@@ -413,19 +413,16 @@\n ode%3CT%3E%0A%09\n-// \n End() *D\n@@ -434,19 +434,13 @@\n T%3E%0A%09\n-// \n ___%0A%09\n-// \n Stri\n@@ -456,11 +456,8 @@\n ng%0A%09\n-// \n Size\n@@ -463,17 +463,18 @@\n e() int%0A\n-%7D\n+*/\n %0A%0Atype D\n",
+            "lines": "136"
+        },
+        {
+            "label": "2026-05-29_16-01-25",
+            "content": "@@ -38,19 +38,16 @@\n gs%22%0A)%0A%0A%0A\n-// \n class DN\n@@ -55,19 +55,16 @@\n de%3CT%3E %7B%0A\n-// \n %09Value: \n@@ -65,19 +65,16 @@\n alue: T%0A\n-// \n %09next, p\n@@ -94,19 +94,16 @@\n Node%3CT%3E%0A\n-// \n %09Next() \n@@ -112,19 +112,16 @@\n Node%3CT%3E%0A\n-// \n %09Prev() \n@@ -134,16 +134,10 @@\n %3CT%3E%0A\n-// %7D%0A// \n+%7D%0A\n clas\n@@ -149,19 +149,16 @@\n st%3CT%3E %7B%0A\n-// \n %09root: *\n@@ -166,19 +166,16 @@\n Node%3CT%3E%0A\n-// \n %09size: i\n@@ -177,19 +177,16 @@\n ze: int%0A\n-// \n %09// ___ \n@@ -206,27 +206,24 @@\n tera%C3%A7%C3%A3o ___%0A\n-// \n %09// PushBack\n@@ -228,27 +228,24 @@\n ck(value T)%0A\n-// \n %09// PushFron\n@@ -251,27 +251,24 @@\n nt(value T)%0A\n-// \n %09// PopBack(\n@@ -269,19 +269,16 @@\n pBack()%0A\n-// \n %09// PopF\n@@ -284,19 +284,16 @@\n Front()%0A\n-// \n %09// Inse\n@@ -318,19 +318,16 @@\n alue T)%0A\n-// \n %09// Eras\n@@ -342,19 +342,16 @@\n ode%3CT%3E)%0A\n-// \n %09// Clea\n@@ -354,19 +354,16 @@\n Clear()%0A\n-// \n %09// ___ \n@@ -396,27 +396,24 @@\n rimento ___%0A\n-// \n %09// Front() \n@@ -418,27 +418,24 @@\n ) *DNode%3CT%3E%0A\n-// \n %09// Back() *\n@@ -439,27 +439,24 @@\n ) *DNode%3CT%3E%0A\n-// \n %09// End() *D\n@@ -467,19 +467,16 @@\n %3CT%3E%0A\n-// \n %09// ___%0A\n // %09\n@@ -471,19 +471,16 @@\n %09// ___%0A\n-// \n %09// Stri\n@@ -491,19 +491,16 @@\n  string%0A\n-// \n %09// Size\n@@ -506,19 +506,16 @@\n e() int%0A\n-// \n %7D%0A%0Atype \n",
+            "lines": "136"
+        },
+        {
+            "label": "2026-05-29_16-03-32",
+            "content": "@@ -700,35 +700,32 @@\n () *DNode%5BT%5D %7B%0A%09\n-// \n if n == n.root %7B\n@@ -718,35 +718,32 @@\n  n == n.root %7B%0A%09\n-// \n %09return n%0A%09// %7D%0A\n@@ -729,35 +729,32 @@\n t %7B%0A%09%09return n%0A%09\n-// \n %7D%0A%09return n.next\n@@ -796,19 +796,16 @@\n e%5BT%5D %7B%0A%09\n-// \n if n == \n@@ -814,19 +814,16 @@\n root %7B%0A%09\n-// \n %09return \n@@ -825,19 +825,16 @@\n turn n%0A%09\n-// \n %7D%0A%09retur\n",
+            "lines": "136"
+        },
+        {
+            "label": "2026-05-29_16-22-36",
+            "content": "@@ -708,16 +708,19 @@\n e%5BT%5D %7B%0A%09\n+// \n if n == \n@@ -725,24 +725,27 @@\n = n.root %7B%0A%09\n+// \n %09return n%0A%09%7D\n@@ -743,16 +743,19 @@\n turn n%0A%09\n+// \n %7D%0A%09retur\n",
+            "lines": "136"
+        },
+        {
+            "label": "2026-06-04_19-39-18",
+            "content": "@@ -700,35 +700,32 @@\n () *DNode%5BT%5D %7B%0A%09\n-// \n if n == n.root %7B\n@@ -718,35 +718,32 @@\n  n == n.root %7B%0A%09\n-// \n %09return n%0A%09// %7D%0A\n@@ -729,35 +729,32 @@\n t %7B%0A%09%09return n%0A%09\n-// \n %7D%0A%09return n.next\n",
+            "lines": "136"
+        },
+        {
+            "label": "2026-06-04_19-39-48",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\n\n// class DNode<T> {\n// \tValue: T\n// \tnext, prev, root: *DNode<T>\n// \tNext() *DNode<T>\n// \tPrev() *DNode<T>\n// }\n// class DList<T> {\n// \troot: *DNode<T>\n// \tsize: int\n// \t// ___ m\u00e9todos de altera\u00e7\u00e3o ___\n// \t// PushBack(value T)\n// \t// PushFront(value T)\n// \t// PopBack()\n// \t// PopFront()\n// \t// Insert(it *DNode<T>, value T)\n// \t// Erase(it *DNode<T>)\n// \t// Clear()\n// \t// ___ m\u00e9todos de acesso e percorrimento ___\n// \t// Front() *DNode<T>\n// \t// Back() *DNode<T>\n// \t// End() *DNode<T>\n// \t// ___\n// \t// String() string\n// \t// Size() int\n// }\n\ntype DNode[T comparable] struct {\n\tValue            T\n\tnext, prev, root *DNode[T]\n}\n\nfunc (n *DNode[T]) Next() *DNode[T] {\n\t// if n == n.root {\n\t// \treturn n\n\t// }\n\treturn n.next\n}\n\nfunc (n *DNode[T]) Prev() *DNode[T] {\n\t// if n == n.root {\n\t// \treturn n\n\t// }\n\treturn n.prev\n}\n\ntype DList[T comparable] struct {\n\troot *DNode[T]\n\tsize int\n}\n\nfunc NewDList[T comparable]() *DList[T] {\n\troot := &DNode[T]{}\n\troot.next = root\n\troot.prev = root\n\troot.root = root\n\treturn &DList[T]{root: root, size: 0}\n}\n\nfunc (l *DList[T]) PushBack(value T) {\n\tl.Insert(l.root, value)\n}\n\nfunc (l *DList[T]) PopBack() {\n\tif l.size == 0 {\n\t\treturn\n\t}\n\tl.Erase(l.root.prev)\n}\n\nfunc (l *DList[T]) PopFront() {\n\tif l.size == 0 {\n\t\treturn\n\t}\n\tl.Erase(l.root.next)\n}\n\nfunc (l *DList[T]) PushFront(value T) {\n\tl.Insert(l.root.next, value)\n}\n\nfunc (l *DList[T]) Insert(it *DNode[T], value T) *DNode[T] {\n\tn := &DNode[T]{Value: value, root: l.root}\n\tn.prev = it.prev\n\tn.next = it\n\tit.prev.next = n\n\tit.prev = n\n\tl.size++\n\treturn n\n}\n\nfunc (l *DList[T]) Erase(it *DNode[T]) {\n\tif it == l.root || it == nil {\n\t\treturn\n\t}\n\tit.prev.next = it.next\n\tit.next.prev = it.prev\n\tl.size--\n}\n\nfunc (l *DList[T]) String() string {\n\tvalues := []string{}\n\tfor n := l.root.next; n != l.root; n = n.next {\n\t\tvalues = append(values, fmt.Sprint(n.Value))\n\t}\n\treturn \"[\" + strings.Join(values, \", \") + \"]\"\n}\n\nfunc (l *DList[T]) Size() int {\n\treturn l.size\n}\n\nfunc (l *DList[T]) Clear() {\n\tl.root.next = l.root\n\tl.root.prev = l.root\n\tl.size = 0\n}\n\nfunc (l *DList[T]) Front() *DNode[T] {\n\treturn l.root.next\n}\n\nfunc (l *DList[T]) Back() *DNode[T] {\n\treturn l.root.prev\n}\n\nfunc (l *DList[T]) End() *DNode[T] {\n\treturn l.root\n}\n",
+            "lines": "136"
+        }
+    ]
+}

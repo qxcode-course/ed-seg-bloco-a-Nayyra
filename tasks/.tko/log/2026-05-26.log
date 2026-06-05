@@ -67,3 +67,18 @@
 2026-05-26 15:04:18, EXEC, v:1, k:ed@lista_d2, mode:FULL, rate:100, size:239
 2026-05-26 15:04:21, MOVE, v:1, k:ed@lista_d2, mode:BACK
 2026-05-26 15:04:58, SELF, v:1, k:ed@lista_d2, self:1, rate:100, study:60, concept:1, problem:1
+2026-05-26 16:26:17, SELF, v:1, k:ed@fractais_png, self:1, rate:50, study:190, guided:1, problem:1
+2026-05-26 16:26:37, MOVE, v:1, k:ed@bettersearch, mode:PICK
+2026-05-26 16:27:56, MOVE, v:1, k:ed@bettersearch, mode:BACK
+2026-05-26 16:28:40, MOVE, v:1, k:ed@bettersearch, mode:PICK
+2026-05-26 16:29:17, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:18, size:33
+2026-05-26 16:29:53, MOVE, v:1, k:ed@bettersearch, mode:BACK
+2026-05-26 16:32:02, MOVE, v:1, k:ed@bettersearch, mode:PICK
+2026-05-26 16:34:30, MOVE, v:1, k:ed@bettersearch, mode:BACK
+2026-05-26 16:34:40, MOVE, v:1, k:ed@prin_list1, mode:DOWN
+2026-05-26 16:36:16, MOVE, v:1, k:ed@prin_list1, mode:PICK
+2026-05-26 16:37:58, MOVE, v:1, k:ed@prin_list1, mode:BACK
+2026-05-26 16:43:26, MOVE, v:1, k:ed@prin_list1, mode:PICK
+2026-05-26 16:43:29, MOVE, v:1, k:ed@prin_list1, mode:BACK
+2026-05-26 16:43:39, MOVE, v:1, k:ed@prin_list1, mode:PICK
+2026-05-26 16:43:41, MOVE, v:1, k:ed@prin_list1, mode:BACK

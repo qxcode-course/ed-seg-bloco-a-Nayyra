@@ -1,0 +1,129 @@
+2026-06-05 09:38:36, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-06-05 09:38:41, EXEC, v:1, k:ed@editorint, mode:FULL, size:277, fail:COMP
+2026-06-05 09:38:47, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-06-05 09:39:07, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-06-05 09:39:08, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 09:40:00, EXEC, v:1, k:ed@editorint, mode:FULL, fail:COMP
+2026-06-05 09:40:23, EXEC, v:1, k:ed@editorint, mode:FULL, size:277, fail:COMP
+2026-06-05 09:41:19, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 09:44:58, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 09:46:25, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-06-05 09:46:27, EXEC, v:1, k:ed@editorint, mode:FULL, size:277, fail:COMP
+2026-06-05 09:46:28, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-06-05 09:46:59, MOVE, v:1, k:ed@editorint, mode:DOWN
+2026-06-05 09:49:29, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 09:54:09, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 09:55:25, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:03:28, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:03:57, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:06:20, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:10:16, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:13:50, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:16:22, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:17:19, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:18:26, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:20:16, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:33:28, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:34:27, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:37:13, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:38:02, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:41:14, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:44:56, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:45:10, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:47:20, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:47:30, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:48:21, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:49:16, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:49:38, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:51:26, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:51:41, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:53:36, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:54:55, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:55:53, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:56:46, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:59:31, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 10:59:47, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 11:00:47, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 11:02:31, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 11:05:15, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 11:09:19, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 11:14:13, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 11:23:08, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 11:31:18, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 11:33:43, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 11:35:59, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 11:36:33, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 11:37:21, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 11:37:36, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 11:38:45, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 11:39:16, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-06-05 11:39:21, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:0, size:306
+2026-06-05 11:40:50, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 11:43:00, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 11:43:30, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 11:44:31, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 11:45:52, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 11:46:41, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 11:47:12, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 11:53:47, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 11:54:32, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 11:55:37, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 12:06:03, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 12:14:10, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 12:16:14, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 12:16:33, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 12:17:33, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 12:18:18, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 12:18:43, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 12:20:29, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 12:23:29, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 12:25:07, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 12:30:45, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 12:35:07, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 12:35:59, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 12:38:39, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 12:39:13, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 12:39:35, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 12:43:53, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 12:50:30, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 12:52:19, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 12:54:14, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 12:54:49, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 12:56:55, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 12:59:08, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 12:59:46, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 13:00:43, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 13:05:01, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 13:06:08, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-06-05 13:06:10, EXEC, v:1, k:ed@editorint, mode:FULL, size:354, fail:COMP
+2026-06-05 13:06:11, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-06-05 13:07:35, SELF, v:1, k:ed@editorint, self:1, study:240, concept:1, refactor:1
+2026-06-05 13:08:19, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-06-05 13:08:20, EXEC, v:1, k:ed@editorint, mode:FULL, fail:COMP
+2026-06-05 13:08:22, EXEC, v:1, k:ed@editorint, mode:FULL, fail:COMP
+2026-06-05 13:08:23, EXEC, v:1, k:ed@editorint, mode:FULL, fail:COMP
+2026-06-05 13:08:47, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-06-05 13:09:06, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 13:09:42, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-06-05 13:10:50, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-06-05 13:10:54, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:0, size:354
+2026-06-05 13:11:00, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-06-05 13:12:50, SELF, v:1, k:ed@editorint, self:1, rate:100, concept:1, refactor:1
+2026-06-05 13:13:03, SELF, v:1, k:ed@editorint, self:1, rate:100, concept:1
+2026-06-05 13:13:05, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-06-05 13:13:08, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:100
+2026-06-05 13:13:09, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-06-05 13:13:20, SELF, v:1, k:ed@editorint, self:1, rate:100, refactor:1
+2026-06-05 13:13:22, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-06-05 13:13:24, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-06-05 13:13:34, SELF, v:1, k:ed@editorint, self:1, rate:100, concept:1, refactor:1
+2026-06-05 13:14:05, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-06-05 13:14:07, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:100
+2026-06-05 13:14:09, MOVE, v:1, k:ed@setbuild, mode:BACK
+2026-06-05 13:14:24, SELF, v:1, k:ed@setbuild, self:1, rate:100, concept:1, problem:1
+2026-06-05 13:14:30, MOVE, v:1, k:ed@bettersearch, mode:PICK
+2026-06-05 13:14:32, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:18
+2026-06-05 13:14:34, MOVE, v:1, k:ed@bettersearch, mode:BACK
+2026-06-05 13:14:49, MOVE, v:1, k:ed@ilhas, mode:PICK
+2026-06-05 13:14:51, EXEC, v:1, k:ed@ilhas, mode:FULL, rate:100
+2026-06-05 13:14:52, MOVE, v:1, k:ed@ilhas, mode:BACK

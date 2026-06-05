@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-31_13-12-32",
+            "content": "@@ -879,19 +879,16 @@\n rn ll%0A%7D%0A\n-%0A%0A%0A\n func mai\n@@ -1159,24 +1159,27 @@\n ompare%22:%0A%09%09%09\n+// \n lla := str2l\n@@ -1186,32 +1186,35 @@\n ist(args%5B1%5D)%0A%09%09%09\n+// \n llb := str2list(\n@@ -1225,16 +1225,19 @@\n %5B2%5D)%0A%09%09%09\n+// \n if equal\n@@ -1249,24 +1249,27 @@\n , llb) %7B%0A%09%09%09\n+// \n %09fmt.Println\n@@ -1282,16 +1282,19 @@\n is%22)%0A%09%09%09\n+// \n %7D else %7B\n@@ -1297,16 +1297,19 @@\n se %7B%0A%09%09%09\n+// \n %09fmt.Pri\n@@ -1330,16 +1330,19 @@\n es%22)%0A%09%09%09\n+// \n %7D%0A%09%09case\n@@ -1629,16 +1629,19 @@\n ge%22:%0A%09%09%09\n+// \n lla := s\n@@ -1660,16 +1660,19 @@\n %5B1%5D)%0A%09%09%09\n+// \n llb := s\n@@ -1691,16 +1691,19 @@\n %5B2%5D)%0A%09%09%09\n+// \n merged :\n@@ -1719,24 +1719,27 @@\n la, llb)%0A%09%09%09\n+// \n fmt.Println(\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-06-01_15-54-02",
+            "content": "@@ -1162,27 +1162,24 @@\n ompare%22:%0A%09%09%09\n-// \n lla := str2l\n@@ -1194,19 +1194,16 @@\n %5B1%5D)%0A%09%09%09\n-// \n llb := s\n@@ -1222,19 +1222,16 @@\n %5B2%5D)%0A%09%09%09\n-// \n if equal\n@@ -1243,27 +1243,24 @@\n , llb) %7B%0A%09%09%09\n-// \n %09fmt.Println\n@@ -1273,19 +1273,16 @@\n is%22)%0A%09%09%09\n-// \n %7D else %7B\n@@ -1285,19 +1285,16 @@\n se %7B%0A%09%09%09\n-// \n %09fmt.Pri\n@@ -1311,27 +1311,24 @@\n rentes%22)%0A%09%09%09\n-// \n %7D%0A%09%09case %22ad\n",
+            "lines": "112"
+        },
+        {
+            "label": "2026-06-01_15-54-14",
+            "content": "@@ -1628,27 +1628,24 @@\n %22merge%22:%0A%09%09%09\n-// \n lla := str2l\n@@ -1652,35 +1652,32 @@\n ist(args%5B1%5D)%0A%09%09%09\n-// \n llb := str2list(\n@@ -1688,19 +1688,16 @@\n %5B2%5D)%0A%09%09%09\n-// \n merged :\n@@ -1713,27 +1713,24 @@\n la, llb)%0A%09%09%09\n-// \n fmt.Println(\n",
+            "lines": "112"
+        },
+        {
+            "label": "2026-06-01_15-54-26",
+            "content": "@@ -884,174 +884,8 @@\n %0A%7D%0A%0A\n-func equals(l1, l2 *Node bool%7B%0A%09p1 := l1%0A%09p2 := l2%0A%0A%09for p1 != nil && p2 != nil%7B%0A%09%09if p1.Value != p2.Value%7B%0A%09%09%09return false%0A%09%09%7D%0A%09%09p1.next%0A%09%09p2.next%0A%09%7D%0A%09return true%0A%7D%0A\n %0A%0Afu\n@@ -1166,16 +1166,19 @@\n re%22:%0A%09%09%09\n+// \n lla := s\n@@ -1197,16 +1197,19 @@\n %5B1%5D)%0A%09%09%09\n+// \n llb := s\n@@ -1228,16 +1228,19 @@\n %5B2%5D)%0A%09%09%09\n+// \n if equal\n@@ -1252,24 +1252,27 @@\n , llb) %7B%0A%09%09%09\n+// \n %09fmt.Println\n@@ -1285,16 +1285,19 @@\n is%22)%0A%09%09%09\n+// \n %7D else %7B\n@@ -1300,16 +1300,19 @@\n se %7B%0A%09%09%09\n+// \n %09fmt.Pri\n@@ -1333,16 +1333,19 @@\n es%22)%0A%09%09%09\n+// \n %7D%0A%09%09case\n",
+            "lines": "112"
+        },
+        {
+            "label": "2026-06-01_16-02-14",
+            "content": "@@ -904,17 +904,16 @@\n l2 *Node\n-)\n  bool%7B%0A%09\n",
+            "lines": "125"
+        },
+        {
+            "label": "2026-06-01_16-02-23",
+            "content": "@@ -1015,13 +1015,8 @@\n %7D%0A%09%09\n-p1 = \n p1.n\n@@ -1025,13 +1025,8 @@\n t%0A%09%09\n-p2 = \n p2.n\n",
+            "lines": "125"
+        },
+        {
+            "label": "2026-06-01_16-02-56",
+            "content": "@@ -1054,30 +1054,12 @@\n urn \n-p1 == nil && p2 == nil\n+true\n %0A%7D%0A%0A\n",
+            "lines": "125"
+        },
+        {
+            "label": "2026-06-01_16-04-57",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tnext  *Node\n\tprev  *Node\n\troot  *Node\n}\n\ntype LList struct {\n\troot *Node\n\tsize int\n}\n\nfunc NewLList() *LList {\n\tlist := &LList{}\n\tlist.root = &Node{root: nil}\n\tlist.root.next = list.root\n\tlist.root.prev = list.root\n\tlist.root.root = list.root // n\u00f3 sentinela aponta pra si mesmo\n\treturn list\n}\n\nfunc (l *LList) PushBack(value int) {\n\tl.insertBefore(l.root, value)\n}\n\nfunc (l *LList) insertBefore(mark *Node, value int) {\n\tn := &Node{\n\t\tValue: value,\n\t\troot:  l.root,\n\t}\n\tn.prev = mark.prev\n\tn.next = mark\n\tmark.prev.next = n\n\tmark.prev = n\n}\n\n\nfunc str2list(serial string) *LList {\n\tserial = serial[1 : len(serial)-1]\n\tll := NewLList()\n\tif serial == \"\" {\n\t\treturn ll\n\t}\n\tfor _, p := range strings.Split(serial, \",\") {\n\t\tvalue, _ := strconv.Atoi(p)\n\t\tll.PushBack(value)\n\t}\n\treturn ll\n}\n\nfunc equals(l1, l2 *Node) bool{\n\tp1 := l1\n\tp2 := l2\n\n\tfor p1 != nil && p2 != nil{\n\t\tif p1.Value != p2.Value{\n\t\t\treturn false\n\t\t}\n\t\tp1 = p1.next\n\t\tp2 = p2.next\n\t}\n\treturn p1 == nil && p2 == nil\n}\n\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tfor {\n\t\tfmt.Print(\"$\")\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\tfmt.Println(line)\n\t\targs := strings.Fields(line)\n\n\t\tif len(args) == 0 {\n\t\t\tcontinue\n\t\t}\n\n\t\tcmd := args[0]\n\n\t\tswitch cmd {\n\t\tcase \"compare\":\n\t\t\tlla := str2list(args[1])\n\t\t\tllb := str2list(args[2])\n\t\t\tif equals(lla, llb) {\n\t\t\t\tfmt.Println(\"iguais\")\n\t\t\t} else {\n\t\t\t\tfmt.Println(\"diferentes\")\n\t\t\t}\n\t\tcase \"addsorted\":\n\t\t\t// lla := NewLList()\n\t\t\t// for i := 1; i < len(args); i++ {\n\t\t\t// \tvalue, _ := strconv.Atoi(args[i])\n\t\t\t// \taddsorted(lla, value)\n\t\t\t// }\n\t\t\t// fmt.Println(lla)\n\t\tcase \"reverse\":\n\t\t\t// lla := str2list(args[1])\n\t\t\t// reverse(lla)\n\t\t\t// fmt.Println(lla)\n\t\tcase \"merge\":\n\t\t\t// lla := str2list(args[1])\n\t\t\t// llb := str2list(args[2])\n\t\t\t// merged := merge(lla, llb)\n\t\t\t// fmt.Println(merged)\n\t\tcase \"end\":\n\t\t\treturn\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "125"
+        }
+    ]
+}
