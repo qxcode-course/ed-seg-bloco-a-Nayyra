@@ -13,19 +13,21 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@vector
-- ed@tree
-- ed@list
-- ed@backtrack
-- ed@linear
-- ed@dfs
+- ed@basic
 - ed@rec
+- ed@linear
+- ed@backtrack
+- ed@list
+- ed@dfs
+- ed@tree
 flags:
-  inbox: inbox
-  panel: graph
-  show_panel: 'true'
+  inbox: all
+  panel: skills
   task_graph_mode: executions
   show_time: 'true'
+audit:
+  enabled: true
+  interval_seconds: null
 lang: go
-selected: ed@list
-selected_index: 18
+selected: ed@bufferring
+selected_index: 46

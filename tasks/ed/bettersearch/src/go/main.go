@@ -9,12 +9,33 @@ import (
 )
 
 func BetterSearch(slice []int, value int) (bool, int) {
-	_, _ = slice, value
-	return false, 0
+	if len(slice) == 0{
+		return false, 0
+	}
+	inicio := 0
+	fim := len(slice)-1
+
+	for inicio <= fim{
+		mei := (fim+inicio)/2
+		if slice[mei] == value{
+			return true, mei
+		}
+
+		if slice[mei] < value{
+			inicio = mei +1
+		}
+
+		if slice[mei] > value{
+			fim = mei - 1
+		}
+	}
+
+	return false, inicio
+
 }
 
 func main() {
-	scanner := bufio.NewScanner(os.Stdin)
+	scanner := bufio.NewScanner(os.Stdin) 
 	scanner.Scan()
 	parts := strings.Split(scanner.Text(), " ")
 	slice := []int{}

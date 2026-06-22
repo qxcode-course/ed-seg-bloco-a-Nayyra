@@ -2,8 +2,288 @@
     "patches": [
         {
             "label": "2026-05-26_16-29-16",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc BetterSearch(slice []int, value int) (bool, int) {\n\t_, _ = slice, value\n\treturn false, 0\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tslice := []int{}\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tfound, result := BetterSearch(slice, value)\n\tif found {\n\t\tfmt.Println(\"V\", result)\n\t} else {\n\t\tfmt.Println(\"F\", result)\n\t}\n}\n",
+            "content": "@@ -124,489 +124,27 @@\n  %7B%0A%09\n-metade := len(slice)%0A%09//verifica se o vector %C3%A9 vazio%0A%09if len(slice) == 0%7B%0A%09%09return false, 0%0A%09%7D%0A%0A%09// se o value estiver o valor for maior que a metade%0A%09//pecorre da metade pra cima%0A%09if slice%5Bmetade%5D %3E value%7B%0A%09%09for i := slice%5Bmetade%5D; i%3C=len(slice); i++%7B%0A%09%09%09if value == i %7B%0A%09%09%09%09return true, i%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09%0A%0A%09//se for menor que a metade, pecorre do inicio at%C3%A9 a metade%0A%09if slice%5Bmetade%5D %3C value%7B%0A%09%09for i := 0; i%3C=slice%5Bmetade%5D; i++%7B%0A%09%09%09if value == i %7B%0A%09%09%09%09return true, i%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A\n+_, _ = slice, value\n %0A%09re\n@@ -212,17 +212,16 @@\n s.Stdin)\n- \n %0A%09scanne\n",
             "lines": "33"
+        },
+        {
+            "label": "2026-06-06_10-24-46",
+            "content": "@@ -402,34 +402,32 @@\n %09%09return true, i\n-+1\n %0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09%0A%0A\n@@ -592,10 +592,8 @@\n e, i\n-+1\n %0A%09%09%09\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-06-06_10-25-09",
+            "content": "@@ -301,19 +301,16 @@\n a cima%0A%09\n-// \n if slice\n@@ -320,35 +320,32 @@\n tade%5D %3E value%7B%0A%09\n-// \n %09for i := slice%5B\n@@ -366,35 +366,32 @@\n n(slice); i++%7B%0A%09\n-// \n %09%09if value == i \n@@ -385,35 +385,32 @@\n f value == i %7B%0A%09\n-// \n %09%09%09return true, \n@@ -410,36 +410,29 @@\n  true, i\n++1\n %0A%09\n-// \n %09%09%7D%0A%09\n-// \n %09%7D%0A%09\n-// \n %7D%0A%09%0A%0A%09//\n@@ -490,19 +490,16 @@\n metade%0A%09\n-// \n if slice\n@@ -517,19 +517,16 @@\n value%7B%0A%09\n-// \n %09for i :\n@@ -554,19 +554,16 @@\n ; i++%7B%0A%09\n-// \n %09%09if val\n@@ -573,19 +573,16 @@\n == i %7B%0A%09\n-// \n %09%09%09retur\n@@ -594,28 +594,21 @@\n e, i\n++1\n %0A%09\n-// \n %09%09%7D%0A%09\n-// \n %09%7D%0A%09\n-// \n %7D%0A%0A%09\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-06-06_10-25-29",
+            "content": "@@ -120,19 +120,16 @@\n int) %7B%0A%09\n-// \n metade :\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-06-06_10-25-44",
+            "content": "@@ -120,16 +120,19 @@\n int) %7B%0A%09\n+// \n metade :\n@@ -221,29 +221,8 @@\n 0%0A%09%7D\n-%0A%09return true, metade\n %0A%0A%09/\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-06-06_10-26-11",
+            "content": "@@ -144,10 +144,8 @@\n ice)\n-/2\n %0A%09//\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-06-06_10-26-30",
+            "content": "@@ -217,17 +217,37 @@\n e, 0%0A%09%7D%0A\n+%09return true, metade\n %0A\n-\n %0A%09// se \n@@ -324,16 +324,19 @@\n a cima%0A%09\n+// \n if slice\n@@ -354,16 +354,19 @@\n value%7B%0A%09\n+// \n %09for i :\n@@ -403,16 +403,19 @@\n ; i++%7B%0A%09\n+// \n %09%09if val\n@@ -425,16 +425,19 @@\n == i %7B%0A%09\n+// \n %09%09%09retur\n@@ -451,17 +451,26 @@\n  i%0A%09\n+// \n %09%09%7D%0A%09\n+// \n %09%7D%0A%09\n+// \n %7D%0A%09%0A\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-06-06_10-26-48",
+            "content": "@@ -322,17 +322,16 @@\n etade%5D %3E\n-=\n  value%7B%0A\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-06-06_10-27-17",
+            "content": "@@ -414,18 +414,16 @@\n  true, i\n--1\n %0A%09%09%09%7D%0A%09%09\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-06-06_10-27-44",
+            "content": "@@ -494,16 +494,19 @@\n metade%0A%09\n+// \n if slice\n@@ -515,17 +515,16 @@\n etade%5D %3C\n-=\n  value%7B%0A\n@@ -516,32 +516,35 @@\n tade%5D %3C value%7B%0A%09\n+// \n %09for i := 0; i%3C=\n@@ -556,32 +556,35 @@\n %5Bmetade%5D; i++%7B%0A%09\n+// \n %09%09if value == i \n@@ -578,32 +578,35 @@\n f value == i %7B%0A%09\n+// \n %09%09%09return true, \n@@ -606,29 +606,36 @@\n  true, i\n--1\n %0A%09\n+// \n %09%09%7D%0A%09\n+// \n %09%7D%0A%09\n+// \n %7D%0A%0A%09retu\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-06-06_10-28-15",
+            "content": "@@ -581,27 +581,8 @@\n i %7B%0A\n-%09%09%09%09fmt.Println(i)%0A\n %09%09%09%09\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-06-06_10-28-51",
+            "content": "@@ -396,35 +396,16 @@\n  == i %7B%0A\n-%09%09%09%09fmt.Println(i)%0A\n %09%09%09%09retu\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-06-06_10-29-25",
+            "content": "@@ -388,32 +388,25 @@\n if value == \n-slice%5Bi%5D\n+i\n  %7B%0A%09%09%09%09fmt.P\n@@ -596,16 +596,9 @@\n  == \n-slice%5Bi%5D\n+i\n  %7B%0A%09\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-06_10-29-41",
+            "content": "@@ -538,16 +538,17 @@\n etade%5D %3C\n+=\n  value%7B%0A\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-06_10-30-19",
+            "content": "@@ -520,19 +520,16 @@\n metade%0A%09\n-// \n if slice\n@@ -547,19 +547,16 @@\n value%7B%0A%09\n-// \n %09for i :\n@@ -584,19 +584,16 @@\n ; i++%7B%0A%09\n-// \n %09%09if val\n@@ -610,19 +610,16 @@\n e%5Bi%5D %7B%0A%09\n-// \n %09%09%09fmt.P\n@@ -629,19 +629,16 @@\n tln(i)%0A%09\n-// \n %09%09%09retur\n@@ -654,26 +654,17 @@\n -1%0A%09\n-// \n %09%09%7D%0A%09\n-// \n %09%7D%0A%09\n-// \n %7D%0A%0A%09\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-06_10-30-27",
+            "content": "@@ -307,22 +307,29 @@\n ima%0A%09if \n+slice%5B\n metade\n+%5D\n  %3E= valu\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-06_10-30-44",
+            "content": "@@ -335,22 +335,29 @@\n or i := \n+slice%5B\n metade\n+%5D\n ; i%3C=len\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-06_10-31-00",
+            "content": "@@ -366,19 +366,16 @@\n i++%7B%0A%09%09%09\n-// \n if value\n@@ -432,16 +432,17 @@\n  i-1%0A%09%09%09\n+%7D\n %0A%09%09%7D%0A%09%7D%0A\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-06_10-31-12",
+            "content": "@@ -429,16 +429,18 @@\n  true, i\n+-1\n %0A%09%09%09%0A%09%09%7D\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-06_10-31-24",
+            "content": "@@ -415,16 +415,30 @@\n (i)%0A%09%09%09%09\n+return true, i\n %0A%09%09%09%0A%09%09%7D\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-06_10-31-43",
+            "content": "@@ -408,24 +408,17 @@\n Println(\n-slice%5Bi%5D\n+i\n )%0A%09%09%09%09%0A%09\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-06_10-32-03",
+            "content": "@@ -415,18 +415,16 @@\n (slice%5Bi\n--1\n %5D)%0A%09%09%09%09%0A\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-06_10-32-11",
+            "content": "@@ -304,19 +304,16 @@\n a cima%0A%09\n-// \n if metad\n@@ -325,19 +325,16 @@\n value%7B%0A%09\n-// \n %09for i :\n@@ -364,19 +364,16 @@\n ; i++%7B%0A%09\n-// \n %09%09// if \n@@ -393,19 +393,16 @@\n e%5Bi%5D %7B%0A%09\n-// \n %09%09%09fmt.P\n@@ -434,18 +434,12 @@\n %09%09%0A%09\n-// \n %09%7D%0A%09\n-// \n %7D%0A%09%0A\n@@ -501,16 +501,19 @@\n metade%0A%09\n+// \n if slice\n@@ -523,32 +523,35 @@\n tade%5D %3C value%7B%0A%09\n+// \n %09for i := 0; i%3C=\n@@ -571,16 +571,19 @@\n ; i++%7B%0A%09\n+// \n %09%09if val\n@@ -595,23 +595,24 @@\n  slice%5Bi\n--1\n %5D %7B%0A%09\n+// \n %09%09%09fmt.P\n@@ -622,16 +622,19 @@\n tln(i)%0A%09\n+// \n %09%09%09retur\n@@ -650,17 +650,26 @@\n -1%0A%09\n+// \n %09%09%7D%0A%09\n+// \n %09%7D%0A%09\n+// \n %7D%0A%0A%09\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-06_10-32-42",
+            "content": "@@ -304,16 +304,19 @@\n a cima%0A%09\n+// \n if metad\n@@ -328,16 +328,19 @@\n value%7B%0A%09\n+// \n %09for i :\n@@ -370,18 +370,24 @@\n ; i++%7B%0A%09\n-%09%09\n+// %09%09// \n if value\n@@ -397,23 +397,24 @@\n  slice%5Bi\n--1\n %5D %7B%0A%09\n+// \n %09%09%09fmt.P\n@@ -424,42 +424,40 @@\n tln(\n-i)%0A%09%09%09%09return true, i-1\n+slice%5Bi-1%5D)%0A%09%09%09%09\n %0A%09%09%09\n-%7D\n %0A%09\n+// \n %09%7D%0A%09\n+// \n %7D%0A%09%0A\n@@ -519,19 +519,16 @@\n metade%0A%09\n-// \n if slice\n@@ -538,35 +538,32 @@\n tade%5D %3C value%7B%0A%09\n-// \n %09for i := 0; i%3C=\n@@ -583,19 +583,16 @@\n ; i++%7B%0A%09\n-// \n %09%09if val\n@@ -600,32 +600,31 @@\n e == slice%5Bi\n+-1\n %5D %7B%0A%09\n-// \n %09%09%09fmt.Print\n@@ -630,19 +630,16 @@\n tln(i)%0A%09\n-// \n %09%09%09retur\n@@ -655,26 +655,17 @@\n -1%0A%09\n-// \n %09%09%7D%0A%09\n-// \n %09%7D%0A%09\n-// \n %7D%0A%0A%09\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-06_10-33-19",
+            "content": "@@ -395,19 +395,16 @@\n %5D %7B%0A%09%09%09%09\n-// \n fmt.Prin\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-06_10-33-42",
+            "content": "@@ -511,25 +511,35 @@\n metade%0A%09\n-if \n+// if slice%5B\n metade\n+%5D\n  %3C value\n@@ -533,32 +533,35 @@\n tade%5D %3C value%7B%0A%09\n+// \n %09for i := 0; i%3C=\n@@ -564,22 +564,29 @@\n  i%3C=\n+slice%5B\n metade\n+%5D\n ; i++%7B%0A%09\n %09%09if\n@@ -573,32 +573,35 @@\n %5Bmetade%5D; i++%7B%0A%09\n+// \n %09%09if value == sl\n@@ -605,28 +605,27 @@\n  slice%5Bi\n--1\n %5D %7B%0A%09\n+// \n %09%09%09\n-//\n fmt.Prin\n@@ -624,32 +624,35 @@\n fmt.Println(i)%0A%09\n+// \n %09%09%09return true, \n@@ -656,25 +656,34 @@\n e, i-1%0A%09\n+// \n %09%09%7D%0A%09\n+// \n %09%7D%0A%09\n+// \n %7D%0A%0A%09retu\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-06_10-34-37",
+            "content": "@@ -546,16 +546,17 @@\n := 0; i%3C\n+=\n metade; \n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-06_10-34-48",
+            "content": "@@ -546,17 +546,16 @@\n := 0; i%3C\n-=\n metade; \n@@ -566,30 +566,8 @@\n %0A%09%09%09\n-%09fmt.Println(i)%0A%09%09%09// \n if v\n@@ -590,19 +590,37 @@\n 1%5D %7B%0A%09%09%09\n+%09\n //\n- \n+fmt.Println(i)%0A%09%09%09\n %09return \n@@ -632,19 +632,16 @@\n  i-1%0A%09%09%09\n-// \n %7D%0A%09%09%7D%0A%09%7D\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-06_10-35-31",
+            "content": "@@ -563,16 +563,37 @@\n i++%7B%0A%09%09%09\n+%09fmt.Println(i)%0A%09%09%09//\n  if valu\n@@ -610,35 +610,16 @@\n %5Bi-1%5D %7B%0A\n-%09%09%09%09fmt.Println(i)%0A\n %09%09%09// %09r\n@@ -629,32 +629,35 @@\n rn true, i-1%0A%09%09%09\n+// \n %7D%0A%09%09%7D%0A%09%7D%0A%0A%09retur\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-06_10-35-53",
+            "content": "@@ -583,16 +583,18 @@\n  slice%5Bi\n+-1\n %5D %7B%0A%09%09%09%09\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-06_10-36-02",
+            "content": "@@ -546,16 +546,17 @@\n := 0; i%3C\n+=\n metade; \n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-06_10-36-25",
+            "content": "@@ -521,17 +521,16 @@\n  metade \n-=\n %3C value%7B\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-06_10-36-46",
+            "content": "@@ -521,18 +521,18 @@\n  metade \n-%3C\n =\n+%3C\n  value%7B%0A\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-06_10-36-52",
+            "content": "@@ -603,24 +603,17 @@\n Println(\n-slice%5Bi%5D\n+i\n )%0A%09%09%09// \n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-06_10-37-15",
+            "content": "@@ -587,24 +587,53 @@\n ce%5Bi%5D %7B%0A%09%09%09%09\n+fmt.Println(slice%5Bi%5D)%0A%09%09%09// %09\n return true,\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-06_10-37-53",
+            "content": "@@ -311,21 +311,14 @@\n %09if \n-slice%5B\n metade\n-%5D\n  %3E= \n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-06-06_10-38-42",
+            "content": "@@ -521,29 +521,22 @@\n ade%0A%09if \n-slice%5B\n metade\n-%5D\n  %3C= valu\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-06-06_10-39-00",
+            "content": "@@ -363,18 +363,16 @@\n n(slice)\n--1\n ; i++%7B%0A%09\n@@ -384,32 +384,34 @@\n value == slice%5Bi\n+-1\n %5D %7B%0A%09%09%09%09// fmt.P\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-06-06_10-41-35",
+            "content": "@@ -394,18 +394,16 @@\n  slice%5Bi\n--1\n %5D %7B%0A%09%09%09%09\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-06-06_10-41-41",
+            "content": "@@ -386,32 +386,34 @@\n value == slice%5Bi\n+-1\n %5D %7B%0A%09%09%09%09// fmt.P\n@@ -440,16 +440,18 @@\n  true, i\n+-1\n %0A%09%09%09%7D%0A%09%09\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-06-06_10-42-10",
+            "content": "@@ -123,28 +123,8 @@\n ) %7B%0A\n-%09inicio := slice%5B0%5D%0A\n %09met\n@@ -147,34 +147,8 @@\n )/2%0A\n-%09fim := slice%5Blen(slice)%5D%0A\n %09//v\n@@ -222,88 +222,8 @@\n %09%7D%0A%0A\n-%09fmt.Println(inicio)%0A%09fmt.Println(metade)%0A%09fmt.Println(fim)%0A%0A%09// for %7B%0A%09%09%0A%09// %7D%0A\n %0A%09//\n@@ -304,19 +304,16 @@\n a cima%0A%09\n-// \n if slice\n@@ -324,35 +324,32 @@\n ade%5D %3E= value%7B%0A%09\n-// \n %09for i := metade\n@@ -373,19 +373,16 @@\n ; i++%7B%0A%09\n-// \n %09%09if val\n@@ -399,19 +399,16 @@\n e%5Bi%5D %7B%0A%09\n-// \n %09%09%09// fm\n@@ -421,19 +421,16 @@\n tln(i)%0A%09\n-// \n %09%09%09retur\n@@ -444,34 +444,25 @@\n  i%0A%09\n-// \n %09%09%7D%0A%09\n-// \n %09%7D%0A%09\n-// \n %7D%0A%09%0A%0A%09//\n  //s\n@@ -461,11 +461,8 @@\n %0A%09//\n- //\n se f\n@@ -516,19 +516,16 @@\n metade%0A%09\n-// \n if slice\n@@ -544,19 +544,16 @@\n value%7B%0A%09\n-// \n %09for i :\n@@ -573,19 +573,16 @@\n ; i++%7B%0A%09\n-// \n %09%09 if va\n@@ -600,19 +600,16 @@\n e%5Bi%5D %7B%0A%09\n-// \n %09%09%09retur\n@@ -625,26 +625,17 @@\n -1%0A%09\n-// \n %09%09%7D%0A%09\n-// \n %09%7D%0A%09\n-// \n %7D%0A%0A%09\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-06-06_10-47-19",
+            "content": "@@ -123,50 +123,8 @@\n ) %7B%0A\n-%09if len(slice) == 0%7B%0A%09%09return false, 0%0A%09%7D%0A\n %09ini\n@@ -220,16 +220,58 @@\n  %C3%A9 vazio\n+%0A%09if len(slice) == 0%7B%0A%09%09return false, 0%0A%09%7D\n %0A%0A%09fmt.P\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-06-06_10-48-01",
+            "content": "@@ -182,18 +182,16 @@\n ice%5B0%5D%0A%09\n-//\n metade :\n@@ -286,18 +286,16 @@\n nicio)%0A%09\n-//\n fmt.Prin\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-06-06_10-48-22",
+            "content": "@@ -208,18 +208,16 @@\n ice)/2%0A%09\n-//\n fim := s\n@@ -311,18 +311,16 @@\n etade)%0A%09\n-//\n fmt.Prin\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-06-06_10-48-31",
+            "content": "@@ -182,16 +182,18 @@\n ice%5B0%5D%0A%09\n+//\n metade :\n@@ -290,16 +290,18 @@\n nicio)%0A%09\n+//\n fmt.Prin\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-06-06_10-48-45",
+            "content": "@@ -206,16 +206,18 @@\n ice)/2%0A%09\n+//\n fim := s\n@@ -231,18 +231,16 @@\n n(slice)\n--1\n %5D%0A%09//ver\n@@ -309,16 +309,18 @@\n etade)%0A%09\n+//\n fmt.Prin\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-06-06_10-49-03",
+            "content": "@@ -172,17 +172,48 @@\n icio := \n-0\n+slice%5B0%5D%0A%09metade := len(slice)/2\n %0A%09fim :=\n@@ -304,89 +304,52 @@\n tln(\n-fim)%0A%0A%09for %7B%0A%09%09mei := (fim+inicio)/2%0A%09%09if mei == value%7B%0A%09%09%09return true, mei\n+metade)%0A%09fmt.Println(fim)%0A%0A%09// for %7B\n %0A%09%09\n-%7D\n %0A%09\n+// \n %7D%0A%0A%09\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-06-06_10-51-44",
+            "content": "@@ -352,104 +352,8 @@\n %0A%09%09%7D\n-%0A%0A%09%09if slice%5Bmei%5D %3C value%7B%0A%09%09%09inicio = mei +1%0A%09%09%7D%0A%0A%09%09if slice%5Bmei%5D %3E value%7B%0A%09%09%09fim = mei - 1%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-06-06_10-56-32",
+            "content": "@@ -311,26 +311,19 @@\n /2%0A%09%09if \n-slice%5B\n mei\n-%5D\n  == valu\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-06-06_10-57-17",
+            "content": "@@ -284,21 +284,8 @@\n for \n-inicio %3C= fim\n %7B%0A%09%09\n@@ -918,16 +918,33 @@\n %0A%09// %7D%0A%0A\n+%09return false, 0%0A\n %7D%0A%0Afunc \n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-06-06_10-58-07",
+            "content": "@@ -473,26 +473,8 @@\n %09%7D%0A%0A\n-%09return false, 0%0A%0A\n %09// \n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-06-06_10-58-28",
+            "content": "@@ -484,18 +484,479 @@\n  false, \n--1\n+0%0A%0A%09// se o value estiver o valor for maior que a metade%0A%09//pecorre da metade pra cima%0A%09// if slice%5Bmetade%5D %3E= value%7B%0A%09// %09for i := metade; i%3C=len(slice)-1; i++%7B%0A%09// %09%09if value == slice%5Bi%5D %7B%0A%09// %09%09%09// fmt.Println(i)%0A%09// %09%09%09return true, i%0A%09// %09%09%7D%0A%09// %09%7D%0A%09// %7D%0A%09%0A%0A%09// //se for menor que a metade, pecorre do inicio at%C3%A9 a metade%0A%09// if slice%5Bmetade%5D %3C= value%7B%0A%09// %09for i := 0; i%3Cmetade; i++%7B%0A%09// %09%09 if value == slice%5Bi%5D %7B%0A%09// %09%09%09return true, i-1%0A%09// %09%09%7D%0A%09// %09%7D%0A%09// %7D\n %0A%0A%7D%0A%0Afun\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-06-06_10-58-47",
+            "content": "@@ -201,16 +201,88 @@\n lice)-1%5D\n+%0A%09//verifica se o vector %C3%A9 vazio%0A%0A%09fmt.Println(inicio)%0A%09fmt.Println(fim)\n %0A%0A%09for i\n@@ -484,17 +484,18 @@\n  false, \n-0\n+-1\n %0A%0A%7D%0A%0Afun\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-06-06_10-59-04",
+            "content": "@@ -412,22 +412,17 @@\n  false, \n-inicio\n+0\n %0A%0A%7D%0A%0Afun\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-06-06_11-00-48",
+            "content": "@@ -315,17 +315,16 @@\n e%5Bmei%5D %3C\n-=\n  value%7B%0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-06-06_11-02-23",
+            "content": "@@ -182,16 +182,22 @@\n %09fim := \n+slice%5B\n len(slic\n@@ -200,16 +200,17 @@\n slice)-1\n+%5D\n %0A%0A%09for i\n@@ -315,16 +315,17 @@\n e%5Bmei%5D %3C\n+=\n  value%7B%0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-06-06_11-03-05",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc BetterSearch(slice []int, value int) (bool, int) {\n\tif len(slice) == 0{\n\t\treturn false, 0\n\t}\n\tinicio := 0\n\tfim := len(slice)-1\n\n\tfor inicio <= fim{\n\t\tmei := (fim+inicio)/2\n\t\tif slice[mei] == value{\n\t\t\treturn true, mei\n\t\t}\n\n\t\tif slice[mei] < value{\n\t\t\tinicio = mei +1\n\t\t}\n\n\t\tif slice[mei] > value{\n\t\t\tfim = mei - 1\n\t\t}\n\t}\n\n\treturn false, inicio\n\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin) \n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tslice := []int{}\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tfound, result := BetterSearch(slice, value)\n\tif found {\n\t\tfmt.Println(\"V\", result)\n\t} else {\n\t\tfmt.Println(\"F\", result)\n\t}\n}\n",
+            "lines": "54"
         }
     ]
 }
