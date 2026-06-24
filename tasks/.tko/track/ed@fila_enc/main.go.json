@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-23_16-13-15",
+            "content": "@@ -143,98 +143,19 @@\n %09%7D%0A%09\n-if q.tail == nil%7B%0A%09%09q.tail = node%0A%09%09q.head = node%0A%09%09return%0A%09%7D%0A%0A%09q.tail.next = node%0A%09\n q.tail\n+.next\n  = n\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-06-23_16-18-47",
+            "content": "@@ -138,17 +138,16 @@\n lue,%0A%09%7D%0A\n-%0A\n %09if q.ta\n@@ -193,19 +193,8 @@\n ode%0A\n-%09%09q.size++%0A\n %09%09re\n@@ -241,20 +241,13 @@\n ode%0A\n-%09q.size++%0A%7D%0A\n+%7D%0A// \n func\n@@ -284,143 +284,8 @@\n ool)\n-%7B%0A%09if q.head == nil%7B%0A%09%09var nada T%0A%09%09return nada, false%0A%09%7D%0A%0A%09removido := q.head.Value%0A%0A%09q.head = q.head.next%0A%0A%09return removido, true%0A%0A%0A%7D\n %0A// \n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-06-23_16-38-09",
+            "content": "@@ -1410,16 +1410,19 @@\n op%22:%0A%09%09%09\n+// \n if _, ok\n@@ -1451,16 +1451,19 @@\n ok %7B%0A%09%09%09\n+// \n %09fmt.Pri\n@@ -1487,24 +1487,27 @@\n  vazia%22)%0A%09%09%09\n+// \n %7D%0A%09%09case %22pe\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-06-23_16-38-18",
+            "content": "@@ -435,17 +435,19 @@\n rue%0A%0A%0A%7D%0A\n-%0A\n+// \n func (q \n@@ -477,112 +477,8 @@\n ool)\n-%7B%0A%09if q.head == nil%7B%0A%09%09var bla T%0A%09%09return bla, false%0A%09%7D%0A%0A%09cabeca := q.head.Value%0A%09return cabeca, true%0A%7D%0A\n %0A// \n@@ -1505,16 +1505,19 @@\n ek%22:%0A%09%09%09\n+// \n if value\n@@ -1538,32 +1538,35 @@\n Peek(); ok %7B%0A%09%09%09\n+// \n %09fmt.Println(val\n@@ -1572,16 +1572,19 @@\n lue)%0A%09%09%09\n+// \n %7D else %7B\n@@ -1583,24 +1583,27 @@\n %7D else %7B%0A%09%09%09\n+// \n %09fmt.Println\n@@ -1623,24 +1623,27 @@\n  vazia%22)%0A%09%09%09\n+// \n %7D%0A%09%09default:\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-06-23_16-41-37",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n\t\"strconv\"\n)\n\nfunc (q *Queue[T]) Enqueue(value T){\n\tnode := &Node[T]{\n\t\tValue: value,\n\t}\n\n\tif q.tail == nil{\n\t\tq.tail = node\n\t\tq.head = node\n\t\tq.size++\n\t\treturn\n\t}\n\n\tq.tail.next = node\n\tq.tail = node\n\tq.size++\n}\nfunc (q *Queue[T]) Dequeue() (T, bool){\n\tif q.head == nil{\n\t\tvar nada T\n\t\treturn nada, false\n\t}\n\n\tremovido := q.head.Value\n\n\tq.head = q.head.next\n\n\treturn removido, true\n\n\n}\n\nfunc (q *Queue[T]) Peek() (T, bool){\n\tif q.head == nil{\n\t\tvar bla T\n\t\treturn bla, false\n\t}\n\n\tcabeca := q.head.Value\n\treturn cabeca, true\n}\n\n// func (q *Queue[T]) Size() int\n// func (q *Queue[T]) IsEmpty() bool\n// func (q *Queue[T]) Clear()\n\n\ntype Node[T any] struct {\n\tValue T\n\tnext  *Node[T]\n}\n\ntype Queue[T any] struct {\n\thead *Node[T]\n\ttail *Node[T]\n\tsize int\n}\n\nfunc NewQueue[T any]() *Queue[T] {\n\treturn &Queue[T]{}\n}\n\nfunc (q *Queue[T]) String() string {\n\tresult := \"[\"\n\tfor n := q.head; n != nil; n = n.next {\n\t\tif n != q.head {\n\t\t\tresult += \", \"\n\t\t}\n\t\tresult += fmt.Sprintf(\"%v\", n.Value)\n\t}\n\treturn result + \"]\"\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tqueue := NewQueue[int]()\n\n\tfor {\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\tfmt.Println(\"$\" + line)\n\t\targs := strings.Fields(line)\n\t\tif len(args) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tswitch args[0] {\n\t\tcase \"end\":\n\t\t\tbreak\n\t\tcase \"show\":\n\t\t\tfmt.Println(queue)\n\t\tcase \"push\":\n\t\t\tfor _, arg := range args[1:] {\n\t\t\t\tvalue, _ := strconv.Atoi(arg)\n\t\t\t\tqueue.Enqueue(value)\n\t\t\t}\n\t\tcase \"pop\":\n\t\t\tif _, ok := queue.Dequeue(); !ok {\n\t\t\t\tfmt.Println(\"falha: fila vazia\")\n\t\t\t}\n\t\tcase \"peek\":\n\t\t\tif value, ok := queue.Peek(); ok {\n\t\t\t\tfmt.Println(value)\n\t\t\t} else {\n\t\t\t\tfmt.Println(\"falha: fila vazia\")\n\t\t\t}\n\t\tdefault:\n\t\t\tfmt.Println(\"Unknown command:\", args[0])\n\t\t}\n\t}\n}\n",
+            "lines": "121"
+        }
+    ]
+}
