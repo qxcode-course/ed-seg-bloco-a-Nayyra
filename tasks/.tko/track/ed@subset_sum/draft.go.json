@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-06_15-32-19",
+            "content": "@@ -41,221 +41,35 @@\n     \n-var n, soma int%0A    fmt.Scan(&n, &soma)%0A    lista := make(%5B%5Dint,0)%0A    for i:=0; i %3C len(lista); i++%7B%0A        fmt.Scan(&i)%0A        lista = append(lista, i)%0A    %7D%0A    fmt.Println(n, %22 %22, soma)%0A    fmt.Println(lista\n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-07-06_15-53-08",
+            "content": "@@ -106,11 +106,8 @@\n nt,0\n-, n\n )%0A  \n@@ -126,34 +126,25 @@\n i %3C \n-n\n+len(lista)\n ; i++%7B%0A\n-        var x int%0A\n     \n@@ -157,17 +157,17 @@\n t.Scan(&\n-x\n+i\n )%0A      \n@@ -194,9 +194,9 @@\n ta, \n-x\n+i\n )%0A  \n@@ -217,16 +217,21 @@\n intln(n,\n+ %22 %22,\n  soma)%0A \n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-07-06_15-58-15",
+            "content": "@@ -10,298 +10,107 @@\n ain%0A\n-%0A\n import \n-(%0A%09%22container/list%22%0A%09%22fmt%22%0A)%0A%0Avar n, soma int%0Avar lista %5B%5Dint%0Afunc back(index, somaA int\n+%22fmt%22%0Afunc main(\n ) \n-bool\n %7B%0A    \n-if somaA == soma%7B%0A        return true%0A    %7D%0A%0A    if index %3E somaA %7C%7C index == n%7B%0A        return false%0A    %7D%0A%0A    if back(index+1\n+var n, soma int%0A    fmt.Scan(&n\n , \n+&\n soma\n-A+lista)%0A%7D%0A%0Afunc main() %7B%0A    fmt.Scan(&n, &soma\n+)%0A    lista := make(%5B%5Dint,0, n\n )%0A  \n@@ -211,10 +211,58 @@\n )%0A    %7D%0A\n+    fmt.Println(n, soma)%0A    fmt.Println(lista)%0A\n %7D%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-07-06_16-06-58",
+            "content": "@@ -17,18 +17,16 @@\n port (%0A%09\n-//\n %22contain\n@@ -76,19 +76,16 @@\n a %5B%5Dint%0A\n-// \n func bac\n@@ -110,19 +110,16 @@\n ) bool%7B%0A\n-// \n     if s\n@@ -132,19 +132,16 @@\n = soma%7B%0A\n-// \n         \n@@ -152,33 +152,27 @@\n rn true%0A\n-// \n     %7D%0A%0A\n-//\n     \n- \n if index\n@@ -195,19 +195,16 @@\n x == n%7B%0A\n-// \n         \n@@ -220,21 +220,15 @@\n lse%0A\n-// \n     %7D%0A%0A\n-// \n     \n@@ -261,11 +261,8 @@\n ta)%0A\n-// \n %7D%0A%0Af\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-07-06_16-07-19",
+            "content": "@@ -435,27 +435,6 @@\n   %7D%0A\n-    fmt.Print(lista)%0A\n %7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-07-06_16-07-35",
+            "content": "@@ -78,17 +78,19 @@\n a %5B%5Dint%0A\n-%0A\n+// \n func bac\n@@ -115,20 +115,23 @@\n ) bool%7B%0A\n+//\n     \n+ \n if somaA\n@@ -140,24 +140,26 @@\n = soma%7B%0A\n+//\n         \n return t\n@@ -142,32 +142,33 @@\n soma%7B%0A//        \n+ \n return true%0A    \n@@ -159,31 +159,37 @@\n return true%0A\n+// \n     %7D%0A%0A\n+// \n     if index\n@@ -212,16 +212,19 @@\n x == n%7B%0A\n+// \n         \n@@ -236,23 +236,29 @@\n n false%0A\n+// \n     %7D%0A%0A\n+// \n     if b\n@@ -262,24 +262,26 @@\n f back(index\n++1\n , somaA+list\n@@ -285,70 +285,13 @@\n ista\n-%5Bindex%5D)%7B%0A        return true%0A    %7D%0A%0A    back(index+1, somaA)%0A\n+)%0A// \n %7D%0A%0Af\n@@ -435,95 +435,27 @@\n   %7D%0A\n-%0A    if back(0,0)%7B%0A        fmt.Println(true)%0A    %7Delse%7B%0A        fmt.Println(false)%0A    %7D\n+    fmt.Print(lista)\n %0A%7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-07-06_16-10-48",
+            "content": "@@ -297,23 +297,16 @@\n  %7D%0A%0A    \n-return \n back(ind\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-07-06_16-11-08",
+            "content": "@@ -239,26 +239,24 @@\n f back(index\n-+1\n , somaA+list\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-07-06_16-12-34",
+            "content": "@@ -169,20 +169,21 @@\n %0A    if \n-soma\n+index\n  %3E somaA\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-07-06_16-18-45",
+            "content": "@@ -169,21 +169,20 @@\n %0A    if \n-index\n+soma\n  %3E somaA\n@@ -199,24 +199,8 @@\n == n\n- %7C%7C somaA %3E soma\n %7B%0A  \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-07-06_16-19-28",
+            "content": "@@ -169,16 +169,32 @@\n %0A    if \n+index %3E somaA %7C%7C\n  index =\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-07-06_16-19-40",
+            "content": "package main\n\nimport (\n\t//\"container/list\"\n\t\"fmt\"\n)\n\nvar n, soma int\nvar lista []int\n\nfunc back(index, somaA int) bool{\n    if somaA == soma{\n        return true\n    }\n\n    if  index == n || somaA > soma{\n        return false\n    }\n\n    if back(index+1, somaA+lista[index]){\n        return true\n    }\n\n    return back(index+1, somaA)\n}\n\nfunc main() {\n    fmt.Scan(&n, &soma)\n    for i:=0; i < n; i++{\n        var x int\n        fmt.Scan(&x)\n        lista = append(lista, x)\n    }\n\n    if back(0,0){\n        fmt.Println(true)\n    }else{\n        fmt.Println(false)\n    }\n}\n",
+            "lines": "40"
+        }
+    ]
+}

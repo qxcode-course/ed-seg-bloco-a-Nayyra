@@ -1,0 +1,94 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-06_14-32-38",
+            "content": "@@ -478,19 +478,16 @@\n dPos%0A%7D%0A%0A\n-// \n func vol\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-07-06_14-33-02",
+            "content": "@@ -115,81 +115,11 @@\n urn \n-%5B%5DPos%7B%0A%09%09%7Bp.l -1, p.c%7D,%0A%09%09%7Bp.l +1, p.c%7D%0A%09%09%7Bp.l, p.c -1%7D%0A%09%09%7Bp.l, p.c+1%7D%0A%09%7D\n+nil\n %0A%7D%0A%0A\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-07-06_14-45-33",
+            "content": "@@ -146,25 +146,24 @@\n p.l +1, p.c%7D\n-,\n %0A%09%09%7Bp.l, p.c\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-07-06_14-45-40",
+            "content": "@@ -167,17 +167,16 @@\n  p.c -1%7D\n-,\n %0A%09%09%7Bp.l,\n@@ -182,20 +182,16 @@\n , p.c+1%7D\n-,%0A%09%09\n %0A%09%7D%0A%7D%0A%0Af\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-07-06_14-45-53",
+            "content": "@@ -185,16 +185,18 @@\n p.c+1%7D,%0A\n+%09%09\n %0A%09%7D%0A%7D%0A%0Af\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-07-06_15-05-50",
+            "content": "@@ -520,380 +520,40 @@\n  %7B%0A%09\n-fila := %5B%5DPos%7BstartPos%7D%0A%09visitado := make(map%5BPos%5Dbool)%0A%09anterior := make(map%5BPos%5DPos)%0A%0A%09tala := false%0A%09for len(fila) %3E 0 %7B%0A%09%09atual := fila%5B0%5D%0A%09%09fila = fila%5B1:%5D%0A%0A%09%09if atual == endPos%7B%0A%09%09%09tala = true%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09for _, viz := range atual.getNeig()%7B%0A%09%09%09if inside(grid, viz) && grid%5Bviz.l, viz.c%5D != '#'%7B%0A%09%09%09%09anterior%5Bviz%5D = atual%0A%09%09%09%09fila = append(fila, viz)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n+_, _, _ = grid, startPos, endPos\n %0A%7D%0A%0A\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-07-06_15-14-25",
+            "content": "@@ -805,18 +805,18 @@\n id%5Bviz.l\n-%5D%5B\n+, \n viz.c%5D !\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-07-06_15-15-49",
+            "content": "@@ -541,18 +541,16 @@\n rtPos%7D%0A%09\n-//\n visitado\n@@ -605,18 +605,16 @@\n %5DPos)%0A%0A%09\n-//\n tala := \n@@ -708,17 +708,16 @@\n %09%09%09tala \n-:\n = true%0A%09\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-07-06_15-16-04",
+            "content": "@@ -607,16 +607,18 @@\n %5DPos)%0A%0A%09\n+//\n tala := \n@@ -712,16 +712,17 @@\n %09%09%09tala \n+:\n = true%0A%09\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-07-06_15-16-16",
+            "content": "@@ -721,23 +721,8 @@\n rue%0A\n-%09%09%09return tala%0A\n %09%09%09b\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-07-06_15-16-27",
+            "content": "@@ -724,35 +724,32 @@\n %0A%09%09%09\n-break%0A%09%09%7D%0A%09%09fmt.Print(tala)\n+return tala%0A%09%09%09break%0A%09%09%7D\n %0A%0A%09%09\n",
+            "lines": "97"
+        },
+        {
+            "label": "2026-07-06_15-16-52",
+            "content": "@@ -729,16 +729,34 @@\n reak%0A%09%09%7D\n+%0A%09%09fmt.Print(tala)\n %0A%0A%09%09for \n@@ -906,215 +906,15 @@\n %09%09%7D%0A\n+\n %09%09%7D%0A%09%7D%0A\n-%09if tala%7B%0A%09%09p := endPos%0A%09%09for p != startPos%7B%0A%09%09%09if grid%5Bp.l%5D%5Bp.c%5D == ' '%7B%0A%09%09%09%09grid%5Bp.l%5D%5Bp.c%5D = '.'%0A%09%09%09%7D%0A%09%09%09p = anterior%5Bp%5D%0A%09%09%7D%0A%09%09grid%5BstartPos.l%5D%5BstartPos.c%5D = 'I'%0A%09%09grid%5BendPos.l%5D%5BendPos.c%5D = 'F'%0A%09%7D%0A\n %7D%0A%0A/\n",
+            "lines": "97"
+        },
+        {
+            "label": "2026-07-06_15-19-45",
+            "content": "@@ -541,16 +541,18 @@\n rtPos%7D%0A%09\n+//\n visitado\n@@ -578,35 +578,8 @@\n ol)%0A\n-%09visitado%5BstartPos%5D = true%0A\n %09ant\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-06_15-20-36",
+            "content": "@@ -853,58 +853,8 @@\n #'%7B%0A\n-%09%09%09%09if !visitado%5Bviz%5D%7B%0A%09%09%09%09%09visitado%5Bviz%5D = true%0A%09\n %09%09%09%09\n@@ -879,17 +879,16 @@\n ual%0A%09%09%09%09\n-%09\n fila = a\n@@ -908,14 +908,8 @@\n iz)%0A\n-%09%09%09%09%7D%0A\n %09%09%09%7D\n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-07-06_15-21-48",
+            "content": "@@ -1100,16 +1100,86 @@\n %5Bp%5D%0A%09%09%7D%0A\n+%09%09grid%5BstartPos.l%5D%5BstartPos.c%5D = 'I'%0A%09%09grid%5BendPos.l%5D%5BendPos.c%5D = 'F'%0A\n %09%7D%0A%7D%0A%0A//\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-07-06_15-23-25",
+            "content": "@@ -1104,78 +1104,8 @@\n %09%09%7D%0A\n-%09%09grid%5BstartPos.l%5D%5BstartPos.c%5D = 'I'%0A%09%09grid%5BendPos.l%5D%5BendPos.c%5D = 'F'%0A\n %09%7D%0A%7D\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-07-06_15-23-42",
+            "content": "@@ -1130,25 +1130,25 @@\n rtPos.c%5D = '\n-.\n+I\n '%0A%09%09grid%5Bend\n@@ -1167,17 +1167,17 @@\n s.c%5D = '\n-.\n+F\n '%0A%09%7D%0A%7D%0A%0A\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-07-06_15-24-04",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl, c int\n}\n\nfunc (p Pos) getNeig() []Pos {\n\treturn []Pos{\n\t\t{p.l -1, p.c},\n\t\t{p.l +1, p.c},\n\t\t{p.l, p.c -1},\n\t\t{p.l, p.c+1},\n\n\t}\n}\n\nfunc inside(grid [][]rune, pos Pos) bool {\n\tnrows := len(grid)\n\tncols := len(grid[0])\n\treturn pos.l >= 0 && pos.l < nrows && pos.c >= 0 && pos.c < ncols\n}\n\nfunc match(grid [][]rune, pos Pos, char rune) bool {\n\treturn inside(grid, pos) && grid[pos.l][pos.c] == char\n}\n\nfunc search(grid [][]rune, startPos Pos, endPos Pos) {\n\tfila := []Pos{startPos}\n\tvisitado := make(map[Pos]bool)\n\tvisitado[startPos] = true\n\tanterior := make(map[Pos]Pos)\n\n\ttala := false\n\tfor len(fila) > 0 {\n\t\tatual := fila[0]\n\t\tfila = fila[1:]\n\n\t\tif atual == endPos{\n\t\t\ttala = true\n\t\t\tbreak\n\t\t}\n\n\t\tfor _, viz := range atual.getNeig(){\n\t\t\tif inside(grid, viz) && grid[viz.l][viz.c] != '#'{\n\t\t\t\tif !visitado[viz]{\n\t\t\t\t\tvisitado[viz] = true\n\t\t\t\t\tanterior[viz] = atual\n\t\t\t\t\tfila = append(fila, viz)\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\tif tala{\n\t\tp := endPos\n\t\tfor p != startPos{\n\t\t\tif grid[p.l][p.c] == ' '{\n\t\t\t\tgrid[p.l][p.c] = '.'\n\t\t\t}\n\t\t\tp = anterior[p]\n\t\t}\n\t\tgrid[startPos.l][startPos.c] = '.'\n\t\tgrid[endPos.l][endPos.c] = '.'\n\t}\n}\n\n// func voltar()\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tvar nl, nc int\n\tscanner.Scan()\n\tline := scanner.Text()\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\tmat := make([][]rune, nl) // Inicializa a matriz de runes\n\n\t// Carregando matriz\n\tfor i := range nl {\n\t\tscanner.Scan()\n\t\tline := scanner.Text()\n\t\tmat[i] = []rune(line)\n\t}\n\n\tvar inicio, fim Pos\n\n\t// Procurando inicio e fim e colocando ' ' nas posi\u00e7\u00f5es iniciais\n\tfor l := range nl {\n\t\tfor c := range nc {\n\t\t\tif mat[l][c] == 'I' {\n\t\t\t\tmat[l][c] = ' '\n\t\t\t\tinicio = Pos{l, c}\n\t\t\t}\n\t\t\tif mat[l][c] == 'F' {\n\t\t\t\tmat[l][c] = ' '\n\t\t\t\tfim = Pos{l, c}\n\t\t\t}\n\t\t}\n\t}\n\n\tsearch(mat, inicio, fim)\n\n\tfor _, line := range mat {\n\t\tfmt.Println(string(line)) // Converte o slice de runes de volta para string para imprimir\n\t}\n}\n",
+            "lines": "111"
+        }
+    ]
+}

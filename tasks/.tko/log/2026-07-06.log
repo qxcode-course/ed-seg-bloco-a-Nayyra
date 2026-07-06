@@ -1,0 +1,76 @@
+2026-07-06 12:54:43, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-07-06 12:55:35, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33, size:44
+2026-07-06 12:55:37, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33
+2026-07-06 12:55:39, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33
+2026-07-06 12:55:41, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33
+2026-07-06 13:35:46, EXEC, v:1, k:ed@cercado, mode:FULL, size:99, fail:COMP
+2026-07-06 13:36:11, EXEC, v:1, k:ed@cercado, mode:FULL, size:99, fail:COMP
+2026-07-06 13:36:30, EXEC, v:1, k:ed@cercado, mode:FULL, rate:100, size:98
+2026-07-06 13:36:34, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-07-06 13:38:04, SELF, v:1, k:ed@cercado, self:1, rate:100, study:20, concept:1, refactor:1
+2026-07-06 13:44:01, MOVE, v:1, k:ed@pintura, mode:DOWN
+2026-07-06 13:44:13, MOVE, v:1, k:ed@pintura, mode:PICK
+2026-07-06 13:57:48, EXEC, v:1, k:ed@pintura, mode:FULL, size:78, fail:COMP
+2026-07-06 13:58:01, EXEC, v:1, k:ed@pintura, mode:FULL, size:78, fail:COMP
+2026-07-06 13:58:48, EXEC, v:1, k:ed@pintura, mode:FULL, rate:50, size:78
+2026-07-06 13:59:15, EXEC, v:1, k:ed@pintura, mode:FULL, rate:50, size:79
+2026-07-06 13:59:25, EXEC, v:1, k:ed@pintura, mode:FULL, rate:50, size:79
+2026-07-06 13:59:40, EXEC, v:1, k:ed@pintura, mode:FULL, rate:50, size:79
+2026-07-06 14:00:02, EXEC, v:1, k:ed@pintura, mode:FULL, rate:0, size:80
+2026-07-06 14:00:14, EXEC, v:1, k:ed@pintura, mode:FULL, rate:0, size:80
+2026-07-06 14:26:30, EXEC, v:1, k:ed@pintura, mode:FULL, rate:50, size:80
+2026-07-06 14:27:12, EXEC, v:1, k:ed@pintura, mode:FULL, rate:50, size:82
+2026-07-06 14:27:26, EXEC, v:1, k:ed@pintura, mode:FULL, size:82, fail:COMP
+2026-07-06 14:27:35, EXEC, v:1, k:ed@pintura, mode:FULL, rate:100, size:82
+2026-07-06 14:27:36, MOVE, v:1, k:ed@pintura, mode:BACK
+2026-07-06 14:28:04, SELF, v:1, k:ed@pintura, self:1, rate:100, study:30, concept:1, refactor:1
+2026-07-06 14:28:36, MOVE, v:1, k:ed@caminho, mode:DOWN
+2026-07-06 14:28:39, MOVE, v:1, k:ed@caminho, mode:PICK
+2026-07-06 14:32:38, EXEC, v:1, k:ed@caminho, mode:FULL, size:111, fail:COMP
+2026-07-06 14:33:02, EXEC, v:1, k:ed@caminho, mode:FULL, rate:0, size:111
+2026-07-06 14:45:33, EXEC, v:1, k:ed@caminho, mode:FULL, size:116, fail:COMP
+2026-07-06 14:45:36, EXEC, v:1, k:ed@caminho, mode:FULL, fail:COMP
+2026-07-06 14:45:40, EXEC, v:1, k:ed@caminho, mode:FULL, size:116, fail:COMP
+2026-07-06 14:45:53, EXEC, v:1, k:ed@caminho, mode:FULL, rate:0, size:117
+2026-07-06 15:05:50, EXEC, v:1, k:ed@caminho, mode:FULL, rate:0, size:117
+2026-07-06 15:14:25, EXEC, v:1, k:ed@caminho, mode:FULL, size:137, fail:COMP
+2026-07-06 15:15:00, EXEC, v:1, k:ed@caminho, mode:FULL, fail:COMP
+2026-07-06 15:15:49, EXEC, v:1, k:ed@caminho, mode:FULL, size:137, fail:COMP
+2026-07-06 15:16:04, EXEC, v:1, k:ed@caminho, mode:FULL, size:137, fail:COMP
+2026-07-06 15:16:16, EXEC, v:1, k:ed@caminho, mode:FULL, size:137, fail:COMP
+2026-07-06 15:16:27, EXEC, v:1, k:ed@caminho, mode:FULL, size:138, fail:COMP
+2026-07-06 15:16:52, EXEC, v:1, k:ed@caminho, mode:FULL, rate:0, size:138
+2026-07-06 15:19:45, EXEC, v:1, k:ed@caminho, mode:FULL, rate:0, size:148
+2026-07-06 15:19:51, EXEC, v:1, k:ed@caminho, mode:FULL, rate:0
+2026-07-06 15:20:36, EXEC, v:1, k:ed@caminho, mode:FULL, rate:0, size:149
+2026-07-06 15:21:48, EXEC, v:1, k:ed@caminho, mode:FULL, rate:0, size:152
+2026-07-06 15:23:25, EXEC, v:1, k:ed@caminho, mode:FULL, rate:0, size:150
+2026-07-06 15:23:42, EXEC, v:1, k:ed@caminho, mode:FULL, rate:0, size:152
+2026-07-06 15:24:04, EXEC, v:1, k:ed@caminho, mode:FULL, rate:100, size:152
+2026-07-06 15:24:06, MOVE, v:1, k:ed@caminho, mode:BACK
+2026-07-06 15:24:38, SELF, v:1, k:ed@caminho, self:1, rate:100, study:50, concept:1, refactor:1
+2026-07-06 15:32:10, MOVE, v:1, k:ed@subset_sum, mode:DOWN
+2026-07-06 15:32:13, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-07-06 15:32:20, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:5
+2026-07-06 15:37:21, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0
+2026-07-06 15:53:09, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:13
+2026-07-06 15:58:15, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:14
+2026-07-06 16:06:58, EXEC, v:1, k:ed@subset_sum, mode:FULL, size:29, fail:COMP
+2026-07-06 16:07:19, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:29
+2026-07-06 16:07:35, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:30
+2026-07-06 16:10:48, EXEC, v:1, k:ed@subset_sum, mode:FULL, size:40, fail:COMP
+2026-07-06 16:11:09, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:40
+2026-07-06 16:12:34, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:87, size:40
+2026-07-06 16:18:45, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:29, size:40
+2026-07-06 16:19:28, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:87, size:40
+2026-07-06 16:19:40, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:100, size:40
+2026-07-06 16:19:45, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-07-06 16:21:08, SELF, v:1, k:ed@subset_sum, self:1, rate:100, study:40, concept:1, refactor:1
+2026-07-06 16:21:26, MOVE, v:1, k:ed@distancia, mode:DOWN
+2026-07-06 16:22:21, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-07-06 16:22:30, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25, size:62
+2026-07-06 17:18:16, EXEC, v:1, k:ed@wordsearch, mode:FULL, size:85, fail:COMP
+2026-07-06 17:21:44, EXEC, v:1, k:ed@wordsearch, mode:FULL, size:96, fail:COMP
+2026-07-06 17:23:29, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:100, size:99
+2026-07-06 17:23:43, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-07-06 17:24:53, SELF, v:1, k:ed@wordsearch, self:1, rate:100, study:30, concept:1, problem:1

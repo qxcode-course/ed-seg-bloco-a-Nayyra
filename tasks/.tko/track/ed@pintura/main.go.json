@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-06_13-57-48",
+            "content": "@@ -33,18 +33,16 @@\n %09%22fmt%22%0A%09\n-//\n %22image/c\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-07-06_13-58-01",
+            "content": "@@ -498,28 +498,16 @@\n color)%0A%09\n-return image\n %0A%7D%0A%0A// N\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-07-06_13-58-48",
+            "content": "@@ -261,38 +261,8 @@\n or%0A%0A\n-%09dfs(image, l-1, c, o, color)%0A\n %09dfs\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-07-06_13-59-15",
+            "content": "@@ -300,16 +300,18 @@\n image, l\n+-1\n , c, o, \n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-07-06_13-59-25",
+            "content": "@@ -307,10 +307,8 @@\n l, c\n-+1\n , o,\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-07-06_13-59-40",
+            "content": "@@ -130,16 +130,24 @@\n t)%7B%0A%09if \n+l %3C 0 %7C%7C\n  c %3E= le\n@@ -317,17 +317,16 @@\n  color)%0A\n-%0A\n %7D%0A%0A// N%C3%A3\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-07-06_14-00-02",
+            "content": "@@ -130,16 +130,17 @@\n t)%7B%0A%09if \n+ \n c %3E= len\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-07-06_14-00-14",
+            "content": "@@ -134,18 +134,9 @@\n %09if \n-l %3C 0 %7C%7C l\n+c\n  %3E= \n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-07-06_14-26-29",
+            "content": "@@ -320,70 +320,8 @@\n lor)\n-%0A%09dfs(image, l, c-1, o, color)%0A%09dfs(image, l+1, c+1, o, color)\n %0A%0A%7D%0A\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-07-06_14-27-12",
+            "content": "@@ -364,16 +364,19 @@\n e, l+1, \n+c+1\n , o, col\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-07-06_14-27-26",
+            "content": "@@ -364,17 +364,16 @@\n e, l+1, \n-c\n , o, col\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-07-06_14-27-35",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t//\"image/color\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc dfs( image [][]int, l, c, o, color int){\n\tif l < 0 || l >= len(image) || c < 0 || c >= len(image[0]){\n\t\treturn\n\t}\n\n\tif image[l][c] != o{\n\t\treturn\n\t}\n\n\timage[l][c] = color\n\n\tdfs(image, l-1, c, o, color)\n\tdfs(image, l, c+1, o, color)\n\tdfs(image, l, c-1, o, color)\n\tdfs(image, l+1, c, o, color)\n\n}\n\n// N\u00e3o modifique a assinatura da fun\u00e7\u00e3o floodFill\nfunc floodFill(image [][]int, sr int, sc int, color int) [][]int {\n\t//\n\to := image[sr][sc]\n\n\tif o == color{\n\t\treturn image\n\t}\n\n\tdfs(image, sr, sc, o, color)\n\treturn image\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tparts := strings.Fields(line)\n\tnl, _ := strconv.Atoi(parts[0])\n\tnc, _ := strconv.Atoi(parts[1])\n\n\timage := make([][]int, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\trowStr := strings.Fields(scanner.Text())\n\t\trow := make([]int, nc)\n\t\tfor j := 0; j < nc; j++ {\n\t\t\trow[j], _ = strconv.Atoi(rowStr[j])\n\t\t}\n\t\timage[i] = row\n\t}\n\n\t// L\u00ea sr, sc e color\n\tscanner.Scan()\n\tparams := strings.Fields(scanner.Text())\n\tsr, _ := strconv.Atoi(params[0])\n\tsc, _ := strconv.Atoi(params[1])\n\tcolor, _ := strconv.Atoi(params[2])\n\n\tresult := floodFill(image, sr, sc, color)\n\n\t// Imprime a matriz resultante\n\tfor _, row := range result {\n\t\tfor j, val := range row {\n\t\t\tif j > 0 {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Print(val)\n\t\t}\n\t\tfmt.Println()\n\t}\n}\n",
+            "lines": "82"
+        }
+    ]
+}

@@ -2,8 +2,28 @@
     "patches": [
         {
             "label": "2026-06-01_18-14-12",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00c3O ALTERE A ASSINATURA DA FUN\u00c7\u00c3O solve\nfunc solve(board [][]byte) {\n\t_ = board\n}\n\n// N\u00c3O ALTERE A MAIN\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar nrows, ncols int\n\tfmt.Sscanf(scanner.Text(), \"%d %d\", &nrows, &ncols)\n\tboard := make([][]byte, nrows)\n\tfor i := 0; i < nrows; i++ {\n\t\tscanner.Scan()\n\t\tboard[i] = []byte(scanner.Text())\n\t}\n\tsolve(board)\n\tfor _, row := range board {\n\t\tfmt.Println(string(row))\n\t}\n}\n",
+            "content": "@@ -45,59 +45,8 @@\n %0A)%0A%0A\n-// type Position struct%7B%0A// %09c int%0A// %09l int%0A// %7D%0A%0A\n // N\n@@ -118,194 +118,17 @@\n  %7B%0A%09\n-mapa := make(map%5Bint%5Dbool)%0A%09//linha //registra no mapa a posi%C3%A7%C3%A3o %0A%09for i := 0; i %3C len(board); i++%7B%0A%09%09if i == 'O'%7B%0A%09%09%09mapa%5Bi%5D = true%0A%09%09%7D%0A%09%7D%0A%09%0A%09//coluna%0A%09//linha inversa%0A%09//coluna inversa\n+_ = board\n %0A%7D%0A%0A\n",
             "lines": "29"
+        },
+        {
+            "label": "2026-07-06_12-55-35",
+            "content": "@@ -29,22 +29,8 @@\n io%22%0A\n-%09%22crypto/dsa%22%0A\n %09%22fm\n@@ -41,16 +41,19 @@\n %22os%22%0A)%0A%0A\n+// \n type Pos\n@@ -70,369 +70,31 @@\n ct%7B%0A\n-%09c int%0A%09l int%0A%7D%0A%0Afunc dfs(board %5B%5D%5B%5Dbyte, mapa map%5BPosition%5Dbool, l, c int)%7B%0A%09if l %3C 0 %7C%7C l %3E= len(board) %7C%7C c %3C 0 %7C%7C c %3E= len(board%5B0%5D)%7B%0A%09%09return%0A%09%7D%0A%0A%09if board%5Bl%5D%5Bc%5D == 'X'%7B%0A%09%09return%0A%09%7D%0A%0A%09if mapa%5BPosition%7Bl, c%7D%5D%7B%0A%09%09return%0A%09%7D%0A%0A%09mapa%5BPosition%7Bl, c%7D%5D = true%0A%0A%09dfs(board, mapa, l-1, c)%0A%09dfs(board, mapa, l+1, c)%0A%09dfs(board, mapa, l, c-1)%0A%09dfs(board, mapa, l, c+1)%0A\n+// %09c int%0A// %09l int%0A// \n %7D%0A%0A/\n@@ -182,24 +182,19 @@\n ake(map%5B\n-Position\n+int\n %5Dbool)%0A%09\n@@ -232,19 +232,16 @@\n si%C3%A7%C3%A3o %0A%09\n-// \n for i :=\n@@ -266,19 +266,16 @@\n ; i++%7B%0A%09\n-// \n %09if i ==\n@@ -281,19 +281,16 @@\n = 'O'%7B%0A%09\n-// \n %09%09mapa%5Bi\n@@ -302,118 +302,16 @@\n rue%0A\n-%09// %09%7D%0A%09// %7D%0A%09%0A%09for i := 0; i %3C len(board%5B0%5D); i++%7B%0A%09%09if board%5B0%5D%5Bi%5D == 'O'%7B%0A%09%09%09dfs(board, mapa, 0, i)%0A\n %09%09%7D%0A%09%7D%0A\n+%09\n %0A%09//\n@@ -322,535 +322,43 @@\n na%0A%09\n-%09for j := 0; j %3C len(board); j++%7B%0A%09%09if board%5Bj%5D%5B0%5D == 'O'%7B%0A%09%09%09dfs(board, mapa, j, 0)%0A%09%09%7D%0A%09%7D%0A%0A%0A%09//linha inversa%0A%09for j := 0; j %3C len(board); j++%7B%0A%09%09if board%5Blen(board)-1%5D%5Bj%5D == 'O'%7B%0A%09%09%09dfs(board, mapa, len(board)-1, j)%0A%09%09%7D%0A%09%7D%0A%0A%09//coluna inversa%0A%09for i := 0; i %3C len(board%5B0%5D); i++%7B%0A%09%09if board%5Bi%5D%5Blen(board)-1%5D == 'O'%7B%0A%09%09%09dfs(board, mapa, i, len(board%5B0%5D)-1)%0A%09%09%7D%0A%09%7D%0A%0A%09for i := 0; i %3C len(board); i++%7B%0A%09%09for j := 0; j %3C len(board%5B0%5D); j++%5B%0A%09%09%09if  board%5Bi%5D%5Bj%5D == 'O' && !mapa%5BPosition%7Bi, j%7D%5D %7B%0A%09%09%09%09board%5Bi%5D%5Bj%5D = 'X'%0A%09%09%09%7D%0A%09%09%5D%0A%09%7D %0A%7D%0A\n+//linha inversa%0A%09//coluna inversa%0A%7D\n %0A%0A//\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-07-06_13-35-46",
+            "content": "@@ -1218,17 +1218,17 @@\n 0%5D); j++\n-%7B\n+%5B\n %0A%09%09%09if  \n@@ -1302,17 +1302,17 @@\n %0A%09%09%09%7D%0A%09%09\n-%7D\n+%5D\n %0A%09%7D %0A%7D%0A%0A\n",
+            "lines": "99"
+        },
+        {
+            "label": "2026-07-06_13-36-11",
+            "content": "@@ -25,16 +25,30 @@\n %22bufio%22%0A\n+%09%22crypto/dsa%22%0A\n %09%22fmt%22%0A%09\n",
+            "lines": "99"
+        },
+        {
+            "label": "2026-07-06_13-36-30",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Position struct{\n\tc int\n\tl int\n}\n\nfunc dfs(board [][]byte, mapa map[Position]bool, l, c int){\n\tif l < 0 || l >= len(board) || c < 0 || c >= len(board[0]){\n\t\treturn\n\t}\n\n\tif board[l][c] == 'X'{\n\t\treturn\n\t}\n\n\tif mapa[Position{l, c}]{\n\t\treturn\n\t}\n\n\tmapa[Position{l, c}] = true\n\n\tdfs(board, mapa, l-1, c)\n\tdfs(board, mapa, l+1, c)\n\tdfs(board, mapa, l, c-1)\n\tdfs(board, mapa, l, c+1)\n}\n\n// N\u00c3O ALTERE A ASSINATURA DA FUN\u00c7\u00c3O solve\nfunc solve(board [][]byte) {\n\tmapa := make(map[Position]bool)\n\t//linha //registra no mapa a posi\u00e7\u00e3o \n\t// for i := 0; i < len(board); i++{\n\t// \tif i == 'O'{\n\t// \t\tmapa[i] = true\n\t// \t}\n\t// }\n\t\n\tfor i := 0; i < len(board[0]); i++{\n\t\tif board[0][i] == 'O'{\n\t\t\tdfs(board, mapa, 0, i)\n\t\t}\n\t}\n\n\t//coluna\n\t\tfor j := 0; j < len(board); j++{\n\t\tif board[j][0] == 'O'{\n\t\t\tdfs(board, mapa, j, 0)\n\t\t}\n\t}\n\n\n\t//linha inversa\n\tfor j := 0; j < len(board); j++{\n\t\tif board[len(board)-1][j] == 'O'{\n\t\t\tdfs(board, mapa, len(board)-1, j)\n\t\t}\n\t}\n\n\t//coluna inversa\n\tfor i := 0; i < len(board[0]); i++{\n\t\tif board[i][len(board)-1] == 'O'{\n\t\t\tdfs(board, mapa, i, len(board[0])-1)\n\t\t}\n\t}\n\n\tfor i := 0; i < len(board); i++{\n\t\tfor j := 0; j < len(board[0]); j++{\n\t\t\tif  board[i][j] == 'O' && !mapa[Position{i, j}] {\n\t\t\t\tboard[i][j] = 'X'\n\t\t\t}\n\t\t}\n\t} \n}\n\n\n// N\u00c3O ALTERE A MAIN\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar nrows, ncols int\n\tfmt.Sscanf(scanner.Text(), \"%d %d\", &nrows, &ncols)\n\tboard := make([][]byte, nrows)\n\tfor i := 0; i < nrows; i++ {\n\t\tscanner.Scan()\n\t\tboard[i] = []byte(scanner.Text())\n\t}\n\tsolve(board)\n\tfor _, row := range board {\n\t\tfmt.Println(string(row))\n\t}\n}\n",
+            "lines": "98"
         }
     ]
 }
