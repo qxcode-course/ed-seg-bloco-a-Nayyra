@@ -66,3 +66,29 @@
 2026-07-08 14:35:27, EXEC, v:1, k:ed@clonar, mode:FULL, rate:100, size:83
 2026-07-08 14:35:29, MOVE, v:1, k:ed@clonar, mode:BACK
 2026-07-08 14:35:53, SELF, v:1, k:ed@clonar, self:1, rate:100, study:10, concept:1
+2026-07-08 15:36:34, MOVE, v:1, k:ed@rotten, mode:DOWN
+2026-07-08 15:37:29, MOVE, v:1, k:ed@rotten, mode:PICK
+2026-07-08 15:37:34, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:5
+2026-07-08 15:40:19, MOVE, v:1, k:ed@rotten, mode:PICK
+2026-07-08 15:40:22, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:9
+2026-07-08 15:45:18, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:16
+2026-07-08 15:45:26, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:16
+2026-07-08 15:47:47, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:24
+2026-07-08 15:48:03, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:23
+2026-07-08 15:51:58, MOVE, v:1, k:ed@rotten, mode:BACK
+2026-07-08 15:52:52, MOVE, v:1, k:ed@rotten, mode:PICK
+2026-07-08 15:52:54, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0
+2026-07-08 16:01:00, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0
+2026-07-08 16:01:23, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:20
+2026-07-08 16:04:57, EXEC, v:1, k:ed@rotten, mode:FULL, size:31, fail:COMP
+2026-07-08 16:05:49, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:31
+2026-07-08 16:15:45, EXEC, v:1, k:ed@rotten, mode:FULL, size:44, fail:COMP
+2026-07-08 16:21:09, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:55
+2026-07-08 16:21:15, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0
+2026-07-08 16:21:23, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:55
+2026-07-08 16:22:07, EXEC, v:1, k:ed@rotten, mode:FULL, rate:33, size:55
+2026-07-08 16:22:45, EXEC, v:1, k:ed@rotten, mode:FULL, rate:33, size:57
+2026-07-08 16:25:07, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:57
+2026-07-08 16:25:44, EXEC, v:1, k:ed@rotten, mode:FULL, rate:100, size:57
+2026-07-08 16:25:47, MOVE, v:1, k:ed@rotten, mode:BACK
+2026-07-08 16:26:16, SELF, v:1, k:ed@rotten, self:1, rate:100, study:40, concept:1, refactor:1

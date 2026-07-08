@@ -1,0 +1,84 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-08_15-37-34",
+            "content": "@@ -41,59 +41,35 @@\n     \n-var m, n int%0A    fmt.Scan(&m)%0A    fmt.Scan(&n)%0A%0A    \n+fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-07-08_15-40-21",
+            "content": "@@ -93,133 +93,7 @@\n     \n-laranjas := make(%5B%5D%5B%5Dint, m)%0A%0A    for i := 0; i %3C m; i++%7B%0A        laranjas%5Bi%5D = make(%5B%5Dint, n)%0A    %7D%0A%0A    fmt.Print(laranjas)%0A\n %0A%7D%0A\n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-07-08_15-45-18",
+            "content": "@@ -208,10 +208,8 @@\n rint\n-ln\n (lar\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-07-08_15-45-26",
+            "content": "@@ -221,179 +221,7 @@\n as)%0A\n-    for i :=0; i%3Cm; i++%7B%0A        for j:=0; j%3Cn; j++%7B%0A            fmt.Scan(&laranjas%5Bi%5D%5Bj%5D)%0A        %7D%0A    %7D%0A%0A    for i := 0; i%3Cm; i++%7B%0A        fmt.Println(laranjas%5Bi%5D)%0A    %7D\n %0A%7D%0A\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-07-08_15-47-47",
+            "content": "@@ -183,32 +183,58 @@\n %5Dint, n)%0A    %7D%0A%0A\n+    fmt.Println(laranjas)%0A\n     for i :=0; i\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-07-08_15-48-03",
+            "content": "@@ -299,10 +299,75 @@\n %0A    %7D%0A%0A\n+    for i := 0; i%3Cm; i++%7B%0A        fmt.Println(laranjas%5Bi%5D)%0A    %7D%0A\n %7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-07-08_16-01-23",
+            "content": "@@ -54,56 +54,8 @@\n int%0A\n-    var min, frescas int%0A    var podres %5B%5D%5B%5Dint%0A\n     \n@@ -286,230 +286,23 @@\n j%5D)%0A\n-%0A            if laranjas%5Bi%5D%5Bj%5D == 1%7B%0A                frescas++%0A            %7Delse if laranjas%5Bi%5D%5Bj%5D == 2%7B%0A                podres = append(podres, %5B%5Dint%7Bi,j%7D)%0A            %7D%0A            %0A        %7D%0A    %7D%0A%0A    fmt.Print(podres)\n+        %7D%0A    %7D\n %0A%0A%7D%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-07-08_16-04-57",
+            "content": "@@ -534,28 +534,8 @@\n   %7D%0A\n-    fmt.Println(min)\n %0A   \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-07-08_16-05-49",
+            "content": "@@ -538,333 +538,46 @@\n     \n-%0A    for len(podres) %3E0 && frescas%3E0%7B%0A        for i:=0; i %3C len(podres); i++%7B%0A            atual := podres%5B0%5D%0A            podres = podres%5B:1%5D%0A%0A            dire := %5B%5D%5B%5Dint%7B%0A                %7B-1, 0%7D, %7B0, -1%7D,%0A            %7D%0A%0A            for _, i:= range dire%7B%0A                newL := atual%5B0%5D, + i%5B0%5D%0A            %7D%0A        %7D%0A    %7D\n+fmt.Println(min)%0A    fmt.Print(podres)\n %0A%0A%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-07-08_16-15-45",
+            "content": "@@ -825,262 +825,17 @@\n l%5B0%5D\n+, \n + i%5B0%5D%0A\n-                newC := atual%5B1%5D+i%5B1%5D%0A                if newL %3E= 0 && newL %3C m && newC %3E= 0 && newC %3C n%7B%0A                    laranjas%5BnewL%5D%5BnewC%5D = 2%0A                    frescas--%0A                    podres = append(podres, %5B%5Dint%7BnewL, newC%7D)%0A    \n     \n@@ -856,94 +856,9 @@\n     \n-  \n-  %7D%0A            min++%0A        %7D%0A    %7D%0A%0A    if frescas == 0%7B%0A        fmt.Println(min)\n+%7D\n %0A   \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-07-08_16-21-09",
+            "content": "@@ -1103,30 +1103,24 @@\n       %7D%0A    \n-    %7D%0A\n         min+\n@@ -1121,16 +1121,26 @@\n   min++%0A\n+        %7D%0A\n     %7D%0A%0A \n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-07-08_16-21-23",
+            "content": "@@ -742,22 +742,8 @@\n -1%7D,\n- %7B1,0%7D, %7B0,1%7D,\n %0A   \n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-07-08_16-22-07",
+            "content": "@@ -1198,45 +1198,8 @@\n in)%0A\n-    %7Delse%7B%0A        fmt.Println(%22-1%22)%0A\n     \n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-07-08_16-22-45",
+            "content": "@@ -675,10 +675,10 @@\n res%5B\n-1\n :\n+1\n %5D%0A%0A \n@@ -945,17 +945,16 @@\n newC %3C n\n- \n %7B%0A      \n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-07-08_16-25-07",
+            "content": "@@ -950,37 +950,8 @@\n %3C n \n-&& laranjas%5BnewL%5D%5BnewC%5D == 1 \n %7B%0A  \n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-07-08_16-25-44",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var m, n int\n    var min, frescas int\n    var podres [][]int\n    fmt.Scan(&m)\n    fmt.Scan(&n)\n\n    laranjas := make([][]int, m)\n\n    for i := 0; i < m; i++{\n        laranjas[i] = make([]int, n)\n    }\n\n    for i :=0; i<m; i++{\n        for j:=0; j<n; j++{\n            fmt.Scan(&laranjas[i][j])\n\n            if laranjas[i][j] == 1{\n                frescas++\n            }else if laranjas[i][j] == 2{\n                podres = append(podres, []int{i,j})\n            }\n            \n        }\n    }\n    \n    for len(podres) >0 && frescas>0{\n        for i:=0; i < len(podres); i++{\n            atual := podres[0]\n            podres = podres[1:]\n\n            dire := [][]int{\n                {-1, 0}, {0, -1}, {1,0}, {0,1},\n            }\n\n            for _, i:= range dire{\n                newL := atual[0]+ i[0]\n                newC := atual[1]+i[1]\n                if newL >= 0 && newL < m && newC >= 0 && newC < n && laranjas[newL][newC] == 1 {\n                    laranjas[newL][newC] = 2\n                    frescas--\n                    podres = append(podres, []int{newL, newC})\n                }\n            }\n        }\n        min++\n    }\n\n    if frescas == 0{\n        fmt.Println(min)\n    }else{\n        fmt.Println(\"-1\")\n    }\n\n}\n",
+            "lines": "57"
+        }
+    ]
+}
