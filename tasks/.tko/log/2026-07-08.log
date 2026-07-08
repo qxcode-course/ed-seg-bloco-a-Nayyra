@@ -1,0 +1,68 @@
+2026-07-08 10:29:46, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-07-08 10:29:50, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0
+2026-07-08 10:37:23, EXEC, v:1, k:ed@distancia, mode:FULL, size:5, fail:COMP
+2026-07-08 10:37:41, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:6
+2026-07-08 10:44:00, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:13
+2026-07-08 10:44:32, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:13
+2026-07-08 10:48:12, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:21
+2026-07-08 10:48:33, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:21
+2026-07-08 11:09:03, EXEC, v:1, k:ed@distancia, mode:FULL, size:69, fail:COMP
+2026-07-08 11:09:20, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:69
+2026-07-08 11:09:32, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:69
+2026-07-08 11:10:27, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:73
+2026-07-08 11:10:39, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0
+2026-07-08 11:12:25, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:74
+2026-07-08 11:13:36, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:81
+2026-07-08 11:17:00, EXEC, v:1, k:ed@distancia, mode:FULL, size:81, fail:COMP
+2026-07-08 11:17:25, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:83
+2026-07-08 11:17:55, EXEC, v:1, k:ed@distancia, mode:FULL, rate:100, size:77
+2026-07-08 11:18:00, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-07-08 11:18:26, SELF, v:1, k:ed@distancia, self:1, rate:100, study:40, concept:1, problem:1
+2026-07-08 11:18:47, MOVE, v:1, k:ed@serial, mode:DOWN
+2026-07-08 11:18:49, MOVE, v:1, k:ed@serial, mode:PICK
+2026-07-08 12:55:35, MOVE, v:1, k:ed@serial, mode:BACK
+2026-07-08 12:55:38, MOVE, v:1, k:ed@serial, mode:PICK
+2026-07-08 12:55:39, MOVE, v:1, k:ed@serial, mode:BACK
+2026-07-08 12:56:15, MOVE, v:1, k:ed@serial, mode:PICK
+2026-07-08 13:02:40, EXEC, v:1, k:ed@serial, mode:FULL, rate:0, size:65
+2026-07-08 13:11:02, EXEC, v:1, k:ed@serial, mode:FULL, rate:100, size:81
+2026-07-08 13:11:07, MOVE, v:1, k:ed@serial, mode:BACK
+2026-07-08 13:11:50, SELF, v:1, k:ed@serial, self:1, rate:100, study:15, concept:1, problem:1
+2026-07-08 13:11:59, MOVE, v:1, k:ed@formatada, mode:DOWN
+2026-07-08 13:12:10, MOVE, v:1, k:ed@formatada, mode:PICK
+2026-07-08 13:12:13, EXEC, v:1, k:ed@formatada, mode:FULL, rate:0, size:72
+2026-07-08 13:13:11, EXEC, v:1, k:ed@formatada, mode:FULL, rate:0
+2026-07-08 13:13:47, EXEC, v:1, k:ed@formatada, mode:FULL, rate:0
+2026-07-08 13:23:07, EXEC, v:1, k:ed@formatada, mode:FULL, size:84, fail:COMP
+2026-07-08 13:23:23, EXEC, v:1, k:ed@formatada, mode:FULL, rate:0, size:84
+2026-07-08 13:24:22, EXEC, v:1, k:ed@formatada, mode:FULL, rate:0, size:85
+2026-07-08 13:26:15, EXEC, v:1, k:ed@formatada, mode:FULL, rate:0, size:90
+2026-07-08 13:27:09, EXEC, v:1, k:ed@formatada, mode:FULL, rate:0, size:99
+2026-07-08 13:42:57, EXEC, v:1, k:ed@formatada, mode:FULL, rate:100, size:107
+2026-07-08 13:43:03, MOVE, v:1, k:ed@formatada, mode:BACK
+2026-07-08 13:44:32, SELF, v:1, k:ed@formatada, self:1, rate:100, study:30, concept:1
+2026-07-08 13:44:52, MOVE, v:1, k:ed@inverter, mode:DOWN
+2026-07-08 13:44:54, MOVE, v:1, k:ed@inverter, mode:PICK
+2026-07-08 13:44:55, MOVE, v:1, k:ed@inverter, mode:BACK
+2026-07-08 13:45:34, MOVE, v:1, k:ed@inverter, mode:PICK
+2026-07-08 13:45:35, EXEC, v:1, k:ed@inverter, mode:FULL, rate:16, size:72
+2026-07-08 13:50:01, EXEC, v:1, k:ed@inverter, mode:FULL, rate:16, size:73
+2026-07-08 13:52:10, EXEC, v:1, k:ed@inverter, mode:FULL, rate:16, size:77
+2026-07-08 13:52:51, EXEC, v:1, k:ed@inverter, mode:FULL, rate:16, size:79
+2026-07-08 13:54:26, EXEC, v:1, k:ed@inverter, mode:FULL, rate:100, size:79
+2026-07-08 13:54:29, MOVE, v:1, k:ed@inverter, mode:BACK
+2026-07-08 13:55:08, SELF, v:1, k:ed@inverter, self:1, rate:100, study:10
+2026-07-08 13:55:15, MOVE, v:1, k:ed@clonar, mode:DOWN
+2026-07-08 13:55:17, MOVE, v:1, k:ed@clonar, mode:PICK
+2026-07-08 13:55:57, EXEC, v:1, k:ed@clonar, mode:FULL, rate:0, size:76
+2026-07-08 13:56:11, EXEC, v:1, k:ed@clonar, mode:FULL, rate:0
+2026-07-08 13:59:40, EXEC, v:1, k:ed@clonar, mode:FULL, size:81, fail:COMP
+2026-07-08 13:59:48, EXEC, v:1, k:ed@clonar, mode:FULL, size:81, fail:COMP
+2026-07-08 13:59:58, EXEC, v:1, k:ed@clonar, mode:FULL, size:83, fail:COMP
+2026-07-08 14:00:02, MOVE, v:1, k:ed@clonar, mode:BACK
+2026-07-08 14:00:16, MOVE, v:1, k:ed@clonar, mode:PICK
+2026-07-08 14:00:18, EXEC, v:1, k:ed@clonar, mode:FULL, fail:COMP
+2026-07-08 14:34:56, EXEC, v:1, k:ed@clonar, mode:FULL, rate:33, size:83
+2026-07-08 14:35:27, EXEC, v:1, k:ed@clonar, mode:FULL, rate:100, size:83
+2026-07-08 14:35:29, MOVE, v:1, k:ed@clonar, mode:BACK
+2026-07-08 14:35:53, SELF, v:1, k:ed@clonar, self:1, rate:100, study:10, concept:1

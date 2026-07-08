@@ -1,0 +1,84 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-06_20-23-21",
+            "content": "@@ -41,32 +41,35 @@\n     \n-//que quest%C3%A3o confusa mds\n+fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-07-08_10-37-23",
+            "content": "@@ -67,49 +67,6 @@\n mds%0A\n-    fmt.Println(%22que quest%C3%A3o confusa mds%22)%0A\n %7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-07-08_10-37-41",
+            "content": "@@ -110,130 +110,6 @@\n s%22)%0A\n-    var sequencia string%0A    var l int%0A    fmt.Scan(&sequencia)%0A    fmt.Scan(&l)%0A%0A    fmt.Print(sequencia)%0A    fmt.Print(l)%0A\n %7D%0A\n",
+            "lines": "6"
+        },
+        {
+            "label": "2026-07-08_10-44-00",
+            "content": "@@ -201,18 +201,16 @@\n mt.Print\n-ln\n (sequenc\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-07-08_10-44-32",
+            "content": "@@ -123,17 +123,16 @@\n equencia\n-S\n  string%0A\n@@ -149,25 +149,8 @@\n int%0A\n-    var is %5B%5Dint%0A\n     \n@@ -168,17 +168,16 @@\n equencia\n-S\n )%0A    fm\n@@ -196,159 +196,30 @@\n     \n-sequencia := %5B%5Dbyte(sequenciaS)%0A%0A    for i:=0; i %3C len(sequencia); i++%7B%0A        if sequencia%5Bi%5D == '.'%7B%0A            is = append(is, i)%0A        %7D%0A    %7D%0A\n+fmt.Println(sequencia)\n %0A   \n@@ -228,24 +228,14 @@\n mt.Print\n+(\n l\n-n(sequencia\n )%0A%7D%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-07-08_10-48-12",
+            "content": "@@ -379,14 +379,21 @@\n Println(\n-i\n s\n+equencia\n )%0A%7D%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-07-08_10-48-33",
+            "content": "@@ -10,749 +10,21 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-%09%22strings%22%0A)%0A%0A%0Afunc valido(ss %5B%5Dbyte, pos int, num byte, l int) bool  %7B%0A    for i := pos -1; i %3E pos - l; i--%7B%0A        if ss%5Bi%5D == num%7B%0A            return false%0A        %7D%0A    %7D%0A%0A    for i := pos +1; i %3C pos + l; i++%7B%0A        if ss%5Bi%5D == num%7B%0A            return false%0A        %7D%0A    %7D%0A%0A    return true%0A%7D%0A%0Afunc back(ss %5B%5Dbyte, is %5B%5Dint, p int, l int) bool%7B%0A    if p == len(is)%7B%0A        return true%0A    %7D%0A%0A    posS := is%5Bp%5D%0A%0A    for i:= 0; i %3C= l; i++%7B%0A        //d%C3%A1 um jeito de fazer a convers%C3%A3o do numero em byte%0A%0A        if valido(ss, posS, byte(i), l)%7B%0A            ss%5BposS%5D = byte(i)%0A%0A            if back(ss, is, p+1, l)%7B%0A                return true%0A            %7D%0A        %7D%0A%0A        ss%5BposS%5D = '.'%0A    %7D%0A%0A    return false%0A%7D%0A%0A\n func\n@@ -371,81 +371,22 @@\n     \n-if back(sequencia, is, 0, l)%7B%0A        fmt.Println(string(sequencia))%0A    %7D\n+fmt.Println(is)\n %0A%7D%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-07-08_11-09-03",
+            "content": "@@ -28,11 +28,8 @@\n t%22%0A%09\n-// \n %22str\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-07-08_11-09-20",
+            "content": "@@ -122,17 +122,16 @@\n  -1; i %3E\n-=\n  pos - l\n@@ -228,17 +228,16 @@\n  +1; i %3C\n-=\n  pos + l\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-07-08_11-09-32",
+            "content": "@@ -981,35 +981,8 @@\n S)%0A%0A\n-    fmt.Println(%22jssdlsd%22)%0A\n     \n@@ -1012,24 +1012,24 @@\n ncia); i++%7B%0A\n+\n         if s\n@@ -1100,34 +1100,8 @@\n  %7D%0A%0A\n-    fmt.Println(%22sjdhsd%22)%0A\n     \n@@ -1173,39 +1173,12 @@\n a))%0A\n+\n     %7D\n-%0A%0A    fmt.Println(%22sjdhsd%22)\n %0A%7D%0A\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-07-08_11-10-27",
+            "content": "@@ -541,38 +541,8 @@\n byte\n-%0A        digB := byte(i + '0')\n %0A%0A  \n@@ -567,20 +567,23 @@\n , posS, \n-digB\n+byte(i)\n , l)%7B%0A  \n@@ -607,12 +607,15 @@\n %5D = \n-digB\n+byte(i)\n %0A%0A  \n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-07-08_11-12-25",
+            "content": "@@ -142,56 +142,8 @@\n --%7B%0A\n-%0A        if i %3C 0%7B%0A            break%0A        %7D%0A%0A\n     \n@@ -249,18 +249,8 @@\n ++%7B%0A\n-        %0A%0A\n     \n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-07-08_11-13-36",
+            "content": "@@ -305,23 +305,8 @@\n     \n-if i %3E= len(ss)\n %0A%0A  \n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-07-08_11-17-00",
+            "content": "@@ -320,37 +320,8 @@\n (ss)\n-%7B%0A            break%0A        %7D\n %0A%0A  \n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-07-08_11-17-24",
+            "content": "@@ -892,16 +892,89 @@\n ain() %7B%0A\n+    //que quest%C3%A3o confusa mds%0A    fmt.Println(%22que quest%C3%A3o confusa mds%22)%0A\n     var \n@@ -991,16 +991,16 @@\n  string%0A\n-\n     var \n@@ -1103,16 +1103,43 @@\n nciaS)%0A%0A\n+    fmt.Println(%22jssdlsd%22)%0A\n     for \n@@ -1245,24 +1245,50 @@\n    %7D%0A    %7D%0A%0A\n+    fmt.Println(%22sjdhsd%22)%0A\n     if back(\n@@ -1348,16 +1348,43 @@\n encia))%0A\n-\n     %7D\n+%0A%0A    fmt.Println(%22sjdhsd%22)\n %0A%7D%0A\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-07-08_11-17-55",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t// \"strings\"\n)\n\n\nfunc valido(ss []byte, pos int, num byte, l int) bool  {\n    for i := pos -1; i >= pos - l; i--{\n\n        if i < 0{\n            break\n        }\n\n        if ss[i] == num{\n            return false\n        }\n    }\n\n    for i := pos +1; i <= pos + l; i++{\n        if i >= len(ss){\n            break\n        }\n\n        if ss[i] == num{\n            return false\n        }\n    }\n\n    return true\n}\n\nfunc back(ss []byte, is []int, p int, l int) bool{\n    if p == len(is){\n        return true\n    }\n\n    posS := is[p]\n\n    for i:= 0; i <= l; i++{\n        //d\u00e1 um jeito de fazer a convers\u00e3o do numero em byte\n        digB := byte(i + '0')\n\n        if valido(ss, posS, digB, l){\n            ss[posS] = digB\n\n            if back(ss, is, p+1, l){\n                return true\n            }\n        }\n\n        ss[posS] = '.'\n    }\n\n    return false\n}\n\nfunc main() {\n    var sequenciaS string\n    var l int\n    var is []int\n    fmt.Scan(&sequenciaS)\n    fmt.Scan(&l)\n\n    sequencia := []byte(sequenciaS)\n\n    for i:=0; i < len(sequencia); i++{\n        if sequencia[i] == '.'{\n            is = append(is, i)\n        }\n    }\n\n    if back(sequencia, is, 0, l){\n        fmt.Println(string(sequencia))\n    }\n}\n",
+            "lines": "77"
+        }
+    ]
+}

@@ -13,23 +13,23 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@basic
-- ed@list
-- ed@vector
-- ed@bfs
-- ed@linear
-- ed@tree
-- ed@dfs
 - ed@backtrack
+- ed@vector
+- ed@list
+- ed@bfs
+- ed@dfs
+- ed@linear
+- ed@basic
 - ed@rec
+- ed@tree
 flags:
   inbox: all
-  panel: skills
+  panel: graph
   task_graph_mode: executions
   show_time: 'true'
 audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@wordsearch
-selected_index: 65
+selected: ed@clonar
+selected_index: 73
