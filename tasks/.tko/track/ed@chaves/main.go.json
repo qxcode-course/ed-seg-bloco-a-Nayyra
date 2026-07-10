@@ -2,8 +2,28 @@
     "patches": [
         {
             "label": "2026-07-09_11-35-55",
-            "content": "package main\n\nimport (\n)\n\nfunc main() {\n}\n",
+            "content": "@@ -18,13 +18,11 @@\n ort \n-%22fmt%22\n+(%0A)\n %0A%0Afu\n@@ -37,169 +37,6 @@\n ) %7B%0A\n-%09var lista %5B%5D%5B%5Dint%0A%09for range 16%7B%0A%09%09var a, b int%0A%09%09fmt.Scan(&a, &b)%0A%09%09lista = append(lista, %5B%5Dint%7Ba, b%7D)%0A%09%7D%0A%0A%09for i := 0; i %3C 16; i++ %7B%0A%09%09fmt.Println(lista%5Bi%5D)%0A%09%7D%0A\n %7D%0A\n",
             "lines": "7"
+        },
+        {
+            "label": "2026-07-09_21-47-29",
+            "content": "@@ -66,17 +66,17 @@\n  range 1\n-5\n+6\n %7B%0A%09%09var \n@@ -166,9 +166,9 @@\n  %3C 1\n-5\n+6\n ; i+\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-07-09_21-52-19",
+            "content": "@@ -60,188 +60,31 @@\n t%0A%09f\n-ila := NewQueue%5Bstring%5D()%0A%09for letra := 'A'; letra %3C= 'P'; letra++%7B%0A%09%09fila.Enqueue(string(letra))%0A%09%7D%0A%0A%09for range 15%7B%0A%09%09t1 := fila.Dequeue()%0A%09%09t2 := fila.Dequeue()%0A%0A%09%09var gol1, gol2\n+or range 15%7B%0A%09%09var a, b\n  int\n@@ -100,124 +100,108 @@\n an(&\n-gol1, &gol2\n+a, &b\n )%0A\n-%0A\n %09%09\n-if gol1 %3E gol2%7B%0A%09%09%09fila.Enqueue(t1)%0A%09%09%7Delse%7B%0A%09%09%09fila.Enqueue(t2\n+lista = append(lista, %5B%5Dint%7Ba, b%7D\n )%0A\n-%09\n %09%7D%0A\n-%09%7D%0A%0A%09fmt.Println(fila.Dequeue())\n+%0A%09for i := 0; i %3C 15; i++ %7B%0A%09%09fmt.Println(lista%5Bi%5D)%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-07-09_22-03-23",
+            "content": "@@ -35,16 +35,35 @@\n ain() %7B%0A\n+%09var lista %5B%5D%5B%5Dint%0A\n %09fila :=\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-07-09_22-03-52",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tfila := NewQueue[string]()\n\tfor letra := 'A'; letra <= 'P'; letra++{\n\t\tfila.Enqueue(string(letra))\n\t}\n\n\tfor range 15{\n\t\tt1 := fila.Dequeue()\n\t\tt2 := fila.Dequeue()\n\n\t\tvar gol1, gol2 int\n\t\tfmt.Scan(&gol1, &gol2)\n\n\t\tif gol1 > gol2{\n\t\t\tfila.Enqueue(t1)\n\t\t}else{\n\t\t\tfila.Enqueue(t2)\n\t\t}\n\t}\n\n\tfmt.Println(fila.Dequeue())\n}\n",
+            "lines": "26"
         }
     ]
 }

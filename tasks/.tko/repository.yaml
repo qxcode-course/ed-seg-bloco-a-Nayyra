@@ -13,14 +13,14 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@bfs
-- ed@tree
-- ed@linear
 - ed@vector
 - ed@dfs
 - ed@backtrack
 - ed@rec
 - ed@list
+- ed@bfs
+- ed@tree
+- ed@linear
 - ed@basic
 flags:
   inbox: all
@@ -31,5 +31,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@chaves
-selected_index: 55
+selected: ed@queimando
+selected_index: 56

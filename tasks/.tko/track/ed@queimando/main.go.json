@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-09_22-05-42",
+            "content": "@@ -45,38 +45,8 @@\n %0A)%0A%0A\n-type Pos struct%7B%0A%09l, c int%0A%7D%0A%0A\n func\n@@ -114,217 +114,29 @@\n ()%0A%09\n-stack.Push(Pos%7Bl, c%7D)%0A%0A%09for !stack.IsEmpty()%7B%0A%09%09a := stack.Pop()%0A%0A%09%09if a.l %3E 0 && a.l %3C len(grid) -1 && a.c %3E 0 && a.c %3C len(grid%5B0%5D)-1 %7B%0A%09%09%09if grid%5Ba.l%5D%5Ba.c%5D == '#'%7B%0A%09%09%09%09grid%5Ba.l%5D%5Ba.c%5D = 'o'%0A%0A%09%09%09%09%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n+_ , _ , _ = mat, l, c\n %0A%0A%09/\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-07-09_22-21-40",
+            "content": "@@ -341,35 +341,8 @@\n %09%09%09%09\n-stack.Push(Pos%7Ba.l-1, a.c%7D)\n %0A%09%09%09\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-07-09_22-21-52",
+            "content": "@@ -369,102 +369,8 @@\n c%7D)%0A\n-%09%09%09%09stack.Push(Pos%7Ba.l-1, a.c%7D)%0A%09%09%09%09stack.Push(Pos%7Ba.l, a.c-1%7D)%0A%09%09%09%09stack.Push(Pos%7Ba.l, a.c%7D)%0A\n %09%09%09%7D\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-07-09_22-22-16",
+            "content": "@@ -387,17 +387,17 @@\n (Pos%7Ba.l\n-+\n+-\n 1, a.c%7D)\n@@ -460,10 +460,8 @@\n  a.c\n-+1\n %7D)%0A%09\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-07-09_22-22-28",
+            "content": "@@ -311,13 +311,8 @@\n #'%7B%0A\n-%09%09%09%09%0A\n %09%09%09%09\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-07-09_22-24-05",
+            "content": "@@ -216,17 +216,16 @@\n if a.l %3E\n-=\n  0 && a.\n@@ -311,19 +311,21 @@\n #'%7B%0A%09%09%09%09\n-if \n+%0A%09%09%09%09\n grid%5Ba.l\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-07-09_22-25-52",
+            "content": "@@ -250,17 +250,16 @@\n && a.c %3E\n-=\n  0 && a.\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-07-09_22-25-57",
+            "content": "@@ -313,16 +313,19 @@\n #'%7B%0A%09%09%09%09\n+if \n grid%5Ba.l\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-07-09_22-26-06",
+            "content": "@@ -238,16 +238,19 @@\n en(grid)\n+ -1\n  && a.c \n@@ -275,16 +275,18 @@\n grid%5B0%5D)\n+-1\n  %7B%0A%09%09%09if\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-07-09_22-29-20",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct{\n\tl, c int\n}\n\nfunc burnTrees(grid [][]rune, l, c int) {\n\tstack := NewStack[Pos]()\n\tstack.Push(Pos{l, c})\n\n\tfor !stack.IsEmpty(){\n\t\ta := stack.Pop()\n\n\t\tif a.l >= 0 && a.l < len(grid) && a.c >= 0 && a.c < len(grid[0]) {\n\t\t\tif grid[a.l][a.c] == '#'{\n\t\t\t\tgrid[a.l][a.c] = 'o'\n\n\t\t\t\tstack.Push(Pos{a.l-1, a.c})\n\t\t\t\tstack.Push(Pos{a.l+1, a.c})\n\t\t\t\tstack.Push(Pos{a.l, a.c-1})\n\t\t\t\tstack.Push(Pos{a.l, a.c+1})\n\t\t\t}\n\t\t}\n\t}\n\n\t// Essa fun\u00e7\u00e3o deve usar uma list como pilha\n\t// e marcar as \u00e1rvores na matriz como queimados\n\t// Uma sugest\u00e3o de como fazer isso \u00e9:\n\t// - adicionar a primeira posi\u00e7\u00e3o na pilha\n\t// - enquanto a pilha n\u00e3o estiver vazia:\n\t//   - retirar o elemento do topo\n\t//   - se puder ser queimado, queime e adicione seus vizinhos \u00e0 pilha\n\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc, lfire, cfire int\n\tfmt.Sscanf(line, \"%d %d %d %d\", &nl, &nc, &lfire, &cfire)\n\n\tgrid := make([][]rune, 0, nl)\n\tfor range nl {\n\t\tscanner.Scan()\n\t\tline := []rune(scanner.Text())\n\t\tgrid = append(grid, line)\n\t}\n\tburnTrees(grid, lfire, cfire)\n\tshowGrid(grid)\n}\n\nfunc showGrid(mat [][]rune) {\n\tfor _, linha := range mat {\n\t\tfmt.Println(string(linha))\n\t}\n}\n",
+            "lines": "63"
+        }
+    ]
+}
